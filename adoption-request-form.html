@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hornsby Pet Shelter Adopt from Home</title>
+</head>
+<body>
+<style>
+    :root {
+    --primaryCol: #b1b49c;
+    --variationprimaryCol: #c5c9b0;
+    --accentCol: #d3daa4;
+    --secondaryCol: #d2d6bb;
+    --variationsecondaryCol: #c0c4ad;
+    --lightgrey: #ddd0c0;
+    --lightergrey: #d9dee4;
+    --middlegrey: #969696;
+    --darkgrey: #443e36;
+    --variationdarkgrey: #3d372f;
+    --lightorange: rgb(208, 190, 168);
+    --orange: rgb(207, 186, 159);
+    }
+    body {
+    margin: 0;
+    background-color: var(--lightgrey);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .wrapper {
+    display: grid;
+    grid-template-columns: 2% 96% 2%;
+    grid-template-rows: 2.5% 11% 0.25% 2.5% 0.25% 7.25% 73% 12% 5%;
+    grid-template-areas: "top top top" 
+                        "upperlside banner upperrside"
+                        "banner2 banner2 banner2"
+                        "header header header"
+                        "banner3 banner3 banner3"
+                        "lside caption rside"
+                        "lside questions rside"
+                        "caption2 caption2 caption2"
+                        "footer footer footer"
+                        
+    }
+    .top{
+    grid-area: top;
+    background-color: var(--darkgrey);
+    }
+    .logo {
+    height: 95px;
+    padding-left: 30px;
+    }
+    .logo:hover {
+    transform: scale(1.3);
+    transition: .5s;
+    }
+    .top pre {
+    color: var(--lightgrey);
+    font-size: 14px;
+    text-align: center;
+    padding-right: 15px;
+    padding-top: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    }
+    .leftside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: lside;
+    border-top: 2px solid var(--darkgrey);
+    border-right: 2px solid var(--middlegrey);
+    }
+    .rightside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: rside;
+    border-top: 2px solid var(--darkgrey);
+    border-left: 2px solid var(--middlegrey);
+    }
+    .upperleftside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: upperlside;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid var(--darkgrey);
+    }
+    .upperrightside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: upperrside;
+    border-bottom: 2px solid var(--darkgrey);
+    }
+    .banner {
+    grid-area: banner;
+    background-image: url('bannercat4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 100% 70%; 
+    border-bottom: 2px solid var(--darkgrey);
+    border-left: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    padding-left: 1%;
+    padding-right: 1%;
+    }
+    .banner2 {
+    background-color: #c9cf9d;
+    grid-area: banner2;
+    padding: 0;
+    font-size:x-small;
+    }
+    .banner3 {
+    background-color: #e3ebb3;
+    grid-area: banner3;
+    padding: 0;
+    font-size:x-small;
+    }
+    #header {
+    background-color: var(--accentCol);
+    grid-area: header;
+    place-content: center;
+    border-width: 10px;
+    border-color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .caption {
+    grid-area: caption;
+    background-color: var(--lightgrey);
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 10px;
+    line-height: 160%;
+    font-style: oblique;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-top: 2px solid var(--darkgrey);
+    }
+    .underline {
+    height: 40px;
+    width: 500px;
+    object-fit: fill;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 20px;
+    }
+    .questions {
+    grid-area: questions;
+    background-color: var(--lightorange);
+    border: 2px solid var(--lightergrey);
+    text-align: left;
+    margin: 0 90px 50px 90px;
+    }
+    .questions h1 {
+    font-size: large;
+    padding: 15px 0 15px 0;
+    margin: 0 0 0 0;
+    text-align: center;
+    background-color: var(--orange);
+    border-bottom: 2px solid var(--lightergrey);
+
+    }
+    .ynquestion {
+    float: left;
+    width: 850px;
+    text-align: right;
+    padding: 15px 35px 20px 0px;
+    margin: 0;
+    }
+    .ynquestion pre {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    }
+    .ynquestion2 {
+    float: left;
+    width: 835px;
+    text-align: right;
+    padding: 15px 30px 20px 19px;
+    margin: 0;
+
+    }
+    .ynquestion2 pre {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    }
+    .ynquestion3 {
+    float: left;
+    width: 838px;
+    text-align: right;
+    padding: 35px 35px 15px 19px;
+    margin: 0;
+    }
+    .ynquestion3 pre {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    }
+    .ynquestion4 {
+    float: left;
+    width: 838px;
+    text-align: right;
+    padding: 15px 35px 15px 19px;
+    margin: 0;
+    }
+    .ynquestion4 pre {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    }
+    .openquestion {
+    float: left;
+    width: 652px;
+    text-align: right;
+    padding: 15px 35px 0px 0px;
+    margin: 0;
+    }
+    .openquestion pre {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    }
+    .openquestion2 {
+    float: left;
+    width: 652px;
+    text-align: right;
+    padding: 10px 0px 20px 35px;
+    margin: 0;
+    }
+    .openquestion2 pre {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    }
+    .openquestion3 {
+    float: left;
+    width: 645px;
+    text-align: right;
+    padding: 10px 0px 20px 35px;
+    margin: 0;
+    }
+    .openquestion3 pre {
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    }
+    .questions h2 {
+    float: left;
+    width: 440px;
+    font-size: medium;
+    font-weight: normal;
+    text-align: right;
+    padding: 20px 35px 20px 0px;
+    margin: 2.5px 0% 0 2.5px;
+    }
+    .questions h3 {
+    float: left;
+    width: 440px;
+    font-size: medium;
+    font-weight: normal;
+    text-align: right;
+    padding: 30px 35px 20px 0px;
+    margin: 2.5px 0% 0 2.5px;
+    }
+    .questions h4 {
+    margin: 5px 0 0 0;
+    padding: 0px 0px 0px 300px;
+    float: left;
+    font-weight: normal;
+    }
+    .questions h5 {
+    float: left;
+    width: 500px;
+    font-size: medium;
+    font-weight: normal;
+    text-align: right;
+    padding: 20px 35px 20px 6px;
+    margin: 0px 0% 0 12.5px;
+    }
+    .questions h6 pre {
+    float: left;
+    width: 290px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    text-align: left;
+    padding: 10px 0px 20px 0px;
+    margin: 0 0 0 256px;
+    }
+    .questions h7 pre {
+    float: left;
+    width: 290px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    text-align: left;
+    padding: 10px 0px 20px 0px;
+    margin: 0 0 0 256px;
+    }
+    .questions h8 pre {
+    float: left;
+    width: 65%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    text-align: left;
+    padding: 10px 0px 0px 0px;
+    margin: 50px 0 0 100px;
+    }
+    .questions h9 pre {
+    float: left;
+    width: 65%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    text-align: left;
+    padding: 0px 0px 0px 0px;
+    margin: 0 0 0 100px;
+    }
+    .questions h11 pre {
+    float: left;
+    width: 65%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    text-align: left;
+    padding: 0px 0px 0px 0px;
+    margin: 0 0 0 100px;
+    }
+    .questions h10 {
+    float: left;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-small;
+    font-weight: normal;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 60px 0 0 412px;
+    }
+    textarea {
+    resize: none;
+    border: 2px solid var(--primaryCol);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    }
+    .answer{
+    float: left;
+    width: 362px;
+    padding: 8px 0px 8px 35px;
+    margin: 23px 0px 25px 20px;
+    background-color: var(--variationprimaryCol);
+    }
+    .answer2 {
+    float: left;
+    width: 362px;
+    padding: 8px 0px 8px 35px;
+    margin: 12.5px 0% 25px 20px;
+    background-color: var(--variationprimaryCol);
+    }
+    .answer3 {
+    float: left;
+    width: 155px;
+    padding: 8px 0px 8px 35px;
+    margin: 12.5px 0% 25px 20px;
+    background-color: var(--variationprimaryCol);
+    }
+    .answer4 {
+    float: left;
+    width: 155px;
+    padding: 8px 0px 8px 35px;
+    margin: 12.5px 0% 0% 13px;
+    background-color: var(--variationprimaryCol);
+    }
+    .answer5 {
+    float: left;
+    width: 160px;
+    padding: 15px 0px 8px 45px;
+    margin: 12.5px 0% 0% 10px;
+    border: 2px solid var(--lightorange);
+    }
+    .answer6 {
+    float: left;
+    width: 320px;
+    padding: 15px 0px 8px 25px;
+    margin: 12.5px 0% 25px 0px;
+    background-color: var(--variationprimaryCol);
+    font-size: small;
+    }
+    .answer7 {
+    float: left;
+    width: 320px;
+    padding: 15px 0px 8px 25px;
+    margin: 0px 0% 37.5px 0px;
+    background-color: var(--variationprimaryCol);
+    font-size: small;
+    }
+    #options {
+    float: left;
+    width: 138px;
+    padding: 8px 17.5px 8px 17.5px;
+    margin: 5px 0% 15px 30px;
+    background-color: var(--variationprimaryCol);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    }
+    #options2 {
+    float: left;
+    width: 138px;
+    padding: 8px 17.5px 8px 17.5px;
+    margin: 0px 0% 25px 30px;
+    background-color: var(--variationprimaryCol);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    }
+    #options3 {
+    float: left;
+    width: 138px;
+    padding: 8px 17.5px 8px 17.5px;
+    margin: 0px 0% 25px 38px;
+    background-color: var(--variationprimaryCol);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    }
+    #option1 {
+    position: absolute;
+    top: 352%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option2 {
+    position: absolute;
+    top: 357%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option3 {
+    position: absolute;
+    top: 362%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option4 {
+    position: absolute;
+    top: 367%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option5 {
+    position: absolute;
+    top: 367%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option6 {
+    position: absolute;
+    top: 372%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option7 {
+    position: absolute;
+    top: 377%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option8 {
+    position: absolute;
+    top: 362%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option9 {
+    position: absolute;
+    top: 367%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option10 {
+    position: absolute;
+    top: 372%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden;
+    }
+    #option11 {
+    position: absolute;
+    top: 377%;
+    left: 59.6%;
+    width: 155px;
+    padding: 6px 17.5px 6px 17.5px;
+    margin: 10px 0% 10px 30px;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    border: 2px solid var(--primaryCol);
+    visibility: hidden; 
+    }
+    #option1:hover {
+    background-color: var(--middlegrey);
+    }
+    #option2:hover {
+    background-color: var(--middlegrey);
+    }
+    #option3:hover {
+    background-color: var(--middlegrey);
+    }
+    #option4:hover {
+    background-color: var(--middlegrey);
+    }
+    #option5:hover {
+    background-color: var(--middlegrey);
+    }
+    #option6:hover {
+    background-color: var(--middlegrey);
+    }
+    #option7:hover {
+    background-color: var(--middlegrey);
+    }
+    #option8:hover {
+    background-color: var(--middlegrey);
+    }
+    #option9:hover {
+    background-color: var(--middlegrey);
+    }
+    #option10:hover {
+    background-color: var(--middlegrey);
+    }
+    #option11:hover {
+    background-color: var(--middlegrey);
+    }
+    #expandoption1 {
+    position: absolute;
+    top: 313.2%;
+    left: 73.45%;
+    height: 38px;
+    width: 20px;
+    background-color: var(--middlegrey);
+    }
+    #expandoption1 p {
+    padding: 9px 3px 0 3px;
+    margin: 0 0 0 0;
+    }
+    #expandoption2 {
+    position: absolute;
+    top: 322%;
+    left: 73.45%;
+    height: 38px;
+    width: 20px;
+    background-color: var(--middlegrey);
+    }
+    #expandoption2 p {
+    padding: 9px 3px 0 3px;
+    margin: 0 0 0 0;
+    }
+    #expandoption3 {
+    position: absolute;
+    top: 332.8%;
+    left: 73.5%;
+    height: 38px;
+    width: 20px;
+    background-color: var(--middlegrey);
+    }
+    #expandoption3 p {
+    padding: 9px 3px 0 3px;
+    margin: 0 0 0 0;
+    }
+    /*Caption two when form has not been completed*/
+    #caption2 {
+    grid-area: caption2;
+    background-color: #6d6d6d;
+    border-top: 2px solid #6d6d6d;
+    border-top: 2spx solid #c6cc9f;
+    border-left: 2px solid #c6cc9f;
+    border-right: 2px solid #c6cc9f;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 100% 20%;
+    }
+    #caption2 h1 {
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px; 
+    font-size: 22px;
+    font-weight: normal;
+    background-color: var(--variationdarkgrey);
+    color:rgb(230, 230, 230);
+    margin: 0 0 30px 0;
+    }
+    #rectangle {
+    height: 190px;
+    width: 220px;
+    margin-left: 170px;
+    padding: 20px 10px;
+    font-size: 14px;
+    float: left;
+    background-color: var(--lightgrey);
+    border-top: 3px solid var(--variationsecondaryCol);
+    border-left: 3px solid var(--variationsecondaryCol);
+    border-bottom: 3px solid var(--variationsecondaryCol);
+    }
+    #catimage {
+    float: left;
+    height: 230px;
+    object-fit: cover;
+    width: 220px;
+    border-top: 3px solid var(--variationsecondaryCol);
+    border-right: 3px solid var(--variationsecondaryCol);
+    border-bottom: 3px solid var(--variationsecondaryCol);
+    }
+    #rectangle2 {
+    height: 190px;
+    width: 220px;
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-left: 70px;
+    float: left;
+    background-color: var(--lightgrey);
+    border-top: 3px solid var(--orange);
+    border-left: 3px solid var(--orange);
+    border-bottom: 3px solid var(--orange);
+    }
+    #dogimage {
+    float: left;
+    height: 230px;
+    object-fit: cover;
+    width: 220px;
+    border-top: 3px solid var(--orange);
+    border-right: 3px solid var(--orange);
+    border-bottom: 3px solid var(--orange);
+    }
+    /*Caption two when form has been completed*/
+    #caption2 h2 {
+    position: absolute;
+    top: 532%;
+    left: 8%;
+    background-color: var(--secondaryCol);
+    opacity: 85%;
+    text-align: center;
+    padding-top: 70px;
+    height: 203px;
+    width: 1120px;
+    font-size: 25px;
+    font-weight: normal;
+    z-index: 0;
+    }
+    #caption2 h3 {
+    position: absolute;
+    top: 550%;
+    left: 8.75%;
+    height: 100px;
+    width: 1070px;
+    text-align: center;
+    padding: 10xpx; 
+    font-size: 18px;
+    font-weight: normal;
+    background-color: none;
+    color:var(--variationdarkgrey);
+    margin-bottom: 25px;
+    margin-top: 25px;
+    z-index: 1;
+    }
+    .footer {
+    padding-left: 30px;
+    grid-area: footer;
+    background-color: var(--darkgrey);
+    color: var(--accentCol);
+    margin-bottom: 0%;
+    padding-top: 10px;
+    line-height: 10px;
+    border-top: 2px solid #6d6d6d;
+    }
+    .footer p {
+    padding: 0px;
+    color: var(--lightgrey);
+    text-align: center;
+    line-height: 35%;
+    }
+    .footer ul {
+    font-weight: bold;
+    display : flex;
+    flex-direction: row;
+    list-style: none;
+    margin:0;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    }
+    #copyright {
+    padding-top: 1px;
+    padding-right: 15px;
+    text-align: right;
+    color: var(--primaryCol);
+    font-size: small;
+    font-weight: bold;
+    }
+    /*circles for the yes/no questions*/
+    #circle1 {
+    border-radius: 50%;
+    position: absolute;
+    top: 217.6%;
+    left: 66.5%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle2 {
+    border-radius: 50%;
+    position: absolute;
+    top: 217.6%;
+    left: 73%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle3 {
+    border-radius: 50%;
+    position: absolute;
+    top: 226.6%;
+    left: 66.5%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle4 {
+    border-radius: 50%;
+    position: absolute;
+    top: 226.6%;
+    left: 73%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle5 {
+    border-radius: 50%;
+    position: absolute;
+    top: 259.4%;
+    left: 66.5%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle6 {
+    border-radius: 50%;
+    position: absolute;
+    top: 259.4%;
+    left: 73%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle7 {
+    border-radius: 50%;
+    position: absolute;
+    top: 286.7%;
+    left: 67%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle8 {
+    border-radius: 50%;
+    position: absolute;
+    top: 286.7%;
+    left: 73.5%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle9 {
+    border-radius: 50%;
+    position: absolute;
+    top: 422%;
+    left: 67%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle10 {
+    border-radius: 50%;
+    position: absolute;
+    top: 422%;
+    left: 74%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle11 {
+    border-radius: 50%;
+    position: absolute;
+    top: 430.7%;
+    left: 67%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle12 {
+    border-radius: 50%;
+    position: absolute;
+    top: 430.7%;
+    left: 74%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle13 {
+    border-radius: 50%;
+    position: absolute;
+    top: 443.4%;
+    left: 67%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle14 {
+    border-radius: 50%;
+    position: absolute;
+    top: 443.4%;
+    left: 74%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle15 {
+    border-radius: 50%;
+    position: absolute;
+    top: 452.4%;
+    left: 67%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle16 {
+    border-radius: 50%;
+    position: absolute;
+    top: 452.4%;
+    left: 74%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle17 {
+    border-radius: 50%;
+    position: absolute;
+    top: 475%;
+    left: 70%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    #circle18 {
+    border-radius: 50%;
+    position: absolute;
+    top: 490%;
+    left: 70%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    }
+    .line hr{
+    border: 3px solid var(--lightergrey);
+    height: 3px;
+    width: 740px;
+    position: absolute;
+    left: 23%;
+    top: 380%;
+    }
+    .line2 hr{
+    border: 3px solid var(--lightergrey);
+    height: 3px;
+    width: 740px;
+    position: absolute;
+    left: 23%;
+    top: 424%;
+    }
+    #checkbox {
+    position: absolute;
+    left: 72.5%;
+    top: 490.3%;
+    }
+    #checkbox2 {
+    position: absolute;
+    left: 72.5%;
+    top: 475.05%;
+    }
+    #button {
+    background-color: var(--accentCol);
+    position: absolute;
+    left: 42%;
+    top: 500%;
+    padding: 10px 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    }
+    #button2 {
+    background-color: var(--accentCol);
+    position: absolute;
+    left: 42%;
+    top: 500%;
+    padding: 10px 51px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    opacity: 90%;
+    cursor: not-allowed;
+    visibility: hidden;
+    }
+    #afterButtonclick {
+    visibility:hidden;
+    }
+    
+</style>
+<script>
+/*yes or no answer questions*/
+function optionYes1() {
+document.getElementById("circle1").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle2").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionNo1() {
+document.getElementById("circle2").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle1").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionYes2() {
+document.getElementById("circle3").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle4").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionNo2() {
+document.getElementById("circle4").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle3").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionYes3() {
+document.getElementById("circle5").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle6").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionNo3() {
+document.getElementById("circle6").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle5").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionYes4() {
+document.getElementById("circle7").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle8").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionNo4() {
+document.getElementById("circle8").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle7").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionYes5() {
+document.getElementById("circle9").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle10").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionNo5() {
+document.getElementById("circle10").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle9").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionYes6() {
+document.getElementById("circle11").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle12").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionNo6() {
+document.getElementById("circle12").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle11").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionYes7() {
+document.getElementById("circle13").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle14").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionNo7() {
+document.getElementById("circle14").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle13").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionYes8() {
+document.getElementById("circle15").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle16").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionNo8() {
+document.getElementById("circle16").style.backgroundColor = "var(--accentCol)";
+document.getElementById("circle15").style.backgroundColor = "rgb(230, 230, 230)";
+}
+function optionYes9() {
+document.getElementById("circle17").style.backgroundColor = "var(--accentCol)";
+}
+function optionYes10() {
+document.getElementById("circle18").style.backgroundColor = "var(--accentCol)";
+}
+/*the first drop down answer*/
+function expandoption1() {
+document.getElementById("option1").style.visibility = "visible";
+document.getElementById("option2").style.visibility = "visible";
+document.getElementById("option3").style.visibility = "visible";
+document.getElementById("option4").style.visibility = "visible";
+}
+function clickoption1() {
+document.getElementById("options").innerHTML = "1-3";
+document.getElementById("option1").style.visibility = "hidden";
+document.getElementById("option2").style.visibility = "hidden";
+document.getElementById("option3").style.visibility = "hidden";
+document.getElementById("option4").style.visibility = "hidden";
+}
+function clickoption2() {
+document.getElementById("options").innerHTML = "4-6";
+document.getElementById("option1").style.visibility = "hidden";
+document.getElementById("option2").style.visibility = "hidden";
+document.getElementById("option3").style.visibility = "hidden";
+document.getElementById("option4").style.visibility = "hidden";
+}
+function clickoption3() {
+document.getElementById("options").innerHTML = "7-8";
+document.getElementById("option1").style.visibility = "hidden";
+document.getElementById("option2").style.visibility = "hidden";
+document.getElementById("option3").style.visibility = "hidden";
+document.getElementById("option4").style.visibility = "hidden";
+}
+function clickoption4() {
+document.getElementById("options").innerHTML = "9+";
+document.getElementById("option1").style.visibility = "hidden";
+document.getElementById("option2").style.visibility = "hidden";
+document.getElementById("option3").style.visibility = "hidden";
+document.getElementById("option4").style.visibility = "hidden";
+}
+/*the second drop down answer*/
+function expandoption2() {
+document.getElementById("option5").style.visibility = "visible";
+document.getElementById("option6").style.visibility = "visible";
+document.getElementById("option7").style.visibility = "visible";
+}
+function clickoption5() {
+document.getElementById("options2").innerHTML = "Indoor";
+document.getElementById("option5").style.visibility = "hidden";
+document.getElementById("option6").style.visibility = "hidden";
+document.getElementById("option7").style.visibility = "hidden";
+}
+function clickoption6() {
+document.getElementById("options2").innerHTML = "Outdoor";
+document.getElementById("option5").style.visibility = "hidden";
+document.getElementById("option6").style.visibility = "hidden";
+document.getElementById("option7").style.visibility = "hidden";
+}
+function clickoption7() {
+document.getElementById("options2").innerHTML = "Both";
+document.getElementById("option5").style.visibility = "hidden";
+document.getElementById("option6").style.visibility = "hidden";
+document.getElementById("option7").style.visibility = "hidden";
+}
+/*the third drop down answer*/
+function expandoption3() {
+document.getElementById("option8").style.visibility = "visible";
+document.getElementById("option9").style.visibility = "visible";
+document.getElementById("option10").style.visibility = "visible";
+document.getElementById("option11").style.visibility = "visible";
+}
+function clickoption8() {
+document.getElementById("options3").innerHTML = "Leave with family/friend";
+document.getElementById("option8").style.visibility = "hidden";
+document.getElementById("option9").style.visibility = "hidden";
+document.getElementById("option10").style.visibility = "hidden";
+document.getElementById("option11").style.visibility = "hidden";
+}
+function clickoption9() {
+document.getElementById("options3").innerHTML = "Pet sitter";
+document.getElementById("option8").style.visibility = "hidden";
+document.getElementById("option9").style.visibility = "hidden";
+document.getElementById("option10").style.visibility = "hidden";
+document.getElementById("option11").style.visibility = "hidden";
+}
+function clickoption10() {
+document.getElementById("options3").innerHTML = "Bring with me/us";
+document.getElementById("option8").style.visibility = "hidden";
+document.getElementById("option9").style.visibility = "hidden";
+document.getElementById("option10").style.visibility = "hidden";
+document.getElementById("option11").style.visibility = "hidden";
+}
+function clickoption11() {
+document.getElementById("options3").innerHTML = "Other";
+document.getElementById("option8").style.visibility = "hidden";
+document.getElementById("option9").style.visibility = "hidden";
+document.getElementById("option10").style.visibility = "hidden";
+document.getElementById("option11").style.visibility = "hidden";
+}
+function clickoption8() {
+document.getElementById("options3").innerHTML = "Leave with family/friend";
+document.getElementById("option8").style.visibility = "hidden";
+document.getElementById("option9").style.visibility = "hidden";
+document.getElementById("option10").style.visibility = "hidden";
+document.getElementById("option11").style.visibility = "hidden";
+}
+function clickoption9() {
+document.getElementById("options3").innerHTML = "Pet sitter";
+document.getElementById("option8").style.visibility = "hidden";
+document.getElementById("option9").style.visibility = "hidden";
+document.getElementById("option10").style.visibility = "hidden";
+document.getElementById("option11").style.visibility = "hidden";
+}
+function clickoption10() {
+document.getElementById("options3").innerHTML = "Bring with me/us";
+document.getElementById("option8").style.visibility = "hidden";
+document.getElementById("option9").style.visibility = "hidden";
+document.getElementById("option10").style.visibility = "hidden";
+document.getElementById("option11").style.visibility = "hidden";
+}
+function clickoption11() {
+document.getElementById("options3").innerHTML = "Other";
+document.getElementById("option8").style.visibility = "hidden";
+document.getElementById("option9").style.visibility = "hidden";
+document.getElementById("option10").style.visibility = "hidden";
+document.getElementById("option11").style.visibility = "hidden";
+}
+function submit() {
+document.getElementById("options3").innerHTML = "Other";
+document.getElementById("button").style.visibility = "hidden";
+document.getElementById("button2").style.visibility = "visible";
+document.getElementById("beforeButtonclick").style.visibility = "hidden";
+document.getElementById("afterButtonclick").style.visibility = "visible";
+document.getElementById("caption2").style.backgroundImage = "url('finalcat2.jpg')";
+}
+</script>
+
+</body>
+    <!--beginning of the wrapper-->
+    <div class = "wrapper">
+        <!--the definition for the top bar-->
+        <div class = "top">
+        <img src="logo2.svg" alt="" class = "logo">
+        <pre style="float: right;">Call (04) 0220 4808            l         info@hornsbypetshelter.com.au</pre>
+        </div>
+        <!--the definition for the left side-->
+        <div class="leftside"></div>
+        <!--the definition for the right side-->
+        <div class="rightside"></div>
+        <!--the definition for the upper left side-->
+        <div class="upperleftside"></div>
+        <!--the definition for the upperright side-->
+        <div class="upperrightside"></div>
+        <!--the definition for the banner-->
+        <div class="banner" ></div>
+        <!--the definition for the second banner-->
+        <div class="banner2" ></div>
+        <!--the definition for the third banner-->
+        <div class="banner3" ></div>
+        <!--the definition for the header-->
+        <div id="header">
+        <h2>Adopting a Pet!</h2>
+        </div>
+        <!--the definition for the caption-->
+        <div class = caption>
+        <p>To start the adoption process for your potential pet, please fill out the form. Please consider your decision carefully before you 
+        make this decision. If you are approved for adoption, you will be allocated an appointment to meet the pet/s you selected and to process
+        the adoption. If this is successful you will begin a 2 week trial period. The trial is organised to ensure the pet is right for you.
+        Hornsby Pet Shelter reserves the right to terminate the trial at any given moment, and until the end of the adoption trial, the pet
+        is still owned by Hornsby Pet Shelter. Transfer of ownership will only happen if the 2 week trial is successful. Please fill out the form
+        truthfully and in as much detail as possible. Our team will get in contact with you as soon as possible</p>
+        <img src="Underline.svg" class = "underline">    
+        </div>
+        <!--questions-->
+        <div class = questions>
+            <h1>Adoption Application Form</h1>
+            <h3>Name of potential pet</h3>
+            <textarea class = answer rows="1" cols="25">
+Type name here...
+            </textarea>
+            <h2>Pet ID</h2>
+            <textarea class = answer2 rows="1" cols="25">
+E.g. 434526
+            </textarea>
+            <h2>Applicant's name</h2>
+            <textarea class = answer3 rows="1" cols="25">
+First name
+            </textarea>
+            <textarea class = answer4 rows="1" cols="25">
+Last name
+            </textarea>
+        </textarea>
+        <h2>Phone number</h2>
+        <textarea class = answer2 rows="1" cols="25">
+Type number here...
+        </textarea>
+        <h2>Email address</h2>
+        <textarea class = answer2 rows="1" cols="25">
+Type email here...
+        </textarea>
+        <h2>Address</h2>
+            <textarea class = answer3 rows="1" cols="25">
+Suburb
+            </textarea>
+            <textarea class = answer4 rows="1" cols="25">
+Postcode
+            </textarea>
+        <div class = "ynquestion">
+        <pre>Do you have children under the age of 18 living with you?              Yes                No</pre>
+        </div>
+        <div class = "ynquestion">
+        <pre>Do you have any other pets living at your home currently?              Yes                No</pre>
+        </div>
+        <h5>If yes, tell us a bit more about them:</h5>
+        <textarea class = answer6 rows="5" cols="25">
+Enter answer here
+        </textarea>
+        <div class = "ynquestion2">
+        <pre>Do you, or anyone else living in the house smoke?                             Yes                No</pre>
+        </div>
+        <div class = "ynquestion2">
+        <pre>Have you ever been convicted of abuse of a child or animal?             Yes                No</pre>
+        </div>
+        <!--the first short response question-->
+        <div class = "openquestion">
+        <pre>On average how many hours will your pet be left alone?</pre>
+        </div>
+        <div id = "options">Please select</div>
+        <div id = "expandoption1" onclick="expandoption1()"><p>▼</p></div>
+        <div id = "option1" onclick="clickoption1()">1-3</div>
+        <div id = "option2" onclick="clickoption2()">4-6</div>
+        <div id = "option3" onclick="clickoption3()">7-8</div>
+        <div id = "option4" onclick="clickoption4()">9+</div>
+        <!--the second short response question-->
+        <div class = "openquestion2">
+        <pre>Will this pet be predominantly living inside, outside, or both?</pre>
+        </div>
+        <div id = "options2">Please select</div>
+        <div id = "expandoption2" onclick="expandoption2()"><p>▼</p></div>
+        <div id = "option5" onclick="clickoption5()">Indoor</div>
+        <div id = "option6" onclick="clickoption6()">Outdoor</div>
+        <div id = "option7" onclick="clickoption7()">Both</div>
+        <div class = "openquestion3">
+            <pre>What will you do with the animal when you go on vacation?</pre>
+            </div>
+            <div id = "options3">Please select</div>
+            <div id = "expandoption3" onclick="expandoption3()"><p>▼</p></div>
+            <div id = "option8" onclick="clickoption8()">Leave with family/friend</div>
+            <div id = "option9" onclick="clickoption9()">Pet sitter</div>
+            <div id = "option10" onclick="clickoption10()">Bring with me/us</div>
+            <div id = "option11" onclick="clickoption11()">Other</div>
+        <h6><pre>Provide a description of your 
+potential pet's living conditions</pre></h6>
+        <textarea class = answer7 rows="6" cols="25">
+Enter answer here 
+        </textarea>
+        <h7><pre>Please provide us with any other 
+information you feel is relevant 
+about your home, family and 
+previous pet ownership</pre></h7>
+        <textarea class = answer7 rows="6" cols="25">
+E.g. working arrangements, experience with 
+specific breeds
+        </textarea>   
+    <h7><pre>Are there any other animals that you
+are interested in adopting? If so,
+please provide details. This will help 
+us to find other possible pets if
+your choice is unsuitable</pre></h7>
+    <textarea class = answer7 rows="6" cols="25">
+Enter answer here
+    </textarea>
+    <div class = "ynquestion3">
+    <pre>Have you returned from overseas in the last 2 weeks?                           Yes                No</pre>
+    </div>
+    <div class = "ynquestion4">
+    <pre>Have you been in contact with someone who has recently                    Yes                No
+travelled overseas or who has tested positive to COVID-19?                                            </pre>
+    </div>
+    <div class = "ynquestion4">
+    <pre>Do you have any cold or flu symptoms?                                                 Yes                No</pre>
+    </div>
+    <div class = "ynquestion4">
+    <pre>Are you self-isolating due to illness or potential exposures?                  Yes                No</pre>
+    </div>
+    <h8>
+        <pre>
+            Hornsby Pet Shelter is not responsible for any unforeseen illnesses post adoption. 
+            Should an adopter wish for testing to be done for illnesses that are not visible 
+            at the time of adoption, the cost needs to be covered by the adopter. You are also 
+            aware that we cannot guarantee the future health and temperament of the animal.
+        </pre>
+    </h8>
+    <h9>
+        <pre>
+            I have read the above and certify that the answers I have given are complete, true 
+            and not misleading in any way.
+        </pre>
+    </h9>
+    <h11>
+        <pre>
+            Adopted cats and kittens are the responsibility of the new owner and all 
+            ongoing vet work and medication will be provided from the adoption by the
+            new owners
+        </pre>
+    </h11>
+    <h11>
+        <pre>
+            If your adoption application is successful, you will begin a 2 week trial 
+            period. The trial is organised to ensure the cat/s or kitten/s is right for you.
+            Hornsby Pet Shelter reserves the right to terminate the trial at any given moment.
+            Until the end of the adoption trial, the cat/s or kitten/s are still owned by 
+            The Cat Orphanage. Transfer of ownership will only happen if the 2 week trial
+            is successful
+        </pre>
+    </h11>
+    <h10>*Note: once you submit any answers made will not be registered</h10>
+    </div>
+    <div id ="caption2">
+        <div id = "beforeButtonclick">
+            <h1>Need more time to choose your pet?</h1>
+            <div id = "rectangle">These cute animals are one of the best types of pets. For those who live in smaller homes, have a limited amount of time or are busy, or just love cats, <a href ="http://127.0.0.1:5500/adoptacat.html">click here</a> to see the range of cats and kittens available for adoption!</div>
+            <img src="formcat.jpg" alt="" id = "catimage">
+            <div id = "rectangle2">A source of unconditional love and loyalty. There are so many benefits for owning one of these animals incuding exercising and socialising more, lower stress and they also protect your home! <a href ="http://127.0.0.1:5500/adoptadog.html">click here</a> to see all the dogs and puppies in need of a new home </div>
+            <img src="formdog.jpg" alt="" id = "dogimage">
+        </div>
+        <div id = "afterButtonclick">
+            <h2>Congratulations on submitting an application!</h2>
+            <h3>Every year, around 200,000 dogs and cats are euthanised in shelters through lack of good homes. Through adopting, you many have saved your potential pets life and given it a new chance. We will contact you as soon as possible. If you are interested in purchasing food, equipment and toys for your potential pet or pets your currently own, <a href ="http://127.0.0.1:5500/adoptadog.html">click here</a>. Profits made from those items go towards sheltering and rehoming more animals. </h3>
+        </div>
+    </div>
+    <div class="footer" >
+        <ul class="list">
+            <li>Privacy policy </li>
+            <li>Terms & Conditions </li>
+            <li>About Us</li>
+            <li>Cookies policy</li>
+          </ul>
+    <p> 132 Weston Street, Brunswick East VIC 3057</p>
+    <p>Office Phone: +61 (3) 9329-9587</p>
+    <p>Fax: +61 (3) 9329-9558</p>
+    <div id ="copyright">© 2021 Lia Wigglesworth. All rights reserved</div>
+    </div>
+    <!--end of the wrapper-->
+    <!--circles and text for the yes/no question-->
+    <div id = "circle1" onclick="optionYes1()"></div>
+    <div id = "circle2" onclick="optionNo1()"></div>
+    <div id = "circle3" onclick="optionYes2()"></div>
+    <div id = "circle4" onclick="optionNo2()"></div>
+    <div id = "circle5" onclick="optionYes3()"></div>
+    <div id = "circle6" onclick="optionNo3()"></div>
+    <div id = "circle7" onclick="optionYes4()"></div>
+    <div id = "circle8" onclick="optionNo4()"></div>
+    <div id = "circle9" onclick="optionYes5()"></div>
+    <div id = "circle10" onclick="optionNo5()"></div>
+    <div id = "circle11" onclick="optionYes6()"></div>
+    <div id = "circle12" onclick="optionNo6()"></div>
+    <div id = "circle13" onclick="optionYes7()"></div>
+    <div id = "circle14" onclick="optionNo7()"></div>
+    <div id = "circle15" onclick="optionYes8()"></div>
+    <div id = "circle16" onclick="optionNo8()"></div>
+    <div id = "circle17" onclick="optionYes9()"></div>
+    <div id = "circle18" onclick="optionYes10()"></div>
+    <div id = "checkbox">Check box if you understand</div>
+    <div id = "checkbox2">Check box if you understand</div>
+    <!--lines-->
+    <div class="line"><hr></div>
+    <div class="line2"><hr></div>
+    <!--submittion button-->
+    <button id="button" onClick="submit()">Submit Application Form</button>
+    <button id="button2">Form Submitted</button>
+</div>
+</html>

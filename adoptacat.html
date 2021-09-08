@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hornsby Pet Shelter: Cats</title>
+    <link rel="icon" href="favicon.ico"/>
+<style>
+        :root {
+    --primaryCol: #b1b49c;
+    --variationprimaryCol: #c5c9b0;
+    --accentCol: #d3daa4;
+    --secondaryCol: #d2d6bb;
+    --variationsecondaryCol: #c0c4ad;
+    --lightgrey: #dad0c3;
+    --middlegrey: #8e9194;
+    --darkgrey: #443e36;
+    --variationdarkgrey: #3d372f;
+    --lightorange: rgb(216, 190, 155);
+    }
+    body {
+    margin: 0;
+    background-color: var(--middlegrey);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+      .wrapper {
+    display: grid;
+    grid-template-columns: 2% 32% 32% 32% 2%;
+    grid-template-rows: 2.25% 10% 0.235% 2.35% 0.235% 1% 8.25% 3.5% 7.22% 7.12% 67% 6.9% 4.5%;
+    grid-template-areas: "top top top top top" 
+                        "upperlside banner banner banner upperrside"
+                        "banner2 banner2 banner2 banner2 banner2"
+                        "header header header header header"
+                        "banner3 banner3 banner3 banner3 banner3"
+                        "lside pages pages pages rside"
+                        "lside caption caption caption rside"
+                        "lside paragraph1 paragraph1 paragraph1 rside"
+                        "lside part1 part2 part3 rside"
+                        "lside part4 part5 part6 rside"
+                        "lside paragraph2 paragraph2 paragraph2 rside"
+                        "lside paragraph3 paragraph3 paragraph3 rside"
+                        "footer footer footer footer footer"
+       }
+    .top{
+    grid-area: top;
+    background-color: var(--darkgrey);
+    }
+    .logo {
+    height: 95px;
+    padding-left: 30px;
+    }
+    .logo:hover {
+    transform: scale(1.3);
+    transition: .5s;
+    }
+    .top pre {
+    color: var(--lightgrey);
+    font-size: 14px;
+    text-align: center;
+    padding-right: 15px;
+    padding-top: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    }
+    .leftside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: lside;
+    border-top: 2px solid var(--darkgrey);
+    }
+    .rightside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: rside;
+    border-top: 2px solid var(--darkgrey);
+    }
+    .upperleftside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: upperlside;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid var(--darkgrey);
+    }
+    .upperrightside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: upperrside;
+    border-bottom: 2px solid var(--darkgrey);
+    }
+    .banner {
+    grid-area: banner;
+    background-image: url('bannercat3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 100% 10%; 
+    border-bottom: 2px solid var(--darkgrey);
+    border-left: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    padding-left: 1%;
+    padding-right: 1%;
+    }
+    .banner2 {
+    background-color: #c9cf9d;
+    grid-area: banner2;
+    padding: 0;
+    font-size:x-small;
+    }
+    .banner3 {
+    background-color: #e3ebb3;
+    grid-area: banner3;
+    padding: 0;
+    font-size:x-small;
+    }
+    #header {
+    background-color: var(--accentCol);
+    grid-area: header;
+    place-content: center;
+    border-width: 10px;
+    border-color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .pages {
+    grid-area: pages;
+    height: 35px;
+    background-color: var(--darkgrey);
+    border-bottom: 2px solid var(--middlegrey);
+    border-left: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    display : flex;
+    justify-content: space-evenly;
+    }
+    .pages h1 {
+    color:var(--lightgrey);
+    font-size: 15px;
+    border-radius: 10px;
+    width: 80px;
+    text-align: center;
+    height: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+    /*link*/
+    a:link {
+    color: var(--lightgrey);
+    text-decoration: none;
+    }
+    /*hover over link*/
+    a:hover {
+    text-decoration: underline;
+    color: rgb(236, 236, 213);
+    }
+    /*link has been visited*/
+    a:visited {
+    text-decoration: none;
+    color: var(--lightgrey);
+    }
+    .caption {
+    grid-area: caption;
+    background-color: var(--lightgrey);
+    border-right: 2px solid var(--middlegrey);
+    border-left: 2px solid var(--middlegrey);
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 160%;
+    font-style: oblique;
+    padding-left: 35px;
+    padding-right: 35px;
+    }
+    .underline {
+    height: 40px;
+    width: 500px;
+    object-fit: fill;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 20px;
+    }
+    #paragraph1 {
+    grid-area: paragraph1;
+    background-color: var(--secondaryCol);
+    text-align: center;
+    border-right: 2px solid var(--middlegrey);
+    border-left: 2px solid var(--middlegrey);
+    }
+    #paragraph1 p {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+    }
+    #paragraph1 h1{
+    font-size: large;
+    margin-bottom: 0px;
+    text-decoration: underline;
+    }
+    #paragraph2 {
+    grid-area: paragraph2;
+    background-color: var(--secondaryCol);
+    border-right: 2px solid var(--middlegrey);
+    border-left: 2px solid var(--middlegrey);
+    }
+    #paragraph2 h1{
+    font-size: large;
+    padding-top: 7px;
+    padding-bottom: 2px;
+    text-align: center;
+    text-decoration: underline;
+    }
+    #paragraph2 p {
+    margin-top: 0;
+    padding-left: 25px;
+    text-align: center;
+    }
+    .list1{
+    float: left;
+    margin-left: 25px;
+    margin-top: 0;
+    margin-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    width: 535px;
+    background-color: var(--variationprimaryCol); 
+    border: 2px solid var(--primaryCol);
+    }
+    .section1{
+    float: left;
+    width: 630px;
+    }
+    .section2{
+    float: right;
+    width: 630px;
+    margin-right: 12.5px;
+    }
+    #paragraph2 h2 {
+    margin-top: 0;
+    line-height: 140%;
+    font-weight: normal;
+    font-size: medium;
+    margin-right: 25px;
+    margin-bottom: 54px;
+    }
+    #paragraph2 h3 {
+    margin-top: 0;
+    color: #3a2b1e;
+    background-color: #c0c4ac;
+    width: 623px;
+    font-weight: bold;
+    font-size: medium;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 25px;
+    line-height: 20px;
+    margin-right: 25px;
+    margin-bottom: 3px;
+    padding-bottom: 0px;
+    padding-left: 25px;
+    }
+    #paragraph2 h6 {
+    margin-top: 0;
+    color: #302216;
+    background-color: #c0c4ac;
+    width: 625px;
+    font-weight: bold;
+    font-size: medium;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 25px;
+    line-height: 20px;
+    margin-right: 25px;
+    margin-bottom: 3px;
+    padding-bottom: 0px;
+    padding-left: 25px;
+    }
+    #paragraph2 h4 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: medium;
+    margin-right: 25px;
+    padding-left: 25px;
+    }
+    #paragraph2 h5{
+    padding-left: 25px;
+    font-size: medium;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    text-decoration: underline;
+    border-bottom: 1.5px solid rgb(148, 142, 142);
+    border-top: 2px solid rgb(148, 142, 142);
+    background-color: #b5b8a5;
+    color: rgb(26, 20, 15);
+    }
+    .list3 {
+    list-style-type: lower-alpha
+    }
+    ol li {
+    padding-left: 15px;
+    }
+    table, td, th{
+    border: 1px solid black;
+    }
+    th {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: normal;
+    text-align: left;
+    }
+    td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    }
+    .part1 {
+    grid-area: part1;
+    background-color: var(--variationprimaryCol);
+    border: 4px solid var(--primaryCol);
+    }
+    .part1 h1{
+    font-size: large;
+    float: right;
+    padding-top: 6px;
+    margin-right: 22%;
+    }
+    .part1 h2{
+    font-size: medium;
+    position: absolute;
+    left: 20%;
+    top: 163.5%;
+    color: var(--darkgrey); 
+    }
+    table.table1 {
+    position: absolute;
+    border-collapse: collapse;
+    left: 15.1%;
+    top: 169%;
+    padding-right: 15px;
+    width: 18.25%;
+    }
+    #part1img1 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute;
+    left: 2.3%;
+    top: 159.5%;
+    z-index: 2;
+    }
+    .part1img2 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute;
+    left: 2.3%;
+    z-index: 1;
+    }
+    #closeinfo1 {
+    position: absolute;
+    left: 31.5%;
+    top: 160%;
+    z-index: 4;
+    font-weight: bold;
+    opacity: 0%;
+    }
+    .part2 {
+    grid-area: part2;
+    background-color: var(--variationsecondaryCol);
+    border-top: 4px solid var(--primaryCol);
+    border-bottom: 4px solid var(--primaryCol);
+    border-right: 4px solid var(--primaryCol);
+    }
+    .part2 h1{
+    font-size: large;
+    float: right;
+    padding-top: 6px;
+    margin-right: 22%;
+    }
+    .part2 h2{
+    font-size: medium;
+    position: absolute;
+    left: 51.25%;
+    top: 163.5%;
+    color: var(--darkgrey); 
+    }
+    table.table2 {
+    position: absolute;
+    border-collapse: collapse;
+    left: 47%;
+    top: 169%;
+    padding-right: 15px;
+    width: 18.25%;
+    }
+    #part2img1 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute;
+    left: 34%;
+    top: 159.5%;
+    z-index: 1;
+    opacity: 100%;
+    }
+    .part2img2 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute; 
+    left: 34%;
+    z-index: 0;
+    }
+    #closeinfo2 {
+    position: absolute;
+    left: 63.5%;
+    top: 160%;
+    z-index: 4;
+    font-weight: bold;
+    opacity: 0%;
+    }
+    .part3 {
+    grid-area: part3;
+    background-color: var(--variationprimaryCol);
+    border: 4px solid var(--primaryCol);
+    }
+    .part3 h1{
+    font-size: large;
+    float: right;
+    padding-top: 6px;
+    margin-right: 28%;
+    }
+    .part3 h2{
+    font-size: medium;
+    position: absolute;
+    right: 8%;
+    top: 163.5%;
+    color: var(--darkgrey); 
+    }
+    table.table3 {
+    position: absolute;
+    border-collapse: collapse;
+    right: 2.85%;
+    top: 169%;
+    width: 18.25%;
+    }
+    #part3img1 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute;
+    left: 66%;
+    top: 159.5%;
+    z-index: 1;
+    opacity: 100%;
+    }
+    .part3img2 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute; 
+    left: 66%;
+    z-index: 0;
+    }
+    #closeinfo3 {
+    position: absolute;
+    right: 4%;
+    top: 160%;
+    z-index: 4;
+    font-weight: bold;
+    opacity: 0%;
+    }
+    .part4 {
+    grid-area: part4;
+    background-color: var(--variationsecondaryCol);
+    border-bottom: 4px solid var(--primaryCol);
+    border-left: 4px solid var(--primaryCol);
+    border-right: 4px solid var(--primaryCol);
+    }
+    .part4 h1{
+    font-size: large;
+    float: right;
+    padding-top: 6px;
+    margin-right: 27%;
+    }
+    .part4 h2{
+    font-size: medium;
+    position: absolute;
+    left: 19%;
+    top: 204%;
+    color: var(--darkgrey); 
+    }
+    table.table4 {
+    position: absolute;
+    border-collapse: collapse;
+    left: 15.1%;
+    top: 209.5%;
+    padding-right: 15px;
+    width: 18.25%;
+    }
+    #part4img1 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute;
+    left: 2.3%;
+    top: 200.2%;
+    z-index: 2;
+    }
+    #closeinfo4 {
+    position: absolute;
+    left: 31.5%;
+    top: 201%;
+    z-index: 4;
+    font-weight: bold;
+    opacity: 0%;
+    }
+    .part5 {
+    grid-area: part5;
+    background-color: var(--variationprimaryCol);
+    border-bottom: 4px solid var(--primaryCol);
+    border-right: 4px solid var(--primaryCol);
+    }
+    .part5 h1{
+    font-size: large;
+    float: right;
+    padding-top: 6px;
+    margin-right: 25%;
+    }
+    .part5 h2{
+    font-size: medium;
+    position: absolute;
+    left: 52%;
+    top: 204%;
+    color: var(--darkgrey); 
+    }
+    table.table5 {
+    position: absolute;
+    border-collapse: collapse;
+    left: 47%;
+    top: 209.5%;
+    padding-right: 15px;
+    width: 18.25%;
+    }
+    #part5img1 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute;
+    left: 34%;
+    top: 200.2%;
+    z-index: 2;
+    }
+    #closeinfo5 {
+    position: absolute;
+    left: 63.4%;
+    top: 201%;
+    z-index: 4;
+    font-weight: bold;
+    opacity: 0%;
+    }
+    .part6 {
+    grid-area: part6;
+    background-color: var(--variationsecondaryCol);
+    border-bottom: 4px solid var(--primaryCol);
+    border-right: 4px solid var(--primaryCol);
+    }
+    .part6 h1{
+    font-size: large;
+    float: right;
+    padding-top: 6px;
+    margin-right: 20%;
+    }
+    .part6 h2{
+    font-size: medium;
+    position: absolute;
+    right: 8%;
+    top: 204%;
+    color: var(--darkgrey); 
+    }
+    table.table6 {
+    position: absolute;
+    border-collapse: collapse;
+    right: 2.85%;
+    top: 209.5%;
+    padding-right: 15px;
+    width: 18.25%;
+    }
+    #part6img1 {
+    height: 250px;
+    width: 167px;
+    object-fit: cover;
+    position: absolute;
+    right: 21.6%;
+    top: 200.2%;
+    z-index: 2;
+    }
+    #closeinfo6 {
+    position: absolute;
+    right: 4%;
+    top: 201%;
+    z-index: 4;
+    font-weight: bold;
+    opacity: 0%;
+    }
+    #info1 {
+    font-size: 14px;
+    background-color: var(--lightgrey);
+    height: 250px;
+    width: 260px;
+    position: absolute;
+    left: 14.55%;
+    top: 159.5%;
+    z-index: 0;
+    visibility: hidden;
+    overflow: auto;
+    }
+    #info1 p {
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    }
+    #info2 {
+    font-size: 14px;
+    background-color: var(--lightgrey);
+    height: 250px;
+    width: 260px;
+    position: absolute;
+    left: 46.5%;
+    top: 159.5%;
+    z-index: 0;
+    visibility: hidden;
+    overflow: auto;
+    }
+    #info2 p {
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    }
+    #info3 {
+    font-size: 14px;
+    background-color: var(--lightgrey);
+    height: 250px;
+    width: 260px;
+    position: absolute;
+    right: 2.3%;
+    top: 159.5%;
+    z-index: 0;
+    overflow: auto;
+    visibility: hidden;
+    }
+    #info3 pre {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-right: 20px;
+    padding-left: 5px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    }
+    #info4 {
+    font-size: 14px;
+    background-color: var(--lightgrey);
+    height: 250px;
+    width: 260px;
+    position: absolute;
+    left: 14.5%;
+    top: 200.2%;
+    z-index: 0;
+    visibility: hidden;
+    overflow: auto;
+    }
+    #info4 p {
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    }
+    #info5 {
+    font-size: 14px;
+    background-color: var(--lightgrey);
+    height: 250px;
+    width: 260px;
+    position: absolute;
+    left: 46.5%;
+    top: 200.2%;
+    z-index: 0;
+    visibility: hidden;
+    overflow: auto;
+    }
+    #info5 p {
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    }
+    #info6 {
+    font-size: 14px;
+    background-color: var(--lightgrey);
+    height: 250px;
+    width: 260px;
+    position: absolute;
+    right: 2.3%;
+    top: 200.2%;
+    z-index: 0;
+    visibility: hidden;
+    overflow: auto;
+    }
+    #info6 p {
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    }
+    #paragraph3 {
+    grid-area: paragraph3;
+    background-color: var(--lightgrey);
+    border-left: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    }
+    #paragraph3 h1{
+    font-size: large;
+    padding-top: 20px;
+    margin-top: 0;
+    padding-bottom: 4px;
+    text-align: center;
+    text-decoration: underline;
+    border-top: 2px solid rgb(148, 142, 142);
+    }
+    #paragraph3 p {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    }
+    .footer {
+    padding-left: 30px;
+    grid-area: footer;
+    background-color: var(--darkgrey);
+    color: var(--accentCol);
+    margin-bottom: 0%;
+    padding-top: 10px;
+    line-height: 10px;
+    border-top: 3px solid var(--middlegrey);
+    }
+    .footer p {
+    padding: 0px;
+    color: var(--lightgrey);
+    text-align: center;
+    line-height: 35%;
+    }
+    .footer ul {
+    font-weight: bold;
+    display : flex;
+    flex-direction: row;
+    list-style: none;
+    margin:0;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    }
+    #copyright {
+    padding-top: 1px;
+    padding-right: 15px;
+    text-align: right;
+    color: var(--primaryCol);
+    font-size: small;
+    font-weight: bold;
+    }
+    .vl {
+    border-left: 2px solid var(--middlegrey);
+    height: 1980px;
+    position: absolute;
+    left: 50%;
+    }
+    #sidebar {
+    width: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    right: 0%;
+    top: 92.5%;
+    text-align: center;
+    color: var(--lightgrey);
+    background-color: var(--darkgrey);
+    border: 2px solid rgb(105, 85, 58);
+    z-index: 2;
+    }
+    #sidebarinfo {
+    width: 100px;
+    height: 277px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 0%;
+    top: 92.5%;
+    background-color: var(--lightorange);
+    border: 2px solid rgb(208, 172, 126);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    visibility: hidden;
+    }
+    #nav {
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    text-align: center;
+    }
+    #closesidebar{
+    position: absolute;
+    right: 0.75%;
+    top: 93%;
+    color: var(--darkgrey);
+    z-index: 4;
+    font-weight: bold;
+    opacity: 0%;
+    }
+    #sidebarinfo1 {
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    }
+    #sidebarinfo2 {
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    }
+    #sidebarinfo3 {
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    }
+    #sidebarinfo4 {
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    }
+    button {
+    background-color: rgb(235, 212, 182);
+    border: 1px solid rgb(202, 172, 132);
+    box-shadow: 0 2px 4px 0 rgba(114, 95, 69, 0.563), 0 3px 10px 0 rgba(114, 89, 56, 0.378);
+    border-radius: 5px;
+    height: 45px;
+    font-size: small;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<script>
+/*part 1*/
+function moreinfo1() {
+document.getElementById("part1img1").style.opacity = "0%";
+document.getElementById("info1").style.visibility = "visible";
+document.getElementById("closeinfo1").style.opacity = "100%";
+}
+function lessinfo1() {
+document.getElementById("part1img1").style.opacity = "100%";
+}
+function closeinfo1() {
+document.getElementById("info1").style.visibility = "hidden";
+document.getElementById("closeinfo1").style.opacity = "0%";
+}
+/*part 2*/
+function moreinfo2() {
+document.getElementById("part2img1").style.opacity = "0%";
+document.getElementById("info2").style.visibility = "visible";
+document.getElementById("closeinfo2").style.opacity = "100%";
+}
+function lessinfo2() {
+document.getElementById("part2img1").style.opacity = "100%";
+}
+function closeinfo2() {
+document.getElementById("info2").style.visibility = "hidden";
+document.getElementById("closeinfo2").style.opacity = "0%";
+}
+/*part 3*/
+function moreinfo3() {
+document.getElementById("part3img1").style.opacity = "0%";
+document.getElementById("info3").style.visibility = "visible";
+document.getElementById("closeinfo3").style.opacity = "100%";
+}
+function lessinfo3() {
+document.getElementById("part3img1").style.opacity = "100%";
+}
+function closeinfo3() {
+document.getElementById("info3").style.visibility = "hidden";
+document.getElementById("closeinfo3").style.opacity = "0%";
+}
+/*part 4*/
+function moreinfo4() {
+document.getElementById("info4").style.visibility = "visible";
+document.getElementById("closeinfo4").style.opacity = "100%";
+}
+function closeinfo4() {
+document.getElementById("info4").style.visibility = "hidden";
+document.getElementById("closeinfo4").style.opacity = "0%";
+}
+/*part 5*/
+function moreinfo5() {
+document.getElementById("info5").style.visibility = "visible";
+document.getElementById("closeinfo5").style.opacity = "100%";
+}
+function closeinfo5() {
+document.getElementById("info5").style.visibility = "hidden";
+document.getElementById("closeinfo5").style.opacity = "0%";
+}
+/*part 6*/
+function moreinfo6() {
+document.getElementById("info6").style.visibility = "visible";
+document.getElementById("closeinfo6").style.opacity = "100%";
+}
+function closeinfo6() {
+document.getElementById("info6").style.visibility = "hidden";
+document.getElementById("closeinfo6").style.opacity = "0%";
+}
+/*side bar*/
+function expandsidebar() {
+if (document.getElementById("sidebarinfo").style.visibility = "hidden") {
+    document.getElementById("sidebarinfo").style.visibility = "visible";
+    document.getElementById("sidebar").style.transform = "translate(-122px)";
+    document.getElementById("closesidebar").style.opacity = "100%";
+    document.getElementById("sidebar").innerHTML = ">";
+}
+}
+function closesidebar() {
+    document.getElementById("sidebarinfo").style.visibility = "hidden";
+    document.getElementById("sidebar").style.transform = "translate(0px)";
+    document.getElementById("closesidebar").style.opacity = "0%";
+    document.getElementById("sidebar").innerHTML = "<";
+}
+/*side bar links*/
+function gotoparagraph1() {
+var elmnt = document.getElementById("paragraph1");
+    elmnt.scrollIntoView();
+}
+function gotoparagraph2() {
+var elmnt = document.getElementById("paragraph2");
+    elmnt.scrollIntoView();
+}
+function gotoparagraph2h5() {
+var elmnt = document.getElementById("paragraph2subheading");
+    elmnt.scrollIntoView();
+}
+function gotoparagraph3() {
+var elmnt = document.getElementById("paragraph3");
+    elmnt.scrollIntoView();
+}
+</script>
+</head>
+<body>
+    <div class = "wrapper">
+        <!--the definition for the top bar-->
+        <div class = "top">
+        <img src="logo2.svg" alt="" class = "logo">
+        <pre style="float: right;">Call (04) 0220 4808            l         info@hornsbypetshelter.com.au</pre>
+        </div>
+        <!--the definition for the left side-->
+        <div class="leftside"></div>
+        <!--the definition for the right side-->
+        <div class="rightside"></div>
+        <!--the definition for the upper left side-->
+        <div class="upperleftside"></div>
+        <!--the definition for the upperright side-->
+        <div class="upperrightside"></div>
+        <!--the definition for the banner-->
+        <div class="banner" ></div>
+        <!--the definition for the second banner-->
+        <div class="banner2" ></div>
+        <!--the definition for the third banner-->
+        <div class="banner3" ></div>
+        <!--the definition for the header-->
+        <div id="header">
+            <h2>Cats for Adoption</h2>
+        </div>
+        <div class="pages">
+            <h1><a href ="http://127.0.0.1:5500/hornsbypetshelteradopt.html">Home</a></h1>
+            <h1><a href ="http://127.0.0.1:5500/adoptacat.html">Cats</a></h1>
+            <h1><a href ="http://127.0.0.1:5500/adoptadog.html">Dogs</a></h1>
+            <h1>Shop</h1>
+            <h1>About Us</h1>
+            </div>
+        <div class = "caption">
+        <p>So you're interested in owning a cat? While the cat vs dog debate continues to be argued, there's no question that cats are easier to take care of, are less of a nuisance, are less expensive, and overall adorable. The comedians of the pet world, the playful and curious antics of the cats will always have you laughing. Even simple things such as a cardboard box or scrunched up paper ball can provide hours of amusement. If you are out all day at work or live in an apartment, cats could be perfect for you as they can look after themselves and are perfectly suited to an apartment or unit. Many of the cats that are available for adoption at Hornsby Pet Shelter, will have to be indoor pets for the rest of their lives due to FIV or cat flu. There are also meticulously clean and spend a lot of time grooming themselves and figure out how to use a litter box fairly quickly.</p>
+        <p>Despite the misunderstanding that all cats are aloof and unaffectionate, all cats have different personalities and traits. Each individual is full of character. There are cats suited to the hustle of family life and also those who prefer a peaceful life.It isn't only dogs that can be trained as well. Cats are very intelligent and through positive reinforcement training and some tasty treats they can be taught to come, sit, play fetch and other things.</p>
+        <img src="Underline.svg" class = "underline">    
+        </div>
+        <div id = "paragraph1">
+        <h1>Meet the cats</h1>
+        <p>Find your fur-ever friend today! All of the cats that are available have been micro-chipped, desexed, are up to date with vaccinations, worming and flea treatments and have undergone a behavior assessment. These adorable fluffy animals are now ready to find a new home! All of them lost their previous home through no fault of their own and are just as deserving of a new home as any other cat. Hover over the images for more information.</p>
+        </div>
+            <!--cat 1-->
+            <div class="part1" >
+            <h1>Chickpea</h1>
+            <h2>Pet ID: 506895</h2>
+            <table class = "table1">
+                <tr>
+                    <th>Breed</th>
+                    <th>Domestic Short Hair</th>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>2 years</td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>Colour</td>
+                    <td>Tabby/white</td>
+                </tr>
+                <tr>
+                    <td>Desexed</td>
+                    <td>✓ </td>
+                </tr>
+              </table>
+            <img src="part1(2).jpg" class = "part1img2">
+            </div>
+            <!--cat 2-->
+            <div class="part2" >
+            <h1>Grayson</h1>
+            <h2>Pet ID: 498847</h2>
+            <table class = "table2">
+                <tr>
+                    <th>Breed</th>
+                    <th>Domestic Medium Hair</th>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>3 years 6 months</td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>Colour</td>
+                    <td>Ginger/tabby</td>
+                </tr>
+                <tr>
+                    <td>Desexed</td>
+                    <td>✓ </td>
+                </tr>
+              </table>
+            <img src="part2(2).jpg" class = "part2img2">
+            </div>
+            <!--cat 3-->
+            <div class="part3" >
+                <h1>Lev</h1>
+                <h2>Pet ID: 481146</h2>
+                <table class = "table3">
+                    <tr>
+                        <th>Breed</th>
+                        <th>Domestic Short Hair</th>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>1 year 9 months</td>
+                    </tr>
+                    <tr>
+                        <td>Sex</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Size</td>
+                        <td>Small</td>
+                    </tr>
+                    <tr>
+                        <td>Colour</td>
+                        <td>Tabby/white</td>
+                    </tr>
+                    <tr>
+                        <td>Desexed</td>
+                        <td>✓ </td>
+                    </tr>
+                  </table>
+            <img src="part3(2).jpeg" class = "part3img2">
+            </div>
+            <!--cat 4-->
+            <div class="part4" >
+                <h1>Allie</h1>
+                <h2>Pet ID: 504625</h2>
+                <table class = "table4">
+                    <tr>
+                        <th>Breed</th>
+                        <th>Domestic Short Hair</th>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>2 years 5 months</td>
+                    </tr>
+                    <tr>
+                        <td>Sex</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td>Size</td>
+                        <td>Medium</td>
+                    </tr>
+                    <tr>
+                        <td>Colour</td>
+                        <td>Tabby</td>
+                    </tr>
+                    <tr>
+                        <td>Desexed</td>
+                        <td>✓ </td>
+                    </tr>
+                  </table>
+            </div>
+            <!--cat 5-->
+            <div class="part5" >
+            <h1>Bella</h1>
+            <h2>Pet ID: 510001</h2>
+            <table class = "table5">
+                <tr>
+                    <th>Breed</th>
+                    <th>Domestic Short Hair</th>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>6 years</td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>Colour</td>
+                    <td>Grey Tabby</td>
+                </tr>
+                <tr>
+                    <td>Desexed</td>
+                    <td>✓ </td>
+                </tr>
+              </table>
+            </div>
+            <!--cat 6-->
+            <div class="part6" >
+                <h1>Wellington</h1>
+            <h2>Pet ID: 487181</h2>
+            <table class = "table6">
+            <tr>
+                <th>Breed</th>
+                <th>Domestic Short Hair</th>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>5 years</td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Size</td>
+                <td>Large</td>
+            </tr>
+            <tr>
+                <td>Colour</td>
+                <td>Grey Tabby/white</td>
+            </tr>
+            <tr>
+                <td>Desexed</td>
+                <td>✓ </td>
+            </tr>
+              </table>
+            </div>
+        <!--second paragraph-->
+        <div id = "paragraph2">
+        <h1>How to Look After a Cat</h1>
+        <p>There are many steps that you have to take to ensure that your cat has a comfortable environment and is cared for properly. These requirements are:</p>
+        <ul class="list1">
+            <li>Provide plenty of human companionship</li>
+            <li>Provide regular, suitable meals with a constant supply of fresh water</li>
+            <li>Provide a clean and comfortable bed</li>
+            <li>Provide the cat with outdoor access or be prepared to empty and clean a litter tray on a daily basis</li>
+            <li>Provide it with a stimulating and safe environment</li>
+            <li>Groom it regularly</li>
+            <li>Vaccinate against the major feline diseases regularly</li>
+            <li>Worm regularly and provide treatment for fleas</li>
+            <li>Take the cat to the vet when it shows any sign of illness</li>
+          </ul>
+        <h2>All of the different conditions listed are required to make sure that your cat can live comfortably, healthily and safely. Though they are applicable to the majority of cats, they will differ between individuals and we highly recommend contacting the Hornsby Pet Shelter team members to ask for advice. Some of these specifications are quite broad, for example, how regularly cats should be groomed. It is recommended to groom short haired cats around once a week while medium or long haired cats should be groomed daily. This is one of the benefits of short-haired cats. Other conditions such as diet, creating a stimulating environment and when to take it to the vet are more complicated. While they can't be briefly summarized, some of the following questions adress how to take care of pets and what to provide for them.</h2>
+        <div id = "paragraph2subheading"><h5>Commonly asked questions</h5></div>
+        <div class = "section1"> 
+            <h3>How much care and affection do cats need?</h3>
+            <h4>Cats require much more attention than the average person may expect. Cats, while often independent creatures, still crave attention and love,
+                 in addition to their obvious nutritional needs of fresh water, clean litter, and food. If you decide to bring a cat or kitten into your home, 
+                 you should be prepared to spend at least 20 minutes a day giving your cat loving one-on-one attention. Obviously, each cat is going to have its own
+                unique personality, and some may prefer to spend hours alone, while others may have a stronger desire to play and spend even more time with its 
+                owners. This can also depend on the breed of the cat. 
+            </h4>
+            <h4>
+                Cats will often show you signs that they are not getting the love and attention they need
+                in several different ways. This could include pawing at your legs or arms or constantly coming to you. When cats continue to not receive enough 
+               attention they could resort to more negative activities such as scratching furniture. If you do not have enough time or do not want to spend time with
+               your cat it may be a better idea to adopt a quieter and less needy cat. Often older cats do not require as much attention.
+            </h4>
+            <h3>What should I feed my cat?</h3> 
+            <h4>Cats have a number of special dietary requirements that do not apply to other animals because they have adapted to become
+                strict carnivores and do not have the metabolic pathways to digest and convert nutrients in plants. Cats can be fed many 
+                different types of meat such as cooked beef, chicken, turkey, and small amounts of lean deli meats, though raw or spoiled
+                meat could make your cat sick. It is actually extremely difficult to provide a well-balanced diet for cats with home-prepared foods.  Feeding a good quality commercial cat food (tins, sachets or dry food) is therefore preferable, at least as the major part of the diet. One of the most important things to look out for when choosing a food to feed your cat is that it is a ‘complete’ food (this will be stated on the packaging). This means that it has been developed to meet all of your cat’s nutritional needs. In addition, cats should never be fed dog food.
+            </h4>
+            <h4>
+                As for the frequency of feeding, naturally cats hunted prey that was small in size, such as mice,
+                and would have to eat multiple portions a day. If cats are restricted to eating two or three big meals a day for the convenience of their 
+                owners it is behaviourally and physiologically unnatural for them. If food is unrestricted and available at all times it can cause them to 
+                overeat and become obese. If food is left in the same location it can also cause anxiety and frustration in cats as mental and physical 
+                exertion isn't needed. The best way to feed cats is a rotation of around 5 portions a day and using puzzle or timed feeders. Puzzle feeders 
+                are objects that must be manipulated by the cat to release food. This increases the physical exertion needed from the cat. 
+            </h4>
+            <h4>Moden conditions have made it more difficult for cats to be fed a healthy amount of food. A cat’s ability to regulate their 
+                calorie intake is often interfered with in a number of ways. Modern pet food is usually developed to be very tasty, which may lead 
+                to excessive food intake. Commercial cat food is also very easy to eat as it is presented in small chunks or bite-sized biscuits,
+                 meaning that cats can eat the food very quickly, which may result in overeating. Cats without sufficient enrichment or outdoor access 
+                 may show increased attention to food through boredom. Competition for food due to the presence of other cats may lead to overeating.
+                For cats who only need to walk to their bowl for food, it is more likely that the calories they take in through eating will outweigh 
+                the calories they use up through exercise, resulting in weight gain. Additionally, most pet cats are neutered, and while this has many
+                 health and welfare benefits for the cat and reduces the number of unwanted cats, it does interfere with their natural ability to 
+                 regulate calorie intake and they will tend to consume more than is required. 
+            </h4>
+            <h4> To prevent overeating, try to control your cats food intake as much as possible. Make sure that you follow the guidelines on
+                food packaging for how much your cat should eat and match this to their size. Dry food is very energy dense, so the correct amount
+                 may look small, but provides all the calories a cat needs to stay fit and healthy. Many owners can't tell what a 'healthy' weight or
+                 size for their cat is so it is encouraged that they ask their vet to determine their body condition score regularly.
+            </h4>
+            <h3>Can I keep a cat on vegetarian food?</h3>
+            <h4>Are you a vegetarian and want your cat to be one too? If you want a vegetarian pet that won’t challenge your beliefs, 
+                then it would be better to get a rabbit – a cat is a carnivore first and foremost, and looks and behaves as it does 
+                for just this reason.  A cat is what is called an obligate carnivore – it has an absolute need for some of the nutrients 
+                found in meat and all of its senses of smell and taste are atuned to being a carnivore – it would be unfair and very
+                 dangerous to health to even attempt keeping it as a vegetarian.</h4>
+            <h3>Is there a type of cat that doesn't hunt?</h3>
+            <h4>You may have a great aversion to your cat hunting outside. Perhaps you are a bird lover, or are simply unable to deal with small carcases on the floor. 
+                Hunting is normal behaviour for cats. Keeping a cat indoors may prevent it actually killing anything, but it will still need an 
+                outlet for this, its most instinctive behaviour, and not all cats will be happy with an indoor lifestyle.
+                 Likewise, if you’re simply getting a cat to keep vermin at bay, you won’t want to find yourself with one which 
+                 isn’t especially interested in huntingand prefers being a couch potato! Older cats are likely to hunt much less 
+                 than younger ones and some cats don’t bother at all. The only definite way to know is to ask the trainers or observe the cat yourself</h4>
+            <h3>Can I have a cat if I have a dog?</h3>
+            <h4>If you have other pets there should not be a problem in getting a cat, but you just need to make sure that you take everything into consideration.  If you have a dog you just need to make sure that you make introductions carefully 
+                so that your new cat is not chased or injured while the dog gets used to it. Not all dog types make good companions for cats and not
+                all cats are good with dogs. Wellington who is currently available for adoption should be fine with dogs as long as careful introductions are made. 
+            </h4>
+                </div>
+        <!--vertical line-->
+        <div class="vl"></div>
+        <div class = "section2">
+            <h6>What equipment should be provided for a cat?</h3> 
+                <ol class="list3">
+                    <li>Kitty litter: this is a necessity for owning a cat. There’s a wide range of options available. 
+                        A litter box can be as simple as a plain plastic tray. Whatever works best for your budget and preferences will be fine.
+                    </li>
+                    <li>Bedding: cats like to have a place to call their own for sleeping. When you’re shopping for a bed for your cat, you’ll find yourself faced with a huge array of choices. Whatever you buy should be soft and warm. 
+                        It might be as simple as a pillow, but lots of cats show a preference for nest-type beds (usually shaped somewhat like a donut).</li>
+                    <li>Scratching post: It is a part of cats nature to scratch, and this is something that can't be trained out of them as it is instinctive.
+                        To stop cats from damaging your property, a scratching post is needed. They should be sturdy and stable and as tall as your cats reach when it is standing on its hind legs.
+                    </li>
+                    <li>Food and water bowls: stainless steel bowls are normally prefered over plastic, as are glass and ceramic. Plastic bowls 
+                        are the most likely to be hosts for harmful bacteria and to retain repellent smells. Puzzle or timed feeders are also a 
+                        great option to give your cat food. 
+                    </li>
+                    <li>Grooming equipment: at a minimum you want a wire brush, a metal-tooth comb (that doesn't have sharp teeth that could injure the cat) and a slicker brush. This is particularly
+                        important for long or medium haired cats. A deshedder tool is also useful. 
+                    </li>
+                    <li>Coller: it is a good idea to own a collar for your cat. This should have break away features 
+                        to prevent your cat from being stuck if the collar becomes snagged on anything. WWith an identification tag on it this 
+                        will allow people to identify and return your cat if it becomes lost. If the cat has a habit of hunting animals that you
+                        wish to control, you can also attach a bell to the collar which will warn other animals when it gets close. 
+                    </li>
+                    <li>Cat carrier: this is the only safe way to transport your cat. Even if you aren't planning any trips longer than to the 
+                        vet, having a loose cat in the car is dangerous for both passengers and the animal. The carrier should be well ventilated and sturdy. 
+                    </li>
+                    <li>Toys: cats are playful creatures and toys are very important to keeping them content and healthy. There are a wide range of
+                        different cat toys. You should make sure that the cat can't get any small pieces off the toy and anything smaller than a ping pong 
+                        could potentially be a choking hazard. 
+                    </li>
+                </ol>
+            <h6>Should I get an adult cat or a kitten?</h3>
+            <h4>A kitten gives you the opportunity to take on an animal right from the beginning and treat it and care for it so that it gets the best
+                 start in life. You will also be able to get some idea of its character. However, kittens require a lot of attention and some 
+                 forethought to prevent them from getting into trouble. If you leave them alone you have to make sure they will be safe while 
+                 you are away. While kittens have a huge ‘cute’ factor, it is worth remembering that they don’t stay kittens for very long –
+                  just six months out of a potential 14 years or more. The age of the kitten or cat you choose to adopt really depends on what you 
+                are looking for!</h4>
+            <h6>What are the different breeds of cats?</h3>
+            <h4>There are many different breeds of cats, though almost all of the cats at shelters are 'moggies' or domestic short or long haired cats.
+               These are a mixture of lots of different breeds of cats and often their parentage is unknown. If you are looking for a pedigree cat
+               it would be better to go to a breeder.   
+            </h4>
+            <h6>How many cats can I have together?</h3>
+            <h4>When having multiple cats together, there may be a great deal of tension between them that owners just don’t pick up on. 
+                Cats originate from a largely solitary species and although they can live in groups these are usually related individuals 
+                or are self-selected so that cats are not sharing space with cats that they don’t get on with. Cats may start to spray or 
+                soil in the house because they’re trying to deal with a situation where they feel under stress because of other cats,
+                and this might be all that owners notice. If you have two cats living together very successfully then think very carefully before you add more. 
+                If you have three cats living well together then thank your stars and quit while you’re ahead!
+            </h4>
+            <h4>
+                The trouble with adding more is that it might not be just the relationship between the resident cats
+                and the new one that causes problems; it may upset the whole equilibrium of the resident cats’ relationship 
+                and introduce difficulties even between the original cats as tension and stress levels rise. The best way to
+                have two compatible cats is to choose siblings. These will have grown up together, and this usually bodes well 
+                for a good future relationship (although never guaranteed!).
+            </h4>
+                <h6>Can I have a cat with a baby or young children?</h3>
+                <h4>For the most part, there is no reason not to have a cat or kitten if you have children.  It is up to parents to teach
+                    their children how to approach, stroke and handle cats and to treat them kindly.  Many children have fantastic relationships 
+                    with theircats and learn about respecting other creatures. Perhaps taking on a new kitten when you have a baby or a toddler might be a lot to handle at 
+                    once, so you may choose a older cat. There are some cases with shelter cats in which they are not suited to living with young
+                    children. If they are more suited to living in a home without young children it will be mentioned in their information. </h4>
+        </div>
+    </div>
+        <!--third paragraph-->
+        <div id = "paragraph3">
+        <h1>Adoption Process</h1>
+        <p>Hornsby Pet Shelter is dedicated to finding loving homes for all of our animals. To protect our staff as well as the wider community of NSW
+            we've had to make some changes to our adoption process. If you are interested in adopting a specific animal from our shelter, please fill out the linked application form below
+            and our team will be in touch to begin the adoption process. If you are approved for adoption, you will be allocated an appointment to meet your
+            potential new pet and to process the adoption. There is no fee for this service. Despite these changes, we assure you that our standards remain the same - 
+            finding the perfect forever home for our animals has been, and will always be, our top priority. We appreciate your understanding and patience during this time.
+            With your help and support, we can ensure that all our animals continue to experience the love and care that they deserve. 
+        </p>
+        </div>
+        <div class="footer" >
+            <ul class="list">
+                <li>Privacy policy </li>
+                <li>Terms & Conditions </li>
+                <li>About Us</li>
+                <li>Cookies policy</li>
+              </ul>
+        <p> 132 Weston Street, Brunswick East VIC 3057</p>
+        <p>Office Phone: +61 (3) 9329-9587</p>
+        <p>Fax: +61 (3) 9329-9558</p>
+        <div id ="copyright">© 2021 Lia Wigglesworth. All rights reserved</div>
+    </div>
+        <!--info for part 1-->
+        <div id="closeinfo1" onclick="closeinfo1()">X</div>
+        <img src="part1(1).jpg" id = "part1img1" onmouseover="moreinfo1()" onmouseout="lessinfo1()">
+        <div id = info1>
+            <p>
+                My name is Chickpea and I came to the shelter after I got lost from my old home. Even though people tried really really hard to find my home, sadly I didn’t have identification... or maybe my old owners just didn’t want me back.
+                So now I am looking for someone to come along who will love me enough to always come looking for me. I am a lovely cat who will always come show you how much I love you.
+                I have recovered from cat flu. While I have recovered, I will always have it in my system. If I go home with other felines it would be best to keep us seperated for the first two weeks so I don’t risk spreading it to them. I will need to be kept an indoor only cat for the rest of my life.
+                If you think that you’re the human of my dreams then have a chat to the staff about adopting me.
+            </p>
+        </div>
+        <!--info for part 2-->
+        <div id="closeinfo2" onclick="closeinfo2()">X</div>
+        <img src="part2(1).jpg" id = "part2img1" onmouseover="moreinfo2()" onmouseout="lessinfo2()">
+        <div id = info2>
+            <p>
+                Hi my name is Grayson! I am a lovely big guy that is looking for his new home to snuggle up and enjoy the day with someone.
+                I am super affectionate but will need to be an only cat as I am FIV positive. FIV is a viral infection that affects cats and can cause me to have a weaker immune system compared to non-FIV positive cats. The staff at the shelter can give you more information on that and I would love to meet you!
+            </p>
+        </div>
+        <!--info for part 3-->
+        <div id="closeinfo3" onclick="closeinfo3()">X</div>
+        <img src="part3(1).jpeg" id = "part3img1" onmouseover="moreinfo3()" onmouseout="lessinfo3()">
+        <div id = info3>
+            <pre>
+    Hey furrriends! My name is Lev
+    and I am looking for my furever 
+    home and hoping its with you 🙂
+    I can be a bit shy at first, but 
+    once I get to know you you will 
+    see how sweet I can be. To help 
+    me settle into my new forever 
+    home there is a few things that 
+    will help me feel comfortable:
+        – A comfy bed and accessible 
+          litter tray
+        – lots of hidey holes and 
+          nooks for me to explore
+        – A scratching post to help 
+          me keep those nails trim, 
+          it could always be my 
+          sunbathing spot too
+        – A healthy and nutritional diet 
+          and regular vet checks to keep 
+          me fit and happy.
+        – Keep me up to date with my 
+          flea and worming treatments 
+          and yearly injections.
+    If you think I’m the one for you 
+    please don’t hesitate to come meet 
+    me at the shelter, I’ll be waiting
+            </pre>
+        </div>
+        <!--info for part 4-->
+        <img src="part4.jpg" id = "part4img1" onmouseover="moreinfo4()">
+        <div id="closeinfo4" onclick="closeinfo4()">X</div>
+        <div id = info4>
+            <p>
+            Hello wonderful human! My name is Allie and its a pleasure to meet you, let me tell you a little bit about myself..I love to roll around and play and food is the way to my heart! Give me some yummy treats and a spot to lay in the sun and I will be one happy cat! I have recovered from cat flu and therefore it will be best I stay an indoor cat, Lots of cuddles, toys and your company is all I need and I can show you my amazing purr-sonality.
+            </p>
+        </div>
+        <!--info for part 5-->
+        <img src="part6.jpg" id = "part5img1" onmouseover="moreinfo5()">
+        <div id="closeinfo5" onclick="closeinfo5()">X</div>
+        <div id = info5>
+            <p>
+                Hi there! My name is Bella and I’m looking for my forever home. I am an older girl who doesn’t mind being alone. I enjoy the peace and quiet actually. I hope my new home will be quiet and predictable, I think I need a slower pace these days.. I am an affectionate cat once I come around, but I can be unsure of lots of things so a family with grown up children or a child free home would be ideal for me. If you think you might be the puurfect home for me than give the shelter a call and organise to come meet me!
+            </p>
+        </div>
+        <!--info for part 5-->
+        <img src="part5.jpg" id = "part6img1" onmouseover="moreinfo6()">
+        <div id="closeinfo6" onclick="closeinfo6()">X</div>
+        <div id = info6>
+            <p>
+                Wellington is a big boy, who found himself homeless through no fault of his own. He wandered about on the streets for a while until a kind soul brought him to RSPCA. Wellington has been in a few fights whilst fending for himself, and this has resulted in him testing positive for FIV. Wellington will still be able to live a long and healthy life but he will need to be an indoors only cat from now on, and preferably in a household with no other cats. Despite his size, Wellington is a very affectionate boy and adores human company. He should be fine with dogs, as long as introductions are careful.
+                Welly is desexed, microchipped, vaccinated and vet checked. His adoption fee is $200 and he is ready to meet his new family. He has so much love to give!            
+            </p>
+        </div>
+        <!--sidebar-->
+        <div id = "sidebar"  onclick="expandsidebar()"><</div>
+        <div id="closesidebar" onclick="closesidebar()">X</div>
+        <div id = "sidebarinfo">
+        <div id = "nav">Index</div>
+        <div id = sidebarinfo1>
+        <button onclick="gotoparagraph1()">Meet the cats</button>
+        </div>
+
+        <div id = sidebarinfo2>
+        <button onclick="gotoparagraph2()">How to look after a cat</button>
+        </div>
+        <div id = sidebarinfo3>
+        <button onclick="gotoparagraph2h5()">Common questions</button>
+        </div>
+        <div id = sidebarinfo4>
+        <button onclick="gotoparagraph3()">Adoption process</button>
+        </div>    
+</body>
+</html>

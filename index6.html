@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gainsboro;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin :0;
+        }
+
+        .wrapper {
+            display : grid;
+            grid-template-columns : 20vw 60vw 20vw;
+            grid-template-rows: 15vh 75vh 10vh;
+            grid-template-areas: "banner banner banner" "nav body side" "footer footer footer";
+        }
+        .myHeader {
+            grid-area : banner;
+            background-color: rgb(189, 181, 223);
+            display: grid;
+            place-content: center;
+        }
+        #kittyImg {
+        position: absolute;
+        left: 100px;
+        display: none;
+        }
+        #catImg {
+        position: absolute;
+        left: 10px;
+        height: 90px;
+        }
+        #catImg:hover {
+        transform: translate(585px,285px)rotate(720deg)scale(5.2);
+        transition: 2s;
+        }
+
+        .myInd {
+            grid-area : nav;
+            background-color: rgb(218, 233, 196);
+            display: grid;
+            text-align: center;             
+        }
+        .myInfo {
+            grid-area : side;
+            background-color: lightgrey;
+            text-align: center;
+            
+        }
+        .myBod {
+            grid-area : body;
+            background-color: rgb(217, 221, 221);
+            overflow : auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .myBod h2 {
+        text-align: center;
+        }
+        .myBod img {
+           width:200px;
+           float : left;
+           padding: 20px;
+        }
+        .footer {
+            grid-area : footer;
+            background-color: black;
+            color : white;
+            display : grid;
+            place-items: center;
+        }
+        #title {
+                color: darkslategrey;
+            }
+        @media (max-width :700px)
+        {
+            .wrapper {
+            display : grid;
+            grid-template-columns : 100vw;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: "banner"
+                                 "nav"
+                                 "body" "side" "footer";
+            }
+            .myBod {
+                background-color: white;
+            }
+
+            .myInd {
+                display : flex;
+                justify-content: space-evenly;
+            }
+
+            .myInd p {
+                background-color: lightgrey;
+                outline-style: solid;
+                padding : 10px;
+            }
+        }
+    </style>
+    <script>
+    function clickDogbutton () {
+    if (document.getElementById("title").innerHTML == "Animals are cute") {
+        document.getElementById("title").innerHTML = "Dogs are cute"
+    } else {
+        document.getElementById("title").innerHTML = "Animals are cute"
+    }
+}
+    function clickCatbutton () {
+        document.getElementById("title").innerHTML = "Cats are cute";
+    }
+    function clickCats () {
+        document.getElementById("title").innerHTML = "Cats are superior";
+    }
+    function clickIndex () {
+        document.getElementById("title").innerHTML = "Animals are cute";
+    }
+    function clickCatss() {
+        document.getElementById("title").innerHTML = "Cats are the best";
+    }
+    function displaykitten(){
+    document.getElementById("kittyImg").style.display = "inline";
+    }
+    </script>
+</head>
+<body>
+    <div class=wrapper>
+        <!-- The definition for the page heading -->
+        <div class="myHeader">
+            <h1 id="title">Cats are the best</h1>
+             <img src="more cat.jpg" alt=""width=160px; id = catImg onClick = "displaykitten">
+             <img src="cat.png" alt=""width=160px; id = kittyImg>
+        </div>
+    
+        <!-- Index Panel -->
+        <div class="myInd">
+            <h2 onclick = "clickIndex()">Index</h2>
+            <p onclick = "clickDogbutton()">Dogs</p>
+            <p onclick = "clickCatbutton()">Cat</p>
+            <p onclick = "clickCats()">Cats</p>
+            <p onclick = "clickCatss()">Catss</p>
+        </div>
+    
+        <!-- Information panel -->
+        <div class="myInfo">
+            <h2>Info</h2> 
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo veritatis distinctio facere 
+        </div>
+    
+        <!-- The body for the page -->
+        <div class="myBod">
+            <h2>OurBody</h2>
+            <img src="more cat.jpg" alt="">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, corrupti suscipit numquam ratione consectetur sint itaque obcaecati saepe incidunt, minima similique consequatur vitae magni illum delectus, provident totam recusandae? Repudiandae, repellendus nam quod soluta dolor neque quam id, quas sequi exercitationem beatae, iure harum accusamus laboriosam vitae officiis totam blanditiis ab saepe facere! Deleniti nesciunt id labore vitae veritatis quidem officiis incidunt molestiae aliquid facilis, hic aperiam omnis repellendus saepe fugiat dolorum rerum asperiores! Modi illo hic nemo porro vel, soluta aut recusandae? Numquam cupiditate excepturi odio iusto asperiores voluptatum nesciunt ab, laudantium eligendi minima illum corrupti eaque facere mollitia delectus! Distinctio quo rem similique accusantium. Deleniti unde vero at perspiciatis molestias maxime sunt? Cum quidem, autem, atque porro architecto incidunt beatae quaerat nesciunt exercitationem perspiciatis labore aut accusamus reiciendis placeat, earum iste. Nulla iure facere labore perferendis, excepturi blanditiis ratione in, sapiente nemo repudiandae consequuntur? Debitis incidunt voluptate error odit ut! Quam maxime libero, ullam laborum iusto qui quae optio eius, reiciendis natus impedit. At, doloremque provident! Aliquid ullam voluptatem magni aut ipsa veritatis laudantium eligendi sapiente? Vero sequi expedita quas rem dolorem fuga alias laboriosam nostrum, provident quis ad officia, temporibus officiis, ea tempora molestias assumenda corrupti. Temporibus accusamus, odio aspernatur, maxime ducimus obcaecati nam, incidunt doloribus aliquam earum sit sapiente! Ratione et soluta eaque consectetur, accusamus, accusantium quam quis exercitationem omnis, ut aut perspiciatis in ea expedita ullam laboriosam dolorum veniam. Blanditiis provident distinctio cum velit voluptates consequatur minima repudiandae dignissimos a assumenda saepe deleniti impedit quis obcaecati, sequi ipsum error nostrum? Fuga quidem praesentium quos iste. Totam, numquam necessitatibus eos veniam minus nisi illo itaque. Earum iusto nemo, delectus amet et quae natus quia veritatis, expedita architecto maiores. Quis, cumque ratione. Non fuga magnam delectus quaerat dicta, nemo voluptate, sed suscipit nostrum facere autem libero tempora.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tempora.
+        </div>
+        <div class="footer">Copyright L.Wigglesworth 2021</div>
+    </div>
+
+</body>
+</html>

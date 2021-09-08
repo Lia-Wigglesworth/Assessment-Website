@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background-color: thistle;
+        font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .Wrapper {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 15% 50% 30% 5%;
+        grid-template-areas: "banner banner banner"
+                            "nav body side"
+                            "image body image2"
+                            "footer footer footer";
+
+        }
+        .myHeader {
+        grid-area: banner;
+        background-color: grey;
+        display: grid;
+        place-items: center;
+        }
+        .myImg img{
+        grid-area: image;
+        width: 270px;
+        }
+        .myImg2 img{
+        grid-area: image2;
+        width: 270px;
+        }
+        .myHeader h1 {
+        background-color: dimgray;
+        text-align: center;
+        color: darksalmon;
+        }
+        .myInd {
+        grid-area: nav;
+        background-color: lightcyan;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        }
+        .myInd p {
+        background-color: lightseagreen;
+        height: 5vh;
+        text-align: center;
+        outline-style: solid;
+        outline-color: grey;
+        padding: 10px;
+        }
+        .myInfo {
+        grid-area: side;
+        background-color: dimgrey;
+        text-align: center;
+        color: lightgray;
+        padding: 5px;
+        }
+        .myBod {
+        grid-area: body;
+        background-color: lightgrey;
+        overflow: auto;
+        padding: 10px;
+        }
+        .myBod h2 {
+        background-color: rgb(247, 203, 186);
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        }
+        .myBod img {
+        width: 100px;
+        float: left;
+        padding: 10px;
+        }
+        .footer {
+        grid-area: footer;
+        background-color: black;
+        color: white;
+        display: grid;
+        place-items: center;
+        }
+    @media(max-width: 700px)
+    {
+        .Wrapper {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "banner"
+                              "nav"
+                              "body" "side" "footer";
+        }
+        .myBod{
+            background-color: rgb(241, 241, 241);
+        }
+    }
+    </style>
+</head>
+<body>
+<div class= "Wrapper">
+        <div class="myHeader"><h1>Cats are superior</h1></div>
+    
+        <div class="myInd">
+            <h2>Index</h2>
+            <p>option 1</p>
+            <p>option 2</p>
+            <p>option 3</p>
+            <p>option 4</p>
+        </div>
+    
+        <div class="myInfo">
+            <h2>Info</h2> 
+            This text is most definitely about cats Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo veritatis distinctio facere minus error eligendi culpa eveniet quae molestias corporis neque totam ab nisi odit ea omnis nemo impedit accusam
+        </div>
+    
+        <div class="myBod">
+            <h2>OurBody</h2>
+            <img src="hornsby-girl-s-high-school-nsw.png" alt="">
+            Catsssss Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, corrupti suscipit numquam ratione consectetur sint itaque obcaecati saepe incidunt, minima similique consequatur vitae magni illum delectus, provident totam recusandae? Repudiandae, repellendus nam quod soluta dolor neque quam id, quas sequi exercitationem beatae, iure harum accusamus laboriosam vitae officiis totam blanditiis ab saepe facere! Deleniti nesciunt id labore vitae veritatis quidem officiis incidunt molestiae aliquid facilis, hic aperiam omnis repellendus saepe fugiat dolorum rerum asperiores! Modi illo hic nemo porro vel, soluta aut recusandae? Numquam cupiditate excepturi odio iusto asperiores voluptatum nesciunt ab, laudantium eligendi minima illum corrupti eaque facere mollitia delectus! Distinctio quo rem similique accusantium. Deleniti unde vero at perspiciatis molestias maxime sunt? Cum quidem, autem, atque porro architecto incidunt beatae quaerat nesciunt exercitationem perspiciatis labore aut accusamus reiciendis placeat, earum iste. Nulla iure facere labore perferendis, excepturi blanditiis ratione in, sapiente nemo repudiandae consequuntur? Debitis incidunt voluptate error odit ut! Quam maxime libero, ullam laborum iusto qui quae optio eius, reiciendis natus impedit. At, doloremque provident! Aliquid ullam voluptatem magni aut ipsa veritatis laudantium eligendi sapiente? Vero sequi expedita quas rem dolorem fuga alias laboriosam nostrum, provident quis ad officia, temporibus officiis, ea tempora molestias assumenda corrupti. Temporibus accusamus, odio aspernatur, maxime ducimus obcaecati nam, incidunt doloribus aliquam earum sit sapiente! Ratione et soluta eaque consectetur, accusamus, accusantium quam quis exercitationem omnis, ut aut perspiciatis in ea expedita ullam laboriosam dolorum veniam. Blanditiis provident distinctio cum velit voluptates consequatur minima repudiandae dignissimos a assumenda saepe deleniti impedit quis obcaecati, sequi ipsum error nostrum? Fuga quidem praesentium quos iste. Totam, numquam necessitatibus eos veniam minus nisi illo itaque. Earum iusto nemo, delectus amet et quae natus quia veritatis, expedita architecto maiores. Quis, cumque ratione. Non fuga magnam delectus quaerat dicta, nemo voluptate, sed suscipit nostrum facere autem libero tempora.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tempora.
+        </div>
+
+        <div class ="myImg">
+        <img src="cat.png" alt="">
+        </div>
+
+        <div class = "myImg2">
+        <img src="cat.png" alt="">
+        </div>
+
+
+        <div class = "footer"> Copyright LW 2021</div>
+</div>
+</body>
+</html>
