@@ -1,0 +1,1 @@
+(self.webpackChunkep_web=self.webpackChunkep_web||[]).push([["../libs/wp/component-inherit/component-inherit"],{"./node_modules/component-inherit/index.js":function(e){e.exports=function(e,o){var fn=function(){};fn.prototype=o.prototype,e.prototype=new fn,e.prototype.constructor=e}}}]);

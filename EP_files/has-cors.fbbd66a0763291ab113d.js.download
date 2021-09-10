@@ -1,0 +1,1 @@
+(self.webpackChunkep_web=self.webpackChunkep_web||[]).push([["../libs/wp/has-cors/has-cors"],{"./node_modules/has-cors/index.js":function(e){try{e.exports="undefined"!=typeof XMLHttpRequest&&"withCredentials"in new XMLHttpRequest}catch(s){e.exports=!1}}}]);
