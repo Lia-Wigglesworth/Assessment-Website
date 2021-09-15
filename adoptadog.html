@@ -28,7 +28,7 @@
     .wrapper {
     display: grid;
     grid-template-columns: 2% 96% 2%;
-    grid-template-rows: 3% 14% 0.3% 3% 0.3% 1.3% 15% 18% 55% 8% 8% 8% 5%;
+    grid-template-rows: 3.5% 15.5% 0.4% 4% 0.4% 1.6% 20% 24% 55% 8% 8% 8% 5%;
     grid-template-areas: "top top top" 
                         "upperlside banner upperrside"
                         "banner2 banner2 banner2"
@@ -43,6 +43,25 @@
                         "lside caption2 rside"
                         "footer footer footer"
        }
+    /*the scrollbar
+    ::-webkit-scrollbar {
+    width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    }
+    ::-webkit-scrollbar-thumb {
+    background: #888; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    }
+    ::-webkit-scrollbar-button {
+    background-image: url('upwardarrow.png');
+    background-size:contain;
+    }
+    */
+    
     .top{
     grid-area: top;
     background-color: var(--darkgrey);
@@ -175,6 +194,7 @@
     padding-left: 60px;
     padding-right: 60px;
     }
+    /*PARAGRAPH 1*/
     .paragraph1 {
     grid-area: paragraph1;
     background-color: var(--secondaryCol);
@@ -234,7 +254,85 @@
     list-style-type: circle;
     padding: 0 140px;
     }
-    /*paragraph 2 constants*/
+    /*PARAGRAPH 2*/
+    /*the different sections in paragraph two with only the first one visible*/
+    #part1 {
+    display: block;
+    }
+    #part2 {
+    display: none;
+    }
+    #part3 {
+    display: none;
+    }
+    /*the three buttons which specify which of the parts is displayed*/
+    #button1 {
+    height: 80px;
+    width: 80px;
+    margin: 20px 10px;
+    }
+    #button2 {
+    height: 80px;
+    width: 80px;
+    margin: 20px 40px;
+    opacity: 70%;
+    }
+    #button3 {
+    height: 80px;
+    width: 80px;
+    margin: 20px 10px;
+    opacity: 70%;
+    }
+    /*the next three headers format each of the individual parts*/
+    .paragraph2 h3 {
+    text-align: left;
+    width: 500px;
+    font-weight: normal;
+    color: black;
+    font-size: medium;
+    margin: 0px 0 0px 0;
+    padding-right: 39px;
+    padding-top: 39px;
+    padding-left: 35px;
+    background-color: rgb(174, 174, 174);
+    border-top: 2px solid var(--middlegrey);
+    border-bottom: 2px solid var(--middlegrey);
+    padding-bottom: 77px;
+    float: left;
+    }
+    .paragraph2 h4 {
+    text-align: left;
+    width: 500px;
+    font-weight: normal;
+    color: black;
+    font-size: medium;
+    margin: 0;
+    padding-right: 39px;
+    padding-top: 39px;
+    padding-left: 35px;
+    background-color: rgb(159, 173, 156);
+    border-top: 2px solid var(--middlegrey);
+    border-bottom: 2px solid var(--middlegrey);
+    padding-bottom: 44px;
+    float: left;
+    }
+    .paragraph2 h6 {
+    text-align: left;
+    width: 500px;
+    font-weight: normal;
+    color: black;
+    font-size: medium;
+    margin: 0px 0 0px 0;
+    padding-right: 39px;
+    padding-top: 39px;
+    padding-left: 35px;
+    background-color: rgba(179, 167, 156, 0.955);
+    border-top: 2px solid var(--middlegrey);
+    border-bottom: 2px solid var(--middlegrey);
+    padding-bottom: 44px;
+    float: left;
+    }
+    /*paragraph 2 formatting that applies to all different parts*/
     .paragraph2 {
     grid-area: paragraph2;
     background-color: lightgrey;
@@ -258,8 +356,7 @@
     font-size: medium;
     margin: 0 0 0 0;
     }
-    /*different sections in paragraph two*/
-    .paragraph2subheading1 {
+    .paragraph2subheading {
     font-weight: bold;
     font-size: 17px;
     text-decoration: underline;
@@ -267,68 +364,13 @@
     padding-top: 0;
     margin: 0 0 0 0;
     }
-    .paragraph2 h3 {
-    text-align: left;
-    width: 500px;
-    font-weight: normal;
-    color: black;
-    font-size: medium;
-    margin: 0px 0 0px 0;
-    padding-right: 39px;
-    padding-top: 39px;
-    padding-left: 35px;
-    background-color: rgb(174, 174, 174);
-    border-top: 2px solid var(--middlegrey);
-    border-bottom: 2px solid var(--middlegrey);
-    padding-bottom: 99px;
-    float: left;
-    }
-    .paragraph2 h4 {
-    text-align: left;
-    width: 500px;
-    font-weight: normal;
-    color: black;
-    font-size: medium;
-    margin: 5px 0 0px 0;
-    padding-right: 39px;
-    padding-top: 39px;
-    padding-left: 35px;
-    background-color: rgb(159, 173, 156);
-    border-top: 2px solid var(--middlegrey);
-    border-bottom: 2px solid var(--middlegrey);
-    padding-bottom: 44px;
-    float: left;
-    }
-    #button1 {
-    height: 80px;
-    width: 80px;
-    margin: 20px 10px;
-    }
-    #button2 {
-    height: 80px;
-    width: 80px;
-    margin: 20px 40px;
-    opacity: 70%;
-    }
-    #button3 {
-    height: 80px;
-    width: 80px;
-    margin: 20px 10px;
-    opacity: 70%;
-    }
-    .line hr{
-    border-top: 2.75px solid var(--variationdarkgrey);
-    border-right: 2.75px solid var(--middlegrey);
-    border-left: 2.75px solid var(--middlegrey);
-    border-bottom: 2.75px solid var(--middlegrey);
-    width: 400px;
-    display: none;
-    }
-    .list2{
+    /*the formatting for most of the lists in paragraph 2, the first three for each part and the last three are for the pop-ups*/
+    .part1list{
     margin-top: 30px;
+    margin-bottom: 20px;
     background-color: var(--secondaryCol);
-    padding: 0.5px 40px 5px 5px;
-    border-radius: 20px;
+    padding: 0.5px 40px 6px 5px;
+    border-radius: 20px;    
     width: 465px;
     }
     .part2list{
@@ -339,7 +381,48 @@
     border-radius: 20px;
     width: 465px;
     }
-    /*the index of paragraph 2*/
+    .part3list{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: var(--secondaryCol);
+    padding: 20px 40px 20px 5px;
+    border-radius: 20px;
+    width: 465px;
+    }
+    .list1 {
+    color: #e0e4d1;
+    font-weight: normal;
+    padding: 10px 10px 20px 50px;
+    font-size: 15px;
+    margin: 0 20px;
+    text-align: left;
+    background-color: rgba(233, 233, 233, 0.104);
+    border-radius: 0 0 20px 20px;
+    overflow: auto;
+    margin-bottom: 10px;
+    }
+    .list2 {
+    color: #e0e4d1;
+    font-weight: normal;
+    padding: 10px 30px 10px 10px;
+    font-size: 15px;
+    margin: 0 20px;
+    background-color: rgba(233, 233, 233, 0.104);
+    overflow: auto;
+    }
+    .list3 {
+    color: #e0e4d1;
+    font-weight: normal;
+    padding: 10px 30px 20px 20px;
+    font-size: 15px;
+    margin: 0px 20px;
+    text-align: left;
+    background-color: rgba(233, 233, 233, 0.104);
+    overflow: auto;
+    margin-bottom: 20px;
+    border-radius: 0 0 20px 20px;
+    }
+    /*the index of paragraph 2, also has a seperate one for part 2*/
     .paragraph2index{
     border-top: 2px solid var(--middlegrey);
     border-left: 2px solid var(--middlegrey);
@@ -351,19 +434,6 @@
     padding-right: 13px;
     padding-left: 13px;
     padding-top: 0px;
-    }
-    .paragraph2part2index{
-    border-top: 2px solid var(--middlegrey);
-    border-left: 2px solid var(--middlegrey);
-    border-bottom: 2px solid var(--middlegrey);
-    background-color: var(--darkgrey);
-    color: rgb(43, 43, 43);
-    float: left;
-    height: 591.5px;
-    padding-right: 13px;
-    padding-left: 13px;
-    padding-top: 0px;
-    margin-top: 5px;
     }
     .paragraph2index p{
     padding: 10px;
@@ -380,6 +450,18 @@
     background-color: var(--variationsecondaryCol);
     box-shadow: 0 6px rgb(131, 131, 131);
     transform: translate(0px,5px);
+    }
+    .paragraph2part2index{
+    border-top: 2px solid var(--middlegrey);
+    border-left: 2px solid var(--middlegrey);
+    border-bottom: 2px solid var(--middlegrey);
+    background-color: var(--darkgrey);
+    color: rgb(43, 43, 43);
+    float: left;
+    height: 591.5px;
+    padding-right: 13px;
+    padding-left: 13px;
+    padding-top: 0px;
     }
     .paragraph2part2index p{
     padding: 10px;
@@ -398,6 +480,7 @@
     transform: translate(0px,5px);
     }
     /*the first pop-up of paragraph 2 part 1*/
+    /*the formatting of the pop-up itself*/
     #paragraph2popup1 {
     border-top: 2px solid var(--middlegrey);    
     border-bottom: 2px solid var(--middlegrey);    
@@ -426,31 +509,21 @@
     }
     #paragraph2popup1 h2{
     color: #e0e4d1;
-    padding: 5px 25px;
+    padding: 5px 25px 0 25px;
     font-size: medium;
     text-align: center;
     font-weight: normal;
     margin: 0px 20px;
     background-color: rgba(233, 233, 233, 0.104);
     }
-    #paragraph2popup1img {
+    #paragraph2popupimg {
     width: 420px;
     height: 170px;
     margin-top: 20px;
-    margin-left: 70px; 
+    margin-left: -10px; 
     object-fit: cover;
     object-position: 0px 0px;
     border: 2px solid var(--middlegrey);    
-    }
-    .list3 {
-    color: #e0e4d1;
-    padding: 10px 10px 20px 50px;
-    font-size: 15px;
-    margin: 0 20px;
-    background-color: rgba(233, 233, 233, 0.104);
-    border-radius: 0 0 20px 20px;
-    overflow: auto;
-    margin-bottom: 10px;
     }
     /*the second pop-up (for the cost) of paragraph 2 part 1*/
     #paragraph2popup2 {
@@ -487,26 +560,7 @@
     margin: 0px 20px;
     background-color: rgba(233, 233, 233, 0.104);
     }
-    #paragraph2popup2img {
-    width: 420px;
-    height: 170px;
-    margin-top: 20px;
-    margin-left: 70px; 
-    object-fit: cover;
-    object-position: 0px 0px;
-    border: 2px solid var(--middlegrey);    
-    }
-    .list4 {
-    color: #e0e4d1;
-    padding: 10px 10px 20px 50px;
-    font-size: 15px;
-    margin: 0 20px;
-    background-color: rgba(233, 233, 233, 0.104);
-    border-radius: 0 0 20px 20px;
-    overflow: auto;
-    margin-bottom: 10px;
-    }
-    /*the third pop-up of paragraph 2 part 1*/
+    /*the third pop-up (for housing) of paragraph 2 part 1*/
     #paragraph2popup3 {
     border-top: 2px solid var(--middlegrey);    
     background: rgb(92, 92, 92);
@@ -544,23 +598,13 @@
     #paragraph2popup3img {
     width: 420px;
     height: 170px;
-    margin-top: 20px;
-    margin-left: 70px; 
+    margin-top: 20px; 
+    margin-left: 62px;
     object-fit: cover;
-    object-position: 0px -90px;
+    object-position: 0px -30px;
     border: 2px solid var(--middlegrey);    
     }
-    .list5 {
-    color: #e0e4d1;
-    padding: 10px 10px 20px 50px;
-    font-size: 15px;
-    margin: 0 20px;
-    background-color: rgba(233, 233, 233, 0.104);
-    border-radius: 0 0 20px 20px;
-    overflow: auto;
-    margin-bottom: 10px;
-    }
-    /*the fourth pop-up of paragraph 2 part 1*/
+    /*the fourth pop-up (for lifestyle) of paragraph 2 part 1*/
     #paragraph2popup4 {
     border-top: 2px solid var(--middlegrey);    
     background: rgb(92, 92, 92);
@@ -604,22 +648,12 @@
     object-position: 0px 0px;
     border: 2px solid var(--middlegrey);    
     }
-    .list6 {
-    color: #e0e4d1;
-    padding: 10px 10px 20px 50px;
-    font-size: 15px;
-    margin: 0 20px;
-    background-color: rgba(233, 233, 233, 0.104);
-    border-radius: 0 0 20px 20px;
-    overflow: auto;
-    margin-bottom: 10px;
-    }
     /*the first pop-up of paragraph 2 part 2*/
     #paragraph2part2popup1 {
     border-top: 2px solid var(--middlegrey);    
     border-bottom: 2px solid var(--middlegrey);    
     background: rgb(92, 92, 92);
-    height: 587px;
+    height: 586px;
     width: 568.525px;
     float: right;
     overflow: auto;
@@ -641,6 +675,46 @@
     border-radius: 20px 20px 0 0;
     overflow: auto;
     }
+    /*background of info in pop-up*/
+    .paragraph2part2popup1info {
+    padding: 5px 25px 5px 0px;
+    margin: 0 20px 25px 20px;
+    background-color: rgba(233, 233, 233, 0.104);
+    border-radius: 0 0 20px 20px;
+    height: 2200px;
+    }
+    /*the individual text boxes in the pop-up*/
+    .interiorinfo {
+    font-weight: normal;
+    }
+    .paragraph2part2popup1info h5{
+    color: #f1f3ea;
+    text-align: center;
+    background-color: var(--middlegrey);
+    float: left;
+    height: 180px;
+    width: 215px;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 14.5px;
+    font-weight: bold;
+    border-top: 2px solid var(--middlegrey);
+    border-bottom: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    border-radius: 0px 20px 20px 0px;
+    overflow: auto;
+    }
+    /*the individual images in the pop-up*/
+    #paragraph2part2image1 {
+    width: 210px;
+    height: 200px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+    border: 2px solid var(--middlegrey);
+    float: left;
+    }
     #paragraph2part2popup1 h2{
     color: #e0e4d1;
     padding: 5px 25px;
@@ -656,29 +730,20 @@
     margin-top: 20px;
     margin-left: 70px; 
     object-fit: cover;
-    object-position: 0px 0px;
+    object-position: 0px -35px;
     border: 2px solid var(--middlegrey);    
-    }
-    .list7 {
-    color: #e0e4d1;
-    padding: 10px 10px 20px 50px;
-    font-size: 15px;
-    margin: 0 20px;
-    background-color: rgba(233, 233, 233, 0.104);
-    border-radius: 0 0 20px 20px;
-    overflow: auto;
-    margin-bottom: 10px;
     }
     /*the second pop-up of paragraph 2 part 2*/
     #paragraph2part2popup2 {
     border-top: 2px solid var(--middlegrey);    
+    border-bottom: 2px solid var(--middlegrey);    
     background: rgb(92, 92, 92);
-    height: 591.5px;
+    height: 586px;
     width: 568.525px;
     float: right;
+    padding-top: 5px;
     overflow: auto;
     display: none;
-    margin-top: 5px;
     }
     #paragraph2part2popup2 h1{
     padding-top: 40px;
@@ -696,26 +761,89 @@
     border-radius: 20px 20px 0 0;
     overflow: auto;
     }
-    #paragraph2part2popup2img {
-    width: 420px;
-    height: 170px;
-    margin-top: 20px;
-    margin-left: 70px; 
+    #paragraph2part2popup2 h2{
+    color: #e0e4d1;
+    padding: 10px 25px 25px 25px;
+    font-size: medium;
+    text-align: center;
+    font-weight: normal;
+    margin: 0px 20px;
+    background-color: rgba(233, 233, 233, 0.104);
+    border-radius: 0px 0px 20px 20px;
+    }
+    /*different images in this pop-up*/
+    #paragraph2popup2img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 15px 5px 15px 25px;
     object-fit: cover;
     object-position: 0px 0px;
     border: 2px solid var(--middlegrey);    
     }
-    .list8 {
-    color: #e0e4d1;
-    padding: 10px 10px 20px 50px;
-    font-size: 15px;
-    margin: 0 20px;
-    background-color: rgba(233, 233, 233, 0.104);
-    border-radius: 0 0 20px 20px;
-    overflow: auto;
-    margin-bottom: 10px;
+    #paragraph2popup2img2 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 15px 5px 15px 0px;
+    object-fit: cover;
+    object-position: -10px 0px;
+    border: 2px solid var(--middlegrey);
+    opacity: 75%;
+    }
+    #paragraph2popup2img3 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 15px 5px 15px 25px;
+    object-fit: cover;
+    object-position: -60px 0px;
+    border: 2px solid var(--middlegrey);
+    opacity: 75%;
     }
     /*the third pop-up of paragraph 2 part 2*/
+    .paragraph2part2popup3background {
+    background-color: rgba(233, 233, 233, 0.104);
+    height: 1225px;
+    margin: 0 20px 0 20px;
+    }
+    #paragraph2part2image2 {
+    width: 210px;
+    height: 200px;
+    margin-left: 35px;
+    margin-top: 20px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+    border: 2px solid var(--middlegrey);
+    float: left;
+    }
+    #paragraph2part2popup3 h3 {
+    height: 15px;
+    width: 512px;
+    font-size: normal;
+    margin: 0 20px 20px 20px;
+    padding: 0;
+    background-color:rgba(233, 233, 233, 0.104);
+    border-radius: 0px 0px 20px 20px;
+    border: none;
+    }
+    #paragraph2part2popup3 h5{
+    color: #f1f3ea;
+    text-align: center;
+    background-color: var(--middlegrey);
+    float: left;
+    height: 180px;
+    width: 215px;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 14.5px;
+    font-weight: bold;
+    border-top: 2px solid var(--middlegrey);
+    border-bottom: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    border-radius: 0px 20px 20px 0px;
+    overflow: auto;
+    }
     #paragraph2part2popup3 {
     border-top: 2px solid var(--middlegrey);    
     background: rgb(92, 92, 92);
@@ -723,8 +851,8 @@
     width: 568.525px;
     float: right;
     overflow: auto;
-    display: none;
     padding-top: 5px;
+    display: none;
     }
     #paragraph2part2popup3 h1{
     padding-top: 40px;
@@ -737,7 +865,7 @@
     color: #e0e4d1;
     padding: 12px 25px 5px 25px;
     font-size: normal;
-    margin: 5px 20px 0 20px;
+    margin: 10px 20px 0 20px;
     background-color: rgba(233, 233, 233, 0.104);
     border-radius: 20px 20px 0 0;
     overflow: auto;
@@ -751,44 +879,34 @@
     margin: 0px 20px;
     background-color: rgba(233, 233, 233, 0.104);
     }
-    #paragraph2part2popup3img {
-    width: 420px;
-    height: 170px;
-    margin-top: 20px;
-    margin-left: 70px; 
-    object-fit: cover;
-    object-position: 0px -90px;
-    border: 2px solid var(--middlegrey);    
+     /*the first pop-up of paragraph 2 part 3*/
+    #paragraph2part3popup1 h3 {
+    height: 15px;
+    width: 512px;
+    font-size: normal;
+    margin: 0 20px 20px 20px;
+    padding: 0;
+    background-color:rgba(233, 233, 233, 0.104);
+    border-radius: 0px 0px 20px 20px;
+    border: none;
     }
-    .list9 {
-    color: #e0e4d1;
-    padding: 10px 10px 20px 50px;
-    font-size: 15px;
-    margin: 0 20px;
-    background-color: rgba(233, 233, 233, 0.104);
-    border-radius: 0 0 20px 20px;
-    overflow: auto;
-    margin-bottom: 10px;
-    }
-    /*the fourth pop-up of paragraph 2 part 2*/
-    #paragraph2part2popup4 {
+    #paragraph2part3popup1 {
     border-top: 2px solid var(--middlegrey);    
+    border-bottom: 2px solid var(--middlegrey);    
     background: rgb(92, 92, 92);
-    height: 591.5px;
+    height: 591.142px;
     width: 568.525px;
     float: right;
     overflow: auto;
-    display: none;
-    padding-top: 5px;
     }
-    #paragraph2part2popup4 h1{
+    #paragraph2part3popup1 h1{
     padding-top: 40px;
     font-weight: bold;
     font-size: 17px;
     text-decoration: underline;
     color: rgb(218, 218, 218);
     }
-    #paragraph2part2popup4 p{
+    #paragraph2part3popup1 p{
     color: #e0e4d1;
     padding: 12px 25px 5px 25px;
     font-size: normal;
@@ -797,16 +915,98 @@
     border-radius: 20px 20px 0 0;
     overflow: auto;
     }
-    #paragraph2part2popup4 h2{
+    #paragraph2part3popup1 h8{
     color: #e0e4d1;
-    padding: 5px 25px;
+    padding: 0;
+    font-size: normal;
+    float: left;
+    text-align: center;
+    font-weight: normal;
+    font-size: medium;
+    margin: 0 20px 0 20px;
+    padding: 10px 25px 0 25px;
+    overflow: auto;
+    background-color: rgba(233, 233, 233, 0.104);
+    }
+    .paragraph2part3popup1images {
+    padding: 5px 25px 5px 0px;
+    margin: 0 20px 25px 20px;
+    background-color: rgba(233, 233, 233, 0.104);
+    border-radius: 0 0 20px 20px;
+    height: 2200px;
+    }
+    .paragraph2part3popup1images h5{
+    color: #e0e4d1;
+    text-align: center;
+    background-color: var(--middlegrey);
+    float: left;
+    padding: 10px;
+    margin: 20px 0;
+    height: 180px;
+    width: 215px;
+    font-size: normal;
+    border-top: 2px solid var(--middlegrey);
+    border-bottom: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    border-radius: 0px 20px 20px 0px;
+    overflow: auto;
+    }
+    #paragraph2part3image1 {
+    width: 210px;
+    height: 200px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+    border: 2px solid var(--middlegrey);
+    float: left;
+    }
+    #paragraph2part3popup1 h2{
+    color: #e0e4d1;
+    padding: 5px 25px 0 25px;
     font-size: medium;
     text-align: center;
     font-weight: normal;
     margin: 0px 20px;
     background-color: rgba(233, 233, 233, 0.104);
     }
-    #paragraph2part2popup4img {
+    #paragraph2part3popup1img {
+    width: 420px;
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 70px; 
+    object-fit: cover;
+    object-position: 0px -35px;
+    border: 2px solid var(--middlegrey);    
+    }
+     /*the second pop-up of paragraph 2 part 3*/
+    #paragraph2part3popup2 {
+    border-top: 2px solid var(--middlegrey);    
+    border-bottom: 2px solid var(--middlegrey);    
+    background: rgb(92, 92, 92);
+    height: 591.5px;
+    width: 568.525px;
+    float: right;
+    overflow: auto;
+    display: none;
+    }
+    #paragraph2part3popup2 h1{
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: underline;
+    color: rgb(218, 218, 218);
+    }
+    #paragraph2part3popup2 p{
+    color: #e0e4d1;
+    padding: 12px 25px 0px 25px;
+    font-size: normal;
+    margin: 5px 20px 0 20px;
+    background-color: rgba(233, 233, 233, 0.104);
+    border-radius: 20px 20px 0 0;
+    overflow: auto;
+    }
+    #paragraph2part3popup2img {
     width: 420px;
     height: 170px;
     margin-top: 20px;
@@ -815,16 +1015,145 @@
     object-position: 0px 0px;
     border: 2px solid var(--middlegrey);    
     }
-    .list10 {
+    /*the third pop-up of paragraph 2 part 3*/
+    #paragraph2part3popup3 h3 {
+    height: 15px;
+    width: 512px;
+    font-size: normal;
+    margin: 0 20px 20px 20px;
+    padding: 0;
+    background-color:rgba(233, 233, 233, 0.104);
+    border-radius: 0px 0px 20px 20px;
+    border: none;
+    }
+    #paragraph2part3popup3 h4 {
+    height: 15px;
+    width: 492px;
+    font-size: normal;
+    margin: 0 20px 0px 20px;
+    padding: 10px;
+    color: var(--lightgrey);
+    font-weight: bold;
+    background-color: rgba(233, 233, 233, 0);
+    border: none;
+    text-align: center;
+    text-decoration: underline;
+    }
+    #paragraph2part3popup3 h2{
     color: #e0e4d1;
-    padding: 10px 10px 20px 50px;
-    font-size: 15px;
+    padding: 0;
+    font-size: medium;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 20px 0 20px;
+    padding: 10px 25px 0 25px;  
+    background-color: rgba(233, 233, 233, 0.104);
+    }
+    #paragraph2part3popup3 {
+    border-top: 2px solid var(--middlegrey);    
+    border-bottom: 2px solid var(--middlegrey);    
+    background: rgb(92, 92, 92);
+    height: 591.5px;
+    width: 568.525px;
+    float: right;
+    overflow: auto;
+    display: none;
+    }
+    #paragraph2part3popup3 h1{
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: underline;
+    color: rgb(218, 218, 218);
+    }
+    #paragraph2part3popup3 p{
+    color: #e0e4d1;
+    padding: 12px 25px 5px 25px;
+    font-size: normal;
+    margin: 5px 20px 0 20px;
+    background-color: rgba(233, 233, 233, 0.104);
+    border-radius: 20px 20px 0 0;
+    overflow: auto;
+    }
+    #paragraph2part3popup3img {
+    width: 420px;
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 70px; 
+    object-fit: cover;
+    object-position: 0px 0px;
+    border: 2px solid var(--middlegrey);    
+    }
+    /*the fourth pop-up of paragraph 2 part 3*/
+    #paragraph2part3popup4 {
+    border-top: 2px solid var(--middlegrey);    
+    border-bottom: 2px solid var(--middlegrey);    
+    background: rgb(92, 92, 92);
+    height: 591.5px;
+    width: 568.525px;
+    float: right;
+    overflow: auto;
+    display: none;
+    }
+    #paragraph2part3popup4 h3 {
+    height: 20px;
+    width: 512px;
+    font-size: normal;
+    margin: 0 20px 20px 20px;
+    padding: 0;
+    background-color:rgba(233, 233, 233, 0.104);
+    border-radius: 0px 0px 20px 20px;
+    border: none;
+    }
+    #paragraph2part3popup4 h1{
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: underline;
+    color: rgb(218, 218, 218);
+    }
+    #paragraph2part3popup4 p{
+    color: #e0e4d1;
+    padding: 12px 25px 5px 25px;
+    font-size: normal;
+    margin: 5px 20px 0 20px;
+    background-color: rgba(233, 233, 233, 0.104);
+    border-radius: 20px 20px 0 0;
+    overflow: auto;
+    }
+    #paragraph2part3popup4 h2{
+    color: #e0e4d1;
+    font-size: medium;
+    text-align: center;
+    padding: 10px 25px 5px 25px;
     margin: 0 20px;
     background-color: rgba(233, 233, 233, 0.104);
-    border-radius: 0 0 20px 20px;
-    overflow: auto;
-    margin-bottom: 10px;
+    text-decoration: underline;
     }
+    #paragraph2part3popup4 h4, h5{
+    color: #e0e4d1;
+    padding: 0;
+    font-size: medium;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 20px 0 20px;
+    padding: 10px 25px 10px 25px;
+    width: 462px;
+    overflow: auto;
+    background: rgba(233, 233, 233, 0.104);
+    border: none;
+    }
+    #paragraph2part3popup4img {
+    width: 420px;
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 70px; 
+    object-fit: cover;
+    object-position: 0px 0px;
+    border: 2px solid var(--middlegrey);
+    opacity: 80%;
+    }
+    /*paragraph 3*/
     .paragraph3 {
     grid-area: paragraph3;
     background-color: rgb(106, 186, 186);
@@ -906,6 +1235,31 @@
     }
 </style>
 <script>
+/*main buttons for making different parts visible*/
+function mainbutton1() {
+document.getElementById("part1").style.display = "block";
+document.getElementById("part2").style.display = "none";
+document.getElementById("part3").style.display = "none";
+document.getElementById("button1").style.opacity = "100%";
+document.getElementById("button2").style.opacity = "70%";
+document.getElementById("button3").style.opacity = "70%";
+}
+function mainbutton2() {
+document.getElementById("part1").style.display = "none";
+document.getElementById("part2").style.display = "block";
+document.getElementById("part3").style.display = "none";
+document.getElementById("button1").style.opacity = "70%";
+document.getElementById("button2").style.opacity = "100%";
+document.getElementById("button3").style.opacity = "70%";
+}
+function mainbutton3() {
+document.getElementById("part1").style.display = "none";
+document.getElementById("part2").style.display = "none";
+document.getElementById("part3").style.display = "block";
+document.getElementById("button1").style.opacity = "70%";
+document.getElementById("button2").style.opacity = "70%";
+document.getElementById("button3").style.opacity = "100%";
+}
 /*part 1 pop-ups*/
 function buttonpress1() {
 document.getElementById("paragraph2popup1").style.display = "block";
@@ -936,25 +1290,41 @@ function buttonpress5() {
 document.getElementById("paragraph2part2popup1").style.display = "block";
 document.getElementById("paragraph2part2popup2").style.display = "none";
 document.getElementById("paragraph2part2popup3").style.display = "none";
-document.getElementById("paragraph2part2popup4").style.display = "none";
 }
 function buttonpress6() {
 document.getElementById("paragraph2part2popup1").style.display = "none";
 document.getElementById("paragraph2part2popup2").style.display = "block";
 document.getElementById("paragraph2part2popup3").style.display = "none";
-document.getElementById("paragraph2part2popup4").style.display = "none";
 }
 function buttonpress7() {
 document.getElementById("paragraph2part2popup1").style.display = "none";
 document.getElementById("paragraph2part2popup2").style.display = "none";
 document.getElementById("paragraph2part2popup3").style.display = "block";
-document.getElementById("paragraph2part2popup4").style.display = "none";
 }
+/*part 3 pop-ups*/
 function buttonpress8() {
-document.getElementById("paragraph2part2popup1").style.display = "none";
-document.getElementById("paragraph2part2popup2").style.display = "none";
-document.getElementById("paragraph2part2popup3").style.display = "none";
-document.getElementById("paragraph2part2popup4").style.display = "block";
+document.getElementById("paragraph2part3popup1").style.display = "block";
+document.getElementById("paragraph2part3popup2").style.display = "none";
+document.getElementById("paragraph2part3popup3").style.display = "none";
+document.getElementById("paragraph2part3popup4").style.display = "none";
+}
+function buttonpress9() {
+document.getElementById("paragraph2part3popup1").style.display = "none";
+document.getElementById("paragraph2part3popup2").style.display = "block";
+document.getElementById("paragraph2part3popup3").style.display = "none";
+document.getElementById("paragraph2part3popup4").style.display = "none";
+}
+function buttonpress10() {
+document.getElementById("paragraph2part3popup1").style.display = "none";
+document.getElementById("paragraph2part3popup2").style.display = "none";
+document.getElementById("paragraph2part3popup3").style.display = "block";
+document.getElementById("paragraph2part3popup4").style.display = "none";
+}
+function buttonpress11() {
+document.getElementById("paragraph2part3popup1").style.display = "none";
+document.getElementById("paragraph2part3popup2").style.display = "none";
+document.getElementById("paragraph2part3popup3").style.display = "none";
+document.getElementById("paragraph2part3popup4").style.display = "block";
 }
 </script>
 </head>
@@ -1054,199 +1424,445 @@ muscle tension.
         <h1>Choosing a dog<h1>
         <p>Matching the right people to the right dog is important to us at Hornsby Pet Shelter, that's why we have an adoption process. 
             Take your time to think about what type of dog you are after, and what type of dog is right for you and your family.</p>
-            <img src="Button1.svg" id = "button1"> 
-            <img src="Button2.svg" id = "button2">  
-            <img src="Button3.svg" id = "button3"> 
-        <h3>
-        <div class = "paragraph2subheading1">Being prepared</div>
-        Before getting a dog it’s important to consider what is involved in being a responsible owner and to decide whether 
-        you’ll be able to meet all your dog’s needs throughout their lifetime. Dogs are wonderful companions but owning one
-        is a long-term commitment, so make sure you are ready.
-            <div class = list2>
-                <ul>
-                    <li>Do I want a puppy or an adult dog?</li>
-                    <li>Can I cover all the financial costs of owning a dog, beyond just the purchase price, 
-                        including food, bedding, toys and veterinary check-ups and treatment including emergencies?</li>
-                    <li>Is my home safe, secure and suitable for a dog?</li>
-                    <li>Do I have time to train and socialise a dog?</li>
-                    <li>Will I be able to provide them with enough company so they don’t get lonely or bored? 
-                        A dog that doesn’t receive enough attention is unlikely to become a social and well-behaved pet.</li>
-                    <li>Do I have time to walk and play with a dog every day?</li>
-                    <li>Am I ready to make a 15-year commitment?</li>
-                </ul>
+            <img src="Button1.svg" id = "button1" onclick="mainbutton1()"> 
+            <img src="Button2.svg" id = "button2" onclick="mainbutton2()">  
+            <img src="Button3.svg" id = "button3" onclick="mainbutton3()"> 
+ <div id = "part1"> 
+            <h3>
+            <div class = "paragraph2subheading">Being prepared</div>
+            Before getting a dog it’s important to consider what is involved in being a responsible owner and to decide whether 
+            you’ll be able to meet all your dog’s needs throughout their lifetime. Dogs are wonderful companions but owning one
+            is a long-term commitment, so make sure you are ready.
+                <div class = part1list>
+                    <ul>
+                        <li>Do I want a puppy or an adult dog?</li>
+                        <li>Can I cover all the financial costs of owning a dog, beyond just the purchase price, 
+                            including food, bedding, toys and veterinary check-ups and treatment including emergencies?</li>
+                        <li>Is my home safe, secure and suitable for a dog?</li>
+                        <li>Do I have time to train and socialise a dog?</li>
+                        <li>Will I be able to provide them with enough company so they don’t get lonely or bored? 
+                            A dog that doesn’t receive enough attention is unlikely to become a social and well-behaved pet.</li>
+                        <li>Do I have time to walk and play with a dog every day?</li>
+                        <li>Am I ready to make a 15-year commitment?</li>
+                    </ul>
+                </div>
+            </h3>
+            <div class = paragraph2index>
+            <p onclick="buttonpress1()">Puppy or dog</p>
+            <p onclick ="buttonpress2()">Cost</p>
+            <p onclick ="buttonpress3()">Housing</p>
+            <p onclick ="buttonpress4()">Lifestyle</p>
             </div>
-        </h3>
-        <div class = paragraph2index>
-        <p onclick="buttonpress1()">Puppy or dog</p>
-        <p onclick ="buttonpress2()">Cost</p>
-        <p onclick ="buttonpress3()">Housing</p>
-        <p onclick ="buttonpress4()">Lifestyle</p>
+            <!--the first part of paragraph 2-->
+        <div id = "paragraph2popup1">
+            <h1>Puppy or dog??</h1>
+            <img src="dogpuppyimg.jpg" id = "paragraph2popupimg"> 
+            <p>Puppies are adorable but it is important to remember this phase doesn’t last long, and all dogs grow up 
+                very quickly. Caring for a puppy generally takes more time and effort than caring for an older dog, 
+                so if it is a puppy you are after, be prepared for extra work. If you’re not particularly looking for a
+                    puppy, there are plenty of great things about getting an older dog. Older dogs may have (at least)
+                basic training and have grown out of those puppy habits, like the teething phase when pups chew on 
+                everything!</p>
+            <h2>To help you decide between a puppy and an adult dog, ask yourself the following questions:</h2>
+                <ul class = "list1">
+                    <li>Would I like a dog that is already toilet trained?  Toilet training a puppy usually means taking them 
+                        to a toilet area up to 10 times a day (and during the night as well) and rewarding them when they ‘go’ 
+                        in the right spot. You will also probably find yourself cleaning up after the inevitable accidents during 
+                        the learning phase. Older dogs often have at least some basic toilet training habits.</li>
+                    <li>Would I like a dog that already has some basic obedience skills (e.g., sits for you, can walk well on a lead)?
+                        Puppies will need to be taken to puppy classes and taught all of these skills using reward-based training. Training school is a very important part of being a responsible pet owner and while some older dogs 
+                            often have basic training, they will still require some attention and guidance.</li>
+                    <li>Would I like a dog that already has basic social skills (e.g., can interact safely and politely with
+                        other dogs and people)? The first 3-17 weeks of a puppy’s life are critical for their social and behavioural 
+                        development. During this time it’s important to make sure they have plenty of positive experiences with 
+                        a variety of different people, places, sights and sounds, as they will influence your dog’s behaviour 
+                        throughout the rest of their lives.</li>
+                </ul>
         </div>
-        <!--the first pop-up-->
-    <div id = "paragraph2popup1">
-        <h1>Puppy or dog??</h1>
-        <img src="dogpuppyimg.jpg" id = "paragraph2popup1img"> 
-        <p>Puppies are adorable but it is important to remember this phase doesn’t last long, and all dogs grow up 
-            very quickly. Caring for a puppy generally takes more time and effort than caring for an older dog, 
-            so if it is a puppy you are after, be prepared for extra work. If you’re not particularly looking for a
-                puppy, there are plenty of great things about getting an older dog. Older dogs may have (at least)
-            basic training and have grown out of those puppy habits, like the teething phase when pups chew on 
-            everything!</p>
-        <h2>To help you decide between a puppy and an adult dog, ask yourself the following questions:</h2>
-            <ul class = "list3">
-                <li>Would I like a dog that is already toilet trained?  Toilet training a puppy usually means taking them 
-                    to a toilet area up to 10 times a day (and during the night as well) and rewarding them when they ‘go’ 
-                    in the right spot. You will also probably find yourself cleaning up after the inevitable accidents during 
-                    the learning phase. Older dogs often have at least some basic toilet training habits.</li>
-                <li>Would I like a dog that already has some basic obedience skills (e.g., sits for you, can walk well on a lead)?
-                    Puppies will need to be taken to puppy classes and taught all of these skills using reward-based training. Training school is a very important part of being a responsible pet owner and while some older dogs 
-                        often have basic training, they will still require some attention and guidance.</li>
-                <li>Would I like a dog that already has basic social skills (e.g., can interact safely and politely with
-                    other dogs and people)? The first 3-17 weeks of a puppy’s life are critical for their social and behavioural 
-                    development. During this time it’s important to make sure they have plenty of positive experiences with 
-                    a variety of different people, places, sights and sounds, as they will influence your dog’s behaviour 
-                    throughout the rest of their lives.</li>
-            </ul>
-    </div>
-    <!--the second pop-up-->
-    <div id = "paragraph2popup2">
-        <h1>Cost</h1>
-        <img src="vetdog.jpg" id = "paragraph2popup1img"> 
-        <p>There are many costs involved with dog ownership; they are an expensive addition to any family.</p>
-        <h2>Ask yourself, can I afford:</h2>
-            <ul class = "list4">
-                <li> All of the upfront costs of getting a dog or puppy? While vaccinations, microchipping and desexing
-                    has already been provided for our dogs, there is still a registration cost and a fee to adopt them.</li>
-                <li>Annual council registration fees, if it is required in my area</li>
-                <li>Good quality food for my dog throughout their lifetime?</li>
-                <li>Routine health care (like worming)</li>
-                <li>Obedience training classes</li>
-                <li>Leash, collar, toys and all the other necessary equipment such as bedding</li>
-                <li>For them to be looked after if I go away</li>
-                <li>Veterinary treatment in case of emergency or accident, or insurance fees for if this is to occur</li>
-            </ul>
-    </div>
-    <!--the third pop-up-->
-    <div id = "paragraph2popup3">
-        <h1>Housing</h1>
-        <img src="housedog.jpg" id = "paragraph2popup3img"> 
-        <p>Carefully consider whether your home is suitable for your dog.</p>
-        <h2>Ask yourself:</h2>
-            <ul class = "list5">
-                <li> If I have a yard, is it secure? Are there toys and activities to keep my dog 
-                    entertained while I’m not home, so it doesn’t get bored, bark or be destructive?</li>
-                <li>If I don’t have a yard, where will my dog be while I’m not home? If it is inside, 
-                    where will it go to the toilet? Can I get home to let it outside every few hours?</li>
-                <li>Is there safe, outdoor space or a dog park close by that I can regularly take my dog to exercise?</li>
-                <li>If I rent my property, has my landlord given me written permission to have a dog and if so,
-                     do they have any additional requirements? What will happen if I have to move?</li>
-            </ul>
-    </div>
-    <!--the fourth pop-up-->
-    <div id = "paragraph2popup4">
-        <h1>Lifestyle</h1>
-        <img src="alonedog.jpg" id = "paragraph2popup4img"> 
-        <p>Working hours, a busy social life and taking regular trips away from home are all factors
-        that need to be considered before becoming a dog owner. Dogs thrive on human company and will 
-        always depend on you. It is important that your lifestyle is compatible with caring for a dog so 
-        you can meet their needs throughout their lifetime.</p>
-        <h2>Ask yourself:</h2>
-            <ul class = "list6">
-                <li>Do I have time each and every day to care for a puppy or a dog?</li>
-                <li>Will I be home in time each day to feed a dog?</li>
-                <li>Do I have time to take my puppy or dog to ‘school’ for training and to practice every day 
-                    with reward-based training throughout its life?</li>
-                <li>Am I prepared to walk a dog at least once every day, or twice a day for an active type of dog?</li>
-                <li>How often am I at home to keep a dog company?</li>
-                <li>Will I have time to groom a dog or puppy regularly?</li>
-                <li>Who will care for my dog when I’m away, either travelling or if I’m sick or injured?</li>
-            </ul>
-    </div>
+        <!--the second pop-up-->
+        <div id = "paragraph2popup2">
+            <h1>Cost</h1>
+            <img src="vetdog.jpg" id = "paragraph2popupimg"> 
+            <p>There are many costs involved with dog ownership; they are an expensive addition to any family.</p>
+            <h2>Ask yourself, can I afford:</h2>
+                <ul class = "list1">
+                    <li> All of the upfront costs of getting a dog or puppy? While vaccinations, microchipping and desexing
+                        has already been provided for our dogs, there is still a registration cost and a fee to adopt them.</li>
+                    <li>Annual council registration fees, if it is required in my area</li>
+                    <li>Good quality food for my dog throughout their lifetime?</li>
+                    <li>Routine health care (like worming)</li>
+                    <li>Obedience training classes</li>
+                    <li>Leash, collar, toys and all the other necessary equipment such as bedding</li>
+                    <li>For them to be looked after if I go away</li>
+                    <li>Veterinary treatment in case of emergency or accident, or insurance fees for if this is to occur</li>
+                </ul>
+        </div>
+        <!--the third pop-up-->
+        <div id = "paragraph2popup3">
+            <h1>Housing</h1>
+            <img src="housedog.jpg" id = "paragraph2popupimg"> 
+            <p>Carefully consider whether your home is suitable for your dog.</p>
+            <h2>Ask yourself:</h2>
+                <ul class = "list1">
+                    <li> If I have a yard, is it secure? Are there toys and activities to keep my dog 
+                        entertained while I’m not home, so it doesn’t get bored, bark or be destructive?</li>
+                    <li>If I don’t have a yard, where will my dog be while I’m not home? If it is inside, 
+                        where will it go to the toilet? Can I get home to let it outside every few hours?</li>
+                    <li>Is there safe, outdoor space or a dog park close by that I can regularly take my dog to exercise?</li>
+                    <li>If I rent my property, has my landlord given me written permission to have a dog and if so,
+                         do they have any additional requirements? What will happen if I have to move?</li>
+                </ul>
+        </div>
+        <!--the fourth pop-up-->
+        <div id = "paragraph2popup4">
+            <h1>Lifestyle</h1>
+            <img src="alonedog.jpg" id = "paragraph2popupimg"> 
+            <p>Working hours, a busy social life and taking regular trips away from home are all factors
+            that need to be considered before becoming a dog owner. Dogs thrive on human company and will 
+            always depend on you. It is important that your lifestyle is compatible with caring for a dog so 
+            you can meet their needs throughout their lifetime.</p>
+            <h2>Ask yourself:</h2>
+                <ul class = "list1">
+                    <li>Do I have time each and every day to care for a puppy or a dog?</li>
+                    <li>Will I be home in time each day to feed a dog?</li>
+                    <li>Do I have time to take my puppy or dog to ‘school’ for training and to practice every day 
+                        with reward-based training throughout its life?</li>
+                    <li>Am I prepared to walk a dog at least once every day, or twice a day for an active type of dog?</li>
+                    <li>How often am I at home to keep a dog company?</li>
+                    <li>Will I have time to groom a dog or puppy regularly?</li>
+                    <li>Who will care for my dog when I’m away, either travelling or if I’m sick or injured?</li>
+                </ul>
+        </div>
+ </div>
 <!--The definition for paragraph 2 part 2-->
-    <h4>
-        <div class = "paragraph2subheading1">Different types of dogs</div>
-Just like us, every dog has its own unique personality, but their general temperament is strongly influenced by their genetics 
-and early life experiences. In choosing your dog, think about what breed or type of dog will best suit your lifestyle.
-            <div class = part2list>
+<div id = "part2">
+        <h4>
+            <div class = "paragraph2subheading">Different types of dogs</div>
+    Just like us, every dog has its own unique personality, but their general temperament is strongly influenced by their genetics 
+    and early life experiences. In choosing your dog, think about what breed or type of dog will best suit your lifestyle.
+                <div class = part2list>
+                    <ul>
+                        <li>Am I looking for a calm, quiet dog that settles easily, or a more playful, active dog?</li>
+                        <li>Is a small, medium or large-sized dog best for me?</li>
+                        <li>Do I have time to groom a dog that needs frequent brushing?</li>
+                        <li>Am I aware of the particular health and welfare problems some breeds can have?
+                        </li>
+                    </ul>
+                </div>
+    If you are interested in a particular breed of dog, be aware that different breeds are predisposed to different inherited
+    disorders.  Dogs that have been dred for a certain look can have exaggerated features that lead to serious health issues.
+    These conditions can cause dogs significant pain and suffering so be sure to find out about the problems
+    that are known to occur in that specific breed or breed type.
+        </h4>
+            <div class = paragraph2part2index>
+            <p onclick="buttonpress5()">Type of dog</p>
+            <p onclick ="buttonpress6()">Inbreeding</p>
+            <p onclick ="buttonpress7()">Exaggerated features</p>
+            </div>
+            <!--the first pop-up-->
+        <div id = "paragraph2part2popup1">
+            <h1>Types of dogs</h1>
+            <img src="Dachshund.jpg" id = "paragraph2popupimg"> 
+            <p>While every dog is its own unique personality, there are some general behavioural traits associated with different
+                breed types. These traits include energy levels, how easy they are to train, if they are playful and outgoing or quiet
+                and calm and if they are good with children and strangers. They also have different physical traits including size, 
+                general appearance and their grooming requirements.</p>
+            <h2>Some general dog breeds are:</h2>
+            <div class = paragraph2part2popup1info>
+            <img src="Samoyed.jpg" id = "paragraph2part2image1">
+            <h5> Sled dogs
+            <div class = "interiorinfo">
+                These dogs were bred to pull sleds through snow. Their long fur can be quite inconvenient as it needs to be regularly
+                groomed. They also don't cope particularly well with the heat of Australian summers. They are more independent and can be
+                strong-willed, though they are friendly and gentle. When well socialised they are affectionate to others, including children. 
+                They can be quite loud, many samoyeds for example have quite loud, high-pitched barks.
+            </div>
+            </h5>
+            <img src="Foxhound.jpg" id = "paragraph2part2image1">
+            <h5>Scent hounds
+            <div class = "interiorinfo">
+                Scent hounds are one of the best types of dogs as pets. They are loyal and sociable and generally enjoy the company
+                of people. They are make wonderful companions and therapy dogs. They are generally more patient with younger children than
+                other dogs. Basset hounds and beagles in particular are good with children. They have smooth and easy to care for coats with 
+                only occasional shedding. They come in all different sizes. The cons of scent hounds are that they both bark and howl. They are
+                also easily distracted by almost everything and they love to eat. 
+            </div>
+            </h5>
+            <img src="Kelpie.jpg" id = "paragraph2part2image1">
+            <h5>Working dogs
+            <div class = "interiorinfo">
+                Working dogs can make good pets as they are stimulated, well rounded and controlled. They are not suited to busy households
+                or smaller spaces as they have a lot of energy and function better when they have a task to do. They need a lot of physical
+                exercise and mental stimulation. 
+            </div>
+            </h5>
+            <img src="Whippet.jpg" id = "paragraph2part2image1">
+            <h5>Sight hounds
+            <div class = "interiorinfo">
+                These dogs were bred for racing and are very fast, enjoying short bursts of exercise. They have a thin coat and skin which makes 
+                them convenient to groom, however also means that they cannot regulate their temperature very well and will need heating in winter.
+                They usually love to be with people.
+            </div>          
+            </h5>
+            <img src="Shihtzu.jpg" id = "paragraph2part2image1">
+            <h5>Lapdogs
+            <div class = "interiorinfo">
+                These small and light dogs were bred specifically for companionship, and are most suited to being indoor dogs. They are one of
+                the best options if you have a small house and may become anxious if left outside alone. Many breeds of lapdog have intense grooming requirements.
+                As they are specifically bred to be pets they are suited to human companionship. 
+            </div>
+            </h5>
+            <img src="German_shepherd.jpg" id = "paragraph2part2image1">
+            <h5>Guarding dogs
+            <div class = "interiorinfo">
+                They were bred to protect people and homes. They are quite intelligent, and if they are properly trained their breeding doesn't make them
+                aggressive or bad pets. They are usually large and physically strong breeds and need owners that are capable of controlling them. They are quiet
+                active and it is recommended that they get around 2 hours a day. 
+            </div>
+            </h5>
+            <img src="Golden_retriever.jpg" id = "paragraph2part2image1">  
+            <h5>Hunting dogs
+            <div class = "interiorinfo">
+                These dogs tend to be enthusiastic, eager to please and friendly with people. They were originally bred to retrieve game. They are usually
+                easy to train, and they need lots of exercise and can be quite strong. 
+            </div>
+            </h5>
+            <img src="Saint_Bernard.jpg" id = "paragraph2part2image1"> 
+            <h5> Utility dogs
+            <div class = "interiorinfo">
+                Many of these dogs were originally bred as rescue dogs, though this group also includes dogs that don't really
+                fit into any of the other categories. 
+            </div>
+            </h5>
+            <img src="Foxterrier.jpg" id = "paragraph2part2image1"> 
+            <h5>Fox terriers
+            <div class = "interiorinfo">
+                Terrier-type dogs were originally bred for chasing rats and mice on farms, so they love to chase, dig and bark. 
+                They are often fearless towards other dogs and need lots of stimulation and exercise.  They can be skilled escapers 
+                who can squeeze through small gaps.  Staffie-type dogs tend to be less independent than other terriers and often don’t
+                cope alone.
+            </div>
+            </h5>
+            </div>
+        </div>
+        <!--the second pop-up-->
+        <div id = "paragraph2part2popup2">
+            <h1>Inbreeding</h1>
+            <img src="Musculoskeletal_dog_disorders.jpg" id = "paragraph2popupimg"> 
+            <p>Also called linebreeding, this refers to mating animals that have multiple family members in common. This is commonly
+                used in pedigree dogs to create a certain appearance or to enhance personality traits. As this reduces the genetic pool, it
+                increases the chance of inherited disorders and can negatively impact the immune system of a dog. This is not as much of a
+                worry if you are adopting from a shelter, though some dogs are still affected by inbreeding.
+            </p>
+            <h2>
+            Each dog breed is predisposed towards their own list of inherited disorders as a result of inbreeding and selective 
+            breeding practices. In some cases these health problems occur early on in a dog’s life, while in other cases problems
+            may not be apparent until the dog gets older.
+            </h2>
+            <img src="Inbreeding.jpg" id = "paragraph2popup2img2"> 
+            <img src = "Dog_skindisease.jpg" id = "paragraph2popup2img">
+            <img src="Inflammation.jpg" id = "paragraph2popup2img3">  
+        </div>
+        <!--the third pop-up--> 
+        <div id = "paragraph2part2popup3">
+            <h1>Exaggerated physical features</h1>
+            <img src="pug.jpg" id = "paragraph2popupimg"> 
+            <p>Exaggerated features are extreme physical features (deformities) which cause suffering and a poor quality of life. These 
+                features have arisen through deliberate selective breeding in order to conform to a pedigree ‘breed standard’.
+                There are many different types of exaggerated features that cause suffering including:</p>
+            <div class = "paragraph2part2popup3background">
+                <img src="Pug2.jpg" id = "paragraph2part2image2"> 
+                <h5>Excessive skin folds
+                    <div class = "interiorinfo">
+                        The most common breed of dog that is impacted by excessive skin folds or wrinkles are pugs. They can cause 
+                        serious skin and eye problems as the skin between the folds easily become infected if not cleaned regularly 
+                        and thoroughly. The skin is also prone to inflammation. Excessive skin folds near the eyes can cause entropion -
+                        where eyelids roll inwards causing pain and loss of visibility. 
+                    </div>
+                </h5>
+                <img src="Bulldog.jpg" id = "paragraph2part2image2"> 
+                <h5>Large heads
+                    <div class = "dogbreedparagraph">
+                        Dogs that have been bred to have larger heads, such as bulldogs, pugs and boston terriers, cause severe birthing
+                        difficulties. This means that some of these dogs will have lifelong deformities.
+                    </div>
+                </h5>
+                <img src="Cavalier_spaniel.jpg" id = "paragraph2part2image2"> 
+                <h5>Small heads
+                    <div class = "dogbreedparagraph">
+                        Any breeds with abnormally small or flat heads could potentially have several different conditions because of their breeding. 
+                        One of the most painful of these conditions is syringomyelia, where the dogs skull is too small for its brain. This can cause
+                        the dog to be in almost constant pain and is difficult to treat. 
+                    </div>
+                </h5>
+                    <img src="Dachshund2.jpg" id = "paragraph2part2image2"> 
+                <h5>Abnormal body proportions
+                    <div class = "dogbreedparagraph">
+                        These can cause several spinal problems which result in pain and difficulties moving. The dachshund, corgi and basset hound all
+                        have abnormal cartilage which causes their short legs. This cartilage can cause intervertebral disc disease which is quite a common problem
+                        in these breeds. These problems frequently cause paralysis and major surgery can lead to death. 
+                    </div>
+                </h5>
+                    <img src="Boston_terrier.jpg" id = "paragraph2part2image2"> 
+                <h5>Extremely flat faces
+                    <div class = "dogbreedparagraph">
+                        cause serious breathing and eye problems. Brachycephalic breeds such as the Pug, British Bulldog,
+                        French Bulldogs and Pekingese, suffer because they have a reduced muzzle length, but the amount of
+                        soft tissue in their airways is not reduced, resulting in the same amount of tissue being squeezed 
+                        into a smaller area. This tissue obstructs airflow and causes major welfare problems.  They are also
+                        prone to several eye conditions that tend to lead to chronic irritation and pain. This is because the 
+                        flatter the face, the shallower the eye socket and the more prominent the eye. Prominent bulging eyes are
+                        at greater risk of injury and sometimes they actually pop out of their socket.
+                    </div>
+                    </h5>
+            </div>
+                <h3></h3>
+            </div>
+</div>
+ <!--the definition for paragraph2 part 3-->
+<div id = "part3">
+        <h6>
+        <div class = "paragraph2subheading">Looking after a dog</div>
+        Introducing your new puppy or dog to your home, friends and family is a fun and exciting time. Before you bring your new pet 
+        home, be sure to read up on how to provide the best care for your new four-legged friend.
+            <div class = part3list>
                 <ul>
-                    <li>Am I looking for a calm, quiet dog that settles easily, or a more playful, active dog?</li>
-                    <li>Is a small, medium or large-sized dog best for me?</li>
-                    <li>Do I have time to groom a dog that needs frequent brushing?</li>
-                    <li>Am I aware of the particular health and welfare problems some breeds can have?
-                    </li>
+                    <li>Do I have a clean, comfortable, safe and secure home?</li>
+                    <li>Do I have food, bedding, dog toys and walking equipment?</li>
+                    <li>Have I organised where I will take my dog for training and to learn how to make friends?</li>
+                    <li>Have I located a veterinary clinic?</li>
+                    <li>Do I know about desexing, microchipping and registration requirements, vaccinations and
+                         preventative health care (such as worming, flea and tick prevention)?</li>
                 </ul>
             </div>
-If you are interested in a particular breed of dog, be aware that different breeds are predisposed to different inherited
-disorders.  Dogs that have been dred for a certain look can have exaggerated features that lead to serious health issues.
-These conditions can cause dogs significant pain and suffering so be sure to find out about the problems
-that are known to occur in that specific breed or breed type.
-        </h4>
-        <div class = paragraph2part2index>
-        <p onclick="buttonpress5()">Type of dog</p>
-        <p onclick ="buttonpress6()">Inbreeding</p>
-        <p onclick ="buttonpress7()">Inherited conditions</p>
-        <p onclick ="buttonpress8()">Exaggerated features</p>
+            This is the start of a happy friendship for both of you, so with the right research you can look forward to 
+            years of companionship together. Looking after your dog or puppy properly will give it the best life possible, reducing the
+            chance that it will develop conditions such as heart disease and improving its behaviour and attitude. 
+        </h6>
+        <div class = paragraph2index>
+        <p onclick="buttonpress8()">Housing</p>
+        <p onclick ="buttonpress9()">Exercise</p>
+        <p onclick ="buttonpress10()">Behaviour and training</p>
+        <p onclick ="buttonpress11()">Health</p>
         </div>
         <!--the first pop-up-->
-    <div id = "paragraph2part2popup1">
-        <h1>Types of dogs</h1>
-        <img src="Dachshund.jpg" id = "paragraph2popup1img"> 
-        <p>While every dog is its own unique personality, there are some general behavioural traits associated with different
-            breed types. Thinking about these traits can help you choose the right type of dog for you:</p>
+    <div id = "paragraph2part3popup1">
+        <h1>Housing</h1>
+        <img src="Doghousing.jpg" id = "paragraph2popupimg"> 
+        <p>If your dog will be spending most of its time indoors, they will need a comfortable place to sleep.  
+            If your dog will be left on its own at times, start training it to be comfortable alone early on. Gradually 
+            increase the amount of time it is left and combine this with daily exercise, things to do and toys to play with
+            (e.g., toys filled with dog food treats, a sandpit, and other safe dog toys to entertain them while you’re out).
+        </p>
+        <h8>If your dog is going to spend most of its time outdoors it’s important to ensure there is plenty of space between
+            eating, sleeping and toileting areas. Ensure your backyard is escape-proof with sheltered areas to protect from
+            weather extremes like heat, rain and wind. But remember, a back yard - regardless of its size or how many toys
+            you provide - is no substitute for regular walks and exercise outside of the home. It’s also important to ensure
+            the inside of your home is safe for your dog by removing or covering any hazards like electrical cords and toxic
+            chemicals.
+        </h8>
+        <h8>There may be times when you will need to board your dog temporarily while you are away. It’s great if you can
+            find a friend or family member who can take care of your dog in your own home, or in their home if it’s safe
+            and suitable. If you need to find a good boarding facility it's important to visit the site in person to check 
+            you’re happy with the conditions. </h8>
+        <h3></h3>
     </div>
-    <!--the second pop-up-->
-    <div id = "paragraph2popup2">
-        <h1>Cost</h1>
-        <img src="vetdog.jpg" id = "paragraph2popup1img"> 
-        <p>There are many costs involved with dog ownership; they are an expensive addition to any family.</p>
-        <h2>Ask yourself, can I afford:</h2>
-            <ul class = "list4">
-                <li> All of the upfront costs of getting a dog or puppy? While vaccinations, microchipping and desexing
-                    has already been provided for our dogs, there is still a registration cost and a fee to adopt them.</li>
-                <li>Annual council registration fees, if it is required in my area</li>
-                <li>Good quality food for my dog throughout their lifetime?</li>
-                <li>Routine health care (like worming)</li>
-                <li>Obedience training classes</li>
-                <li>Leash, collar, toys and all the other necessary equipment such as bedding</li>
-                <li>For them to be looked after if I go away</li>
-                <li>Veterinary treatment in case of emergency or accident, or insurance fees for if this is to occur</li>
+     <!--the second pop-up-->
+     <div id = "paragraph2part3popup2">
+        <h1>Exercise</h1>
+        <img src="Walkingdog.jpg" id = "paragraph2popupimg"> 
+        <p>All dogs need consistent and regular exercise to ensure that they stay healthy and happy. As with people, the amount of exercise
+            that is needed varies and is dependent on age, health, and breed. When picking a breed make sure you research their exercise
+            requirements for all stages of their life. There are many different ways to exercise your dogs including:
+        </p>
+        <div class = list3>
+            <ul>
+                <li>Take them on a hike</li>
+                <li>Take them with you when you go cycling (not appropriate for all dogs including puppies)</li>
+                <li>When you go skating</li>
+                <li>Take them swimming</li>
+                <li>Play fetch with them</li>
+                <li>Obedience training</li>
+                <li>Get them to run up and down stairs (make sure not to push them too hard especially with smaller breeds who
+                    could sprain their back)
+                </li>
+                <li>Treadmill (with enough training dogs can come to love treadmill, especially high energy breeds)</li>
+                <li>Play tug-of-war</li>
+                <li>Take them on a walk</li>
+                <li>Simply take them to a dog park and let them socialise and run around</li>
             </ul>
+        </div>
     </div>
     <!--the third pop-up-->
-    <div id = "paragraph2popup3">
-        <h1>Housing</h1>
-        <img src="housedog.jpg" id = "paragraph2popup3img"> 
-        <p>Carefully consider whether your home is suitable for your dog.</p>
-        <h2>Ask yourself:</h2>
-            <ul class = "list5">
-                <li> If I have a yard, is it secure? Are there toys and activities to keep my dog 
-                    entertained while I’m not home, so it doesn’t get bored, bark or be destructive?</li>
-                <li>If I don’t have a yard, where will my dog be while I’m not home? If it is inside, 
-                    where will it go to the toilet? Can I get home to let it outside every few hours?</li>
-                <li>Is there safe, outdoor space or a dog park close by that I can regularly take my dog to exercise?</li>
-                <li>If I rent my property, has my landlord given me written permission to have a dog and if so,
-                     do they have any additional requirements? What will happen if I have to move?</li>
+    <div id = "paragraph2part3popup3">
+        <h1>Behaviour and training</h1>
+        <img src="Socialisingdogs.jpg" id = "paragraph2popupimg"> 
+        <p>Training and socialising your dog (that is, introducing it to other dogs and people) is essential to ensure your
+           puppy or dog has the skills it will need throughout their life.</p>
+        <h4>Socialisation</h4>
+        <h2>The first 3-17 weeks of a puppy’s life are critical for its social and behavioural development. During this
+            time it is very important to provide it with positive experiences with a variety of people, places, sights and sounds.
+            Experiences during this period can influence a dog’s behaviour throughout its life. 
+            Hornsby Pet Shelter highly recommends enrolling your puppy in puppy school classes (or dog in dog school 
+            if they need training). Even after this point it is still important that your dog interacts with others. 
+        </h2>
+        <h4>Training</h4>
+        <h2>The RSPCA recommends reward-based positive reinforcement training as it is the most humane and effective
+            way to train dogs, is enjoyable for the dog, and positively enhances the relationship bond between you and your dog.
+            This training method sets the dog up to succeed and then rewards them for performing the ‘good’ behaviour 
+            (positive reinforcement). Rewards can be in the form of a dog food treat, favourite toy, a nice pat, or verbal 
+            praise in a pleasant tone of voice, “good dog”.
+        </h2>
+        <h2>By rewarding ‘good’ behaviour, you reinforce it and this helps make it very likely the dog will do it again,
+            to earn more praise (or another treat!). Reward-based training does not involve punishment, force, or the assertion
+            of dominance over the dog. Reward-based training also involves generally ignoring and not rewarding any ‘unwanted’ 
+            behaviour. If dogs are not rewarded or given attention for undesirable behaviours, they will usually stop as there
+            is no incentive to continue. 
+        </h2>
+        <h2>
+            For example: imagine a dog that jumps up to greet people –that may be OK for the owners but rather intimidating 
+            when they’re out in public or if there are visitors in their home.  The owners have tried pushing the dog down and
+            kneeing her to knock her off balance when she jumps. This has not worked, the dog seems to think it’s a game and in 
+            fact, she now jumps from further away to avoid the knee. Hornsby Pet Shelter does not recommend this kind of training 
+            and encourages dog owners to adopt reward-based training as a much more successful and humane technique.
+        </h2>
+        <h2>Reward-based training involves the following actions:</h2>
+        <div class = list2>
+            <ul>
+                <li>Firstly the dog should be completely ignored if she jumps – don’t speak to her, don’t touch her and don’t make eye 
+                    contact. She should only receive attention (including eye contact) when she has four paws on the ground. 
+                    The moment four paws hit the ground – she should be rewarded.</li>
+                <li>The dog will most likely jump again with a little less effort – and again reward her as soon as those
+                    four paws hit the floor.</li>
+                <li>Soon the dog will discover that it is not the jumping up that is being rewarded with attention, it is the ‘four paws on the ground’, 
+                    and she will start to volunteer the behaviour that the owners want - four paws on the ground.</li>
+                <li>Only when she is standing or sitting should she be rewarded with attention and treats.</li>
             </ul>
+        </div>
+        <h3></h3>
     </div>
     <!--the fourth pop-up-->
-    <div id = "paragraph2popup4">
-        <h1>Lifestyle</h1>
-        <img src="alonedog.jpg" id = "paragraph2popup4img"> 
-        <p>Working hours, a busy social life and taking regular trips away from home are all factors
-        that need to be considered before becoming a dog owner. Dogs thrive on human company and will 
-        always depend on you. It is important that your lifestyle is compatible with caring for a dog so 
-        you can meet their needs throughout their lifetime.</p>
-        <h2>Ask yourself:</h2>
-            <ul class = "list6">
-                <li>Do I have time each and every day to care for a puppy or a dog?</li>
-                <li>Will I be home in time each day to feed a dog?</li>
-                <li>Do I have time to take my puppy or dog to ‘school’ for training and to practice every day 
-                    with reward-based training throughout its life?</li>
-                <li>Am I prepared to walk a dog at least once every day, or twice a day for an active type of dog?</li>
-                <li>How often am I at home to keep a dog company?</li>
-                <li>Will I have time to groom a dog or puppy regularly?</li>
-                <li>Who will care for my dog when I’m away, either travelling or if I’m sick or injured?</li>
-            </ul>
+    <div id = "paragraph2part3popup4">
+        <h1>Health</h1>
+        <img src="dogfood.jpg" id = "paragraph2popupimg"> 
+        <p>Providing veterinary care when needed is an essential part of being a responsible dog owner. Your vet can advise you on annual health checks,
+            vaccination schedules, microchipping, registration, preventative health care (external and internal parasite prevention), 
+            behaviour and desexing.
+        </p>
+        <h2>Feeding</h2>
+        <h5>First and foremost, talk to your vet for dietary advice. Dogs should be fed a high-quality, nutritionally balanced
+            commercial dog food that’s appropriate for their life stage (puppy, adult) and health status. Check products
+            comply with the Australian Standard: Manufacturing and Marketing Pet Food AS 5812:2011. Dogs may also be offered 
+            raw meaty bones occasionally to provide some variety and to help keep teeth and gums healthy. Bones must always 
+            be raw and human-grade. They can also be fed other meats and foods to add variety to their diet.
+        </h5>
+        <h2>Grooming</h2>
+        <h4>Many dogs need regular grooming for their health, particularly long-haired dogs. In order to make grooming an enjoyable bonding experience that 
+            forms part of your dog’s routine, it’s best to establish this habit early in your dog's life. Associate grooming with a 
+            positive experience by rewarding calm behaviour with tasty dog food treats. If you wash your own dog, be sure to use 
+            products specifically designed for dogs. Some types of dog may need regular hair clipping and professional grooming to 
+            manage their coat. Talk to your vet for advice.</h4>
+        <h3></h3>
     </div>
 </div>
             <div class="line"><hr></div>
