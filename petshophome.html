@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hornsby Pet Shelter: Cats</title>
+    <link rel="icon" href="favicon.ico"/>
+<style>
+        :root {
+    --primaryCol: #b1b49c;
+    --variationprimaryCol: #c5c9b0;
+    --accentCol: #d3daa4;
+    --secondaryCol: #d2d6bb;
+    --variationsecondaryCol: #c0c4ad;
+    --lightgrey: #dad0c3;
+    --middlegrey: #8e9194;
+    --darkgrey: #443e36;
+    --variationdarkgrey: #3d372f;
+    --lightorange: rgb(216, 190, 155);
+    }
+    body {
+    margin: 0;
+    background-color: rgb(204, 212, 196);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+      .wrapper {
+    display: grid;
+    grid-template-columns: 2% 96% 2%;
+    grid-template-rows: 3.75% 0% 18% 5% 2% 4.5% 57% 10% 7%;
+    grid-template-areas: "top top top"
+                        "pages pages pages" 
+                        "banner banner banner"
+                        "header header header"
+                        "menu menu menu"
+                        "lside bar rside"
+                        "lside paragraph1 rside"
+                        "lside paragraph2 rside"
+                        "footer footer footer"
+       }
+    .top{
+    grid-area: top;
+    background-color: var(--darkgrey);
+    }
+    .logo {
+    height: 95px;
+    padding-left: 30px;
+    }
+    .logo:hover {
+    transform: scale(1.3);
+    transition: .5s;
+    }
+    .top pre {
+    color: var(--lightgrey);
+    font-size: 14px;
+    text-align: center;
+    padding-right: 15px;
+    padding-top: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    }
+    .leftside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: lside;
+    border-right: 2px solid var(--middlegrey);
+    }
+    .rightside {
+    background-color: lightgrey;
+    color: lightgrey;
+    grid-area: rside;
+    border-left: 2px solid var(--middlegrey);
+    border-bottom: none;
+    border-right: none;
+    }
+    /*styling for the image*/
+    .banner {
+    grid-area: banner;
+    background-image: url('test.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0px 30px; 
+    border-bottom: 2px solid var(--darkgrey);
+    border-left: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    z-index: -2;
+    }
+    /*styling for the two waves*/
+    .banner p {
+    display: block;
+    margin: 260px 0 0 -360px;
+    padding: 0;
+    width: 100%;
+    height: 0px;
+    z-index: -1;
+    }
+    .banner2 p {
+    display: block;
+    margin: 210px 0 0 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    }
+    /*styling for the header*/
+    #header {
+    background-color: #3d372f;
+    color: rgb(211, 224, 200);
+    grid-area: header;
+    place-content: center;
+    border-width: 10px;
+    padding-top: 8px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-top: 10px solid #4e473d;
+    border-bottom: 10px solid #37312a;
+    }
+    #header h1 {
+    font-size: 55px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    margin: 0;
+    }
+    /*styling for the menu*/
+    #menu {
+    background-color: var(--primaryCol);
+    grid-area: menu;
+    place-content: center;
+    border-bottom: 2px solid var(--middlegrey);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    }  
+    #menu p {
+    display: inline-block;
+    width: 82px;
+    padding: 5px 10px 4px 38px;
+    margin: 5px 0 0 60px;
+    font-size: 19px;
+    font-weight: normal;
+    background-color: rgba(211, 211, 211, 0.1);
+    }
+    #menu h2 {
+    display: inline-block;
+    width: 82px;
+    padding: 5px 10px 5px 38px;
+    margin: 5px 0 0 500px;
+    font-size: 19px;
+    font-weight: normal;
+    background-color: rgba(211, 211, 211, 0.1);
+    }
+    /*the different options*/
+    #menu h3 {
+    position: absolute;
+    left: 500px;
+    top: 633px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h4 {
+    position: absolute;
+    left: 500px;
+    top: 665px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h5 {
+    position: absolute;
+    left: 500px;
+    top: 697px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h6 {
+    position: absolute;
+    left: 694px;
+    top: 610px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h7 {
+    position: absolute;
+    left: 694px;
+    top: 685px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h8 {
+    position: absolute;
+    left: 694px;
+    top: 723px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    /*sub-options*/
+    #menu h9 {
+    position: absolute;
+    left: 631px;
+    top: 649px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h10 {
+    position: absolute;
+    left: 631px;
+    top: 680px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h11 {
+    position: absolute;
+    left: 631px;
+    top: 710px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h12 {
+    position: absolute;
+    left: 631px;
+    top: 724px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h13 {
+    position: absolute;
+    left: 631px;
+    top: 754px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h14 {
+    position: absolute;
+    left: 631px;
+    top: 785px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }    
+    #menu h15 {
+    position: absolute;
+    left: 631px;
+    top: 815px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h16 {
+    position: absolute;
+    left: 631px;
+    top: 845px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h17 {
+    position: absolute;
+    left: 825px;
+    top: 647px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h18 {
+    position: absolute;
+    left: 825px;
+    top: 678px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h19 {
+    position: absolute;
+    left: 825px;
+    top: 708px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h20 {
+    position: absolute;
+    left: 825px;
+    top: 723px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h21 {
+    position: absolute;
+    left: 825px;
+    top: 753px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 4;
+    display: none;
+    }
+    #menu h22 {
+    position: absolute;
+    left: 825px;
+    top: 784px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }    
+    #menu h23 {
+    position: absolute;
+    left: 825px;
+    top: 814px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h24 {
+    position: absolute;
+    left: 825px;
+    top: 844px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    /*arrows for expanding the menu*/
+    .arrow {
+    position: absolute;
+    left: 500px;
+    top: 617px;
+    height: 20px;
+    z-index: 3;
+    padding: 6px 20px 6px 90px;
+    }
+    .arrow2 {
+    position: absolute;
+    left: 695px;
+    top: 617px;
+    height: 20px;
+    padding: 6px 20px 6px 90px;
+    z-index: 3;
+    }
+    /*pages*/
+    .pages {
+    grid-area: pages;
+    height: 40px;
+    background-color: var(--variationsecondaryCol);
+    border-bottom: 2px solid var(--variationdarkgrey);
+    border-left: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    display : flex;
+    justify-content: space-evenly;
+    }
+    .pages h1 {
+    color: var(--variationdarkgrey);
+    font-size: 15px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    height: 230px;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+    /*link*/
+    a:link {
+    color: var(--darkgrey);
+    text-decoration: none;
+    }
+    /*hover over link*/
+    a:hover {
+    text-decoration: underline;
+    color: rgb(79, 79, 65);
+    }
+    /*link has been visited*/
+    a:visited {
+    text-decoration: none;
+    color: var(--variationdarkgrey);
+    }
+    .bar {
+    grid-area: bar;
+    width: 1000px;
+    height: 80px;
+    padding: 0;
+    border: 2px solid var(--variationsecondaryCol);
+    border-radius: 30px;
+    display : flex;
+    justify-content: space-evenly;
+    margin-left: 130px;
+    margin-top: 15px;
+    background-color: var(--variationdarkgrey);
+    }
+    .bar p {
+    background-color: var(--lightgrey);
+    width: 180px;
+    text-align: center;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px 15px 10px 70px;
+    margin-top: 10px;
+    font-weight: 500;
+    }
+    .circle1 {
+    position: absolute;
+    left: 225px;
+    top: 682px;
+    width: 50px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    float: left;
+    }
+    .circle2 {
+    position: absolute;
+    left: 538px;
+    top: 682px;
+    width: 50px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    float: left;
+    }
+    .circle3 {
+    position: absolute;
+    left: 850px;
+    top: 682px;
+    width: 50px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    float: left;
+    }
+    /*PARAGRAPH 1*/
+    #paragraph1 {
+    grid-area: paragraph1;
+    background-color: rgb(204, 212, 196);
+    }
+    #paragraph1 h2{
+    text-align: center;
+    padding: 10px 0 20px 0;
+    margin: 20px 0 0 0;
+    font-size: 25px;
+    text-decoration: underline;
+    background-color: var(--variationsecondaryCol);
+    }
+    #paragraph1 h1 {
+    padding: 15px 50px 17px 40px;
+    font-size: 19px;
+    text-decoration: underline;
+    position: relative;
+    z-index: 1;
+    }
+    #paragraph1 p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0 30px 35px 40px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*background for paragraph 1*/
+    .BSbackground {
+    background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
+    25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
+    rgba(255,255,255,0.22172619047619047) 100%);
+    height: 395px;
+    width: 1294px;
+    top: 840px;
+    left: 27px;
+    position: absolute;
+    z-index: 0;
+    }
+    .DIbackground {
+    background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
+    25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
+    rgba(255,255,255,0.22172619047619047) 100%);
+    height: 395px;
+    width: 1294px;
+    top: 1240px;
+    left: 27px;
+    position: absolute;
+    z-index: 0;
+    }
+    .CFbackground {
+    background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
+    25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
+    rgba(255,255,255,0.22172619047619047) 100%);
+    height: 395px;
+    width: 1294px;
+    top: 1640px;
+    left: 27px;
+    position: absolute;
+    z-index: 0;
+    }
+    .CFtext {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 30px;
+    margin: 0 30px 20px 40px;
+    text-align: center;
+    padding: 25px 15px 15px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+    }
+    /*different prices for the first of the 3 different categories*/
+    .price{
+    position: absolute;
+    top: 1160px;
+    left: 135px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price1{
+    position: absolute;
+    top: 1160px;
+    left: 437px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price2{
+    position: absolute;
+    top: 1160px;
+    left: 740px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price3{
+    position: absolute;
+    top: 1160px;
+    left: 1050px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price4{
+    position: absolute;
+    top: 1535px;
+    left: 135px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price5{
+    position: absolute;
+    top: 1535px;
+    left: 437px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price6{
+    position: absolute;
+    top: 1535px;
+    left: 740px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price7{
+    position: absolute;
+    top: 1535px;
+    left: 1050px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    /*styling for all of the images*/
+    .BSitem {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 0 30px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*styling for circles indicating sales and new items*/
+    .Sale1 {
+    height: 85px;
+    position: absolute;
+    top: 1280px;
+    left: 250px;
+    z-index: 2;
+    }
+    .Sale2 {
+    height: 85px;
+    position: absolute;
+    top: 1280px;
+    left: 555px;
+    z-index: 2;
+    }
+    .Sale3 {
+    height: 85px;
+    position: absolute;
+    top: 1280px;
+    left: 860px;
+    z-index: 2;
+    }
+    .Sale4 {
+    height: 85px;
+    position: absolute;
+    top: 1280px;
+    left: 1160px;
+    z-index: 2;
+    }
+    .Newitem {
+    height: 85px;
+    position: absolute;
+    top: 885px;
+    left: 250px;
+    z-index: 2;
+    }
+    .Newitem1 {
+    height: 85px;
+    position: absolute;
+    top: 885px;
+    left: 555px;
+    z-index: 2;
+    }
+    /*PARAGRAPH 2*/
+    #paragraph2 {
+    grid-area: paragraph2;
+    background-color: var(--primaryCol);
+    padding: 10px 90px;
+    text-align: center;
+    font-size: 15px;
+    }
+    #paragraph2 h1{
+    font-size: 20px;
+    text-decoration: underline;
+    }
+    /*styling for the footer*/
+    .footer {
+    padding-left: 30px;
+    grid-area: footer;
+    background-color: var(--darkgrey);
+    color: var(--accentCol);
+    margin-bottom: 0%;
+    padding-top: 10px;
+    line-height: 10px;
+    border-top: 3px solid var(--middlegrey);
+    }
+    .footer p {
+    padding: 0px;
+    color: var(--lightgrey);
+    text-align: center;
+    line-height: 35%;
+    }
+    .footer ul {
+    font-weight: bold;
+    display : flex;
+    flex-direction: row;
+    list-style: none;
+    margin:0;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    }
+    #copyright {
+    padding-top: 1px;
+    padding-right: 15px;
+    text-align: right;
+    color: var(--primaryCol);
+    font-size: small;
+    font-weight: bold;
+    }
+    .vl {
+    border-left: 2px solid var(--middlegrey);
+    height: 1980px;
+    position: absolute;
+    left: 50%;
+    }
+    /*link*/
+    a.link2:link {
+    color: rgb(148, 134, 104);
+    text-decoration: none;
+    }
+    /*hover over link*/
+    a.link2:hover {
+    text-decoration: underline;
+    color: rgb(112, 119, 105);
+    }
+    /*link has been visited*/
+    a.link2:visited {
+    text-decoration: none;
+    color: rgb(70, 82, 61);
+    }
+</style>
+<script>
+    /*function for the menu*/
+    /*cat section*/
+    function Catsmenu() {
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    }
+    function offCatsmenu() {
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    }
+    /*main options*/
+    function Catoption1() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("suboption1").style.display = "block";
+    document.getElementById("suboption2").style.display = "block";
+    document.getElementById("suboption3").style.display = "block";
+    }
+    function offCatoption1() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.backgroundColor = "lightgrey";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("suboption1").style.display = "none";
+    document.getElementById("suboption2").style.display = "none";
+    document.getElementById("suboption3").style.display = "none";
+    }
+    function clickCatoption1() {
+    document.getElementById("mainoption1").style.backgroundColor = "pink";
+    }
+    function Catoption2() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption2").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    }
+    function offCatoption2() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption2").style.backgroundColor = "lightgrey";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    }
+    function Catoption3() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("suboption4").style.display = "block";
+    document.getElementById("suboption5").style.display = "block";
+    document.getElementById("suboption6").style.display = "block";
+    document.getElementById("suboption7").style.display = "block";
+    document.getElementById("suboption8").style.display = "block";
+    }
+    function offCatoption3() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("suboption4").style.display = "none";
+    document.getElementById("suboption5").style.display = "none";
+    document.getElementById("suboption6").style.display = "none";
+    document.getElementById("suboption7").style.display = "none";
+    document.getElementById("suboption8").style.display = "none";
+    }
+    /*sub-options*/
+    function Suboption1() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("catoption1").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption1").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption1").style.display = "block";
+    document.getElementById("suboption2").style.display = "block";
+    document.getElementById("suboption3").style.display = "block";
+    }
+    function offSuboption1() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("catoption1").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption1").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption1").style.display = "none";
+    document.getElementById("suboption2").style.display = "none";
+    document.getElementById("suboption3").style.display = "none";
+    }
+    function Suboption2() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("catoption1").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption2").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption1").style.display = "block";
+    document.getElementById("suboption2").style.display = "block";
+    document.getElementById("suboption3").style.display = "block";
+    }
+    function offSuboption2() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("catoption1").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption2").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption1").style.display = "none";
+    document.getElementById("suboption2").style.display = "none";
+    document.getElementById("suboption3").style.display = "none";
+    }
+    function Suboption3() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("catoption1").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption3").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption1").style.display = "block";
+    document.getElementById("suboption2").style.display = "block";
+    document.getElementById("suboption3").style.display = "block";
+    }
+    function offSuboption3() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("catoption1").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption3").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption1").style.display = "none";
+    document.getElementById("suboption2").style.display = "none";
+    document.getElementById("suboption3").style.display = "none";
+    }
+    function Suboption4() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("catoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption4").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption4").style.display = "block";
+    document.getElementById("suboption5").style.display = "block";
+    document.getElementById("suboption6").style.display = "block";
+    document.getElementById("suboption7").style.display = "block";
+    document.getElementById("suboption8").style.display = "block";
+    }
+    function offSuboption4() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("catoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption4").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption4").style.display = "none";
+    document.getElementById("suboption5").style.display = "none";
+    document.getElementById("suboption6").style.display = "none";
+    document.getElementById("suboption7").style.display = "none";
+    document.getElementById("suboption8").style.display = "none";
+    }
+    function Suboption5() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("catoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption5").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption4").style.display = "block";
+    document.getElementById("suboption5").style.display = "block";
+    document.getElementById("suboption6").style.display = "block";
+    document.getElementById("suboption7").style.display = "block";
+    document.getElementById("suboption8").style.display = "block";
+    }
+    function offSuboption5() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("catoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption5").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption4").style.display = "none";
+    document.getElementById("suboption5").style.display = "none";
+    document.getElementById("suboption6").style.display = "none";
+    document.getElementById("suboption7").style.display = "none";
+    document.getElementById("suboption8").style.display = "none";
+    }
+    function Suboption6() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("catoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption6").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption4").style.display = "block";
+    document.getElementById("suboption5").style.display = "block";
+    document.getElementById("suboption6").style.display = "block";
+    document.getElementById("suboption7").style.display = "block";
+    document.getElementById("suboption8").style.display = "block";
+    }
+    function offSuboption6() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("catoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption6").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption4").style.display = "none";
+    document.getElementById("suboption5").style.display = "none";
+    document.getElementById("suboption6").style.display = "none";
+    document.getElementById("suboption7").style.display = "none";
+    document.getElementById("suboption8").style.display = "none";
+    }
+    function Suboption7() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("catoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption7").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption4").style.display = "block";
+    document.getElementById("suboption5").style.display = "block";
+    document.getElementById("suboption6").style.display = "block";
+    document.getElementById("suboption7").style.display = "block";
+    document.getElementById("suboption8").style.display = "block";
+    }
+    function offSuboption7() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("catoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption7").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption4").style.display = "none";
+    document.getElementById("suboption5").style.display = "none";
+    document.getElementById("suboption6").style.display = "none";
+    document.getElementById("suboption7").style.display = "none";
+    document.getElementById("suboption8").style.display = "none";
+    }
+    function Suboption8() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("catoption1").style.display = "block";
+    document.getElementById("catoption2").style.display = "block";
+    document.getElementById("catoption3").style.display = "block";
+    document.getElementById("catoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption8").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption4").style.display = "block";
+    document.getElementById("suboption5").style.display = "block";
+    document.getElementById("suboption6").style.display = "block";
+    document.getElementById("suboption7").style.display = "block";
+    document.getElementById("suboption8").style.display = "block";
+    }
+    function offSuboption8() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("catoption1").style.display = "none";
+    document.getElementById("catoption2").style.display = "none";
+    document.getElementById("catoption3").style.display = "none";
+    document.getElementById("catoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption8").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption4").style.display = "none";
+    document.getElementById("suboption5").style.display = "none";
+    document.getElementById("suboption6").style.display = "none";
+    document.getElementById("suboption7").style.display = "none";
+    document.getElementById("suboption8").style.display = "none";
+    }
+
+    /*dog section*/
+    function Dogsmenu() {
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    }
+    function offDogsmenu() {
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    }
+    /*main options for dog section*/
+    function Dogoption1() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("suboption9").style.display = "block";
+    document.getElementById("suboption10").style.display = "block";
+    document.getElementById("suboption11").style.display = "block";
+    }
+    function offDogoption1() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.backgroundColor = "lightgrey";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("suboption9").style.display = "none";
+    document.getElementById("suboption10").style.display = "none";
+    document.getElementById("suboption11").style.display = "none";
+    }
+    function clickDogoption1() {
+    document.getElementById("mainoption1").style.backgroundColor = "pink";
+    }
+    function Dogoption2() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption2").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    }
+    function offDogoption2() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption2").style.backgroundColor = "lightgrey";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    }
+    function Dogoption3() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("suboption12").style.display = "block";
+    document.getElementById("suboption13").style.display = "block";
+    document.getElementById("suboption14").style.display = "block";
+    document.getElementById("suboption15").style.display = "block";
+    document.getElementById("suboption16").style.display = "block";
+    }
+    function offDogoption3() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("suboption4").style.display = "none";
+    document.getElementById("suboption5").style.display = "none";
+    document.getElementById("suboption6").style.display = "none";
+    document.getElementById("suboption7").style.display = "none";
+    document.getElementById("suboption8").style.display = "none";
+    }
+       /*sub-options*/
+       function Suboption9() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("dogoption1").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption9").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption9").style.display = "block";
+    document.getElementById("suboption10").style.display = "block";
+    document.getElementById("suboption11").style.display = "block";
+    }
+    function offSuboption9() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("dogoption1").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption9").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption9").style.display = "none";
+    document.getElementById("suboption10").style.display = "none";
+    document.getElementById("suboption11").style.display = "none";
+    }
+    function Suboption10() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("dogoption1").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption10").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption9").style.display = "block";
+    document.getElementById("suboption10").style.display = "block";
+    document.getElementById("suboption11").style.display = "block";
+    }
+    function offSuboption10() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("dogoption1").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption10").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption9").style.display = "none";
+    document.getElementById("suboption10").style.display = "none";
+    document.getElementById("suboption11").style.display = "none";
+    }
+    function Suboption11() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("dogoption1").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption11").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption9").style.display = "block";
+    document.getElementById("suboption10").style.display = "block";
+    document.getElementById("suboption11").style.display = "block";
+    }
+    function offSuboption11() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("dogoption1").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption11").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption9").style.display = "none";
+    document.getElementById("suboption10").style.display = "none";
+    document.getElementById("suboption11").style.display = "none";
+    }
+    function Suboption12() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("dogoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption12").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption12").style.display = "block";
+    document.getElementById("suboption13").style.display = "block";
+    document.getElementById("suboption14").style.display = "block";
+    document.getElementById("suboption15").style.display = "block";
+    document.getElementById("suboption16").style.display = "block";
+    }
+    function offSuboption12() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("dogoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption12").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption12").style.display = "none";
+    document.getElementById("suboption13").style.display = "none";
+    document.getElementById("suboption14").style.display = "none";
+    document.getElementById("suboption15").style.display = "none";
+    document.getElementById("suboption16").style.display = "none";
+    }
+    function Suboption13() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("dogoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption13").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption12").style.display = "block";
+    document.getElementById("suboption13").style.display = "block";
+    document.getElementById("suboption14").style.display = "block";
+    document.getElementById("suboption15").style.display = "block";
+    document.getElementById("suboption16").style.display = "block";
+    }
+    function offSuboption13() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("dogoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption13").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption12").style.display = "none";
+    document.getElementById("suboption13").style.display = "none";
+    document.getElementById("suboption14").style.display = "none";
+    document.getElementById("suboption15").style.display = "none";
+    document.getElementById("suboption16").style.display = "none";
+    }
+    function Suboption14() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("dogoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption14").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption12").style.display = "block";
+    document.getElementById("suboption13").style.display = "block";
+    document.getElementById("suboption14").style.display = "block";
+    document.getElementById("suboption15").style.display = "block";
+    document.getElementById("suboption16").style.display = "block";
+    }
+    function offSuboption14() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("dogoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption14").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption12").style.display = "none";
+    document.getElementById("suboption13").style.display = "none";
+    document.getElementById("suboption14").style.display = "none";
+    document.getElementById("suboption15").style.display = "none";
+    document.getElementById("suboption16").style.display = "none";
+    }
+    function Suboption15() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("dogoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption15").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption12").style.display = "block";
+    document.getElementById("suboption13").style.display = "block";
+    document.getElementById("suboption14").style.display = "block";
+    document.getElementById("suboption15").style.display = "block";
+    document.getElementById("suboption16").style.display = "block";
+    }
+    function offSuboption15() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("dogoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption15").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption12").style.display = "none";
+    document.getElementById("suboption13").style.display = "none";
+    document.getElementById("suboption14").style.display = "none";
+    document.getElementById("suboption15").style.display = "none";
+    document.getElementById("suboption16").style.display = "none";
+    }
+    function Suboption16() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
+    document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
+    document.getElementById("dogoption1").style.display = "block";
+    document.getElementById("dogoption2").style.display = "block";
+    document.getElementById("dogoption3").style.display = "block";
+    document.getElementById("dogoption3").style.backgroundColor = "rgba(187, 187, 187)";
+    document.getElementById("suboption16").style.backgroundColor = "rgb(196, 199, 192)";
+    document.getElementById("suboption12").style.display = "block";
+    document.getElementById("suboption13").style.display = "block";
+    document.getElementById("suboption14").style.display = "block";
+    document.getElementById("suboption15").style.display = "block";
+    document.getElementById("suboption16").style.display = "block";
+    }
+    function offSuboption16() {
+    document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
+    document.getElementById("mainoption1").style.border = "none";
+    document.getElementById("dogoption1").style.display = "none";
+    document.getElementById("dogoption2").style.display = "none";
+    document.getElementById("dogoption3").style.display = "none";
+    document.getElementById("dogoption3").style.backgroundColor = "lightgrey";
+    document.getElementById("suboption16").style.backgroundColor = "rgb(211, 214, 206)";
+    document.getElementById("suboption12").style.display = "none";
+    document.getElementById("suboption13").style.display = "none";
+    document.getElementById("suboption14").style.display = "none";
+    document.getElementById("suboption15").style.display = "none";
+    document.getElementById("suboption16").style.display = "none";
+    }
+</script>
+</head>
+<body>
+    <div class = "wrapper">
+        <!--the definition for the top bar-->
+        <div class = "top">
+        <img src="logo2.svg" alt="" class = "logo">
+        <pre style="float: right;">Call (04) 0220 4808            l         info@hornsbypetshelter.com.au</pre>
+        </div>
+        <!--the definition for the left side-->
+        <div class="leftside"></div>
+        <!--the definition for the right side-->
+        <div class="rightside"></div>
+        <!--the definition for the banner-->
+        <div class="banner" >
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill= lightgrey fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,101.3C672,128,768,160,864,154.7C960,149,1056,107,1152,101.3C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </p>
+        </div>
+        <!--the definition for the links-->
+        <div class="pages">
+            <h1><a href =https://lia-wigglesworth.github.io/Website-Building>Home</a></h1>
+            <h1><a href ="http://127.0.0.1:5500/adoptacat.html">Cats</a></h1>
+            <h1><a href ="http://127.0.0.1:5500/adoptadog.html">Dogs</a></h1>
+            <h1>Shop</h1>
+            <h1>Adoption form</h1>
+            </div>
+        <div class = "bar">
+        <p> <img src="circle1.svg" alt="" class = "circle1"> Fast shipping at low costs</p>
+        <p> <img src="circle2.svg" alt="" class = "circle2"> Items for all ages and types of pets</p>
+        <p> <img src="circle3.svg" alt="" class = "circle3"> We have a wide range of products</p>
+        </div>
+        <!--the definition for the header-->
+        <div id="header">
+            <h1>Hornsby Pet Shop</h1>
+        </div>
+        <!--definition for the menu-->
+        <div id="menu">
+            <!--Cat section-->
+            <h2 id = "mainoption1">Cats</h2>
+            <img src="Downward_arrow.svg" alt="" class = "arrow" onmouseover="Catsmenu()" onmouseout="offCatsmenu()">
+            <h3 id = "catoption1" onmouseover="Catoption1()" onmouseout="offCatoption1()" onclick="clickCatoption1()">- Food</h3>
+                <h9 id = "suboption1" onmouseover="Suboption1()" onmouseout="offSuboption1()">Dry</h9>
+                <h10 id = "suboption2" onmouseover="Suboption2()" onmouseout="offSuboption2()">Wet</h10>
+                <h11 id = "suboption3" onmouseover="Suboption3()" onmouseout="offSuboption3()">Treats</h11>
+            <h4 id = "catoption2" onmouseover="Catoption2()" onmouseout="offCatoption2()">- Toys</h4>
+            <h5 id = "catoption3" onmouseover="Catoption3()" onmouseout="offCatoption3()">- Essentials</h5>
+                <h12 id = "suboption4" onmouseover="Suboption4()" onmouseout="offSuboption4()">Crates</h12>
+                <h13 id = "suboption5" onmouseover="Suboption5()" onmouseout="offSuboption5()">Collars</h13>
+                <h14 id = "suboption6" onmouseover="Suboption6()" onmouseout="offSuboption6()">Grooming</h14>
+                <h15 id = "suboption7" onmouseover="Suboption7()" onmouseout="offSuboption7()">Scratchers</h15>
+                <h16 id = "suboption8" onmouseover="Suboption8()" onmouseout="offSuboption8()">Litter</h16>
+                <!--Dog section-->
+            <p id = "mainoption1">Dogs</p>
+            <img src="Downward_arrow.svg" alt="" class = "arrow2" onmouseover="Dogsmenu()" onmouseout="offDogsmenu()">
+            <h6 id = "dogoption1" onmouseover="Dogoption1()" onmouseout="offDogoption1()" onclick="clickDogoption1()">- Food</h6>
+                <h17 id = "suboption9" onmouseover="Suboption9()" onmouseout="offSuboption9()">Dry</h17>
+                <h18 id = "suboption10" onmouseover="Suboption10()" onmouseout="offSuboption10()">Wet</h18>
+                <h19 id = "suboption11" onmouseover="Suboption11()" onmouseout="offSuboption11()">Treats</h19>
+            <h7 id = "dogoption2" onmouseover="Dogoption2()" onmouseout="offDogoption2()">- Toys</h7>
+            <h8 id = "dogoption3" onmouseover="Dogoption3()" onmouseout="offDogoption3()">- Essentials</h8>
+                <h20 id = "suboption12" onmouseover="Suboption12()" onmouseout="offSuboption12()">Beds</h20>
+                <h21 id = "suboption13" onmouseover="Suboption13()" onmouseout="offSuboption13()">Leads + collars</h21>
+                <h22 id = "suboption14" onmouseover="Suboption14()" onmouseout="offSuboption14()">Crates</h22>
+                <h23 id = "suboption15" onmouseover="Suboption15()" onmouseout="offSuboption15()">Clothing</h23>
+                <h24 id = "suboption16" onmouseover="Suboption16()" onmouseout="offSuboption16()">Grooming</h24>
+        </div>
+        <!--definition for paragraph 1-->
+        <div id = "paragraph1">
+        <h2>Popular Items</h2>
+            <!--the first section-->
+            <h1>Best sellers</h1>
+            <img src="Item_images/Aloveenshampoo.jpg" alt="" class = "BSitem">
+            <img src="Item_images/Catscratcher(1).jpg" alt="" class = "BSitem">
+            <img src="Item_images/Ivorycoatdrydogfood(1).jpg" alt="" class = "BSitem">
+            <img src="Item_images/Kazoojacket.jpg" alt="" class = "BSitem">
+            <p>Aloveen Pet Shampoo</p>
+            <p>ZeeZ Cardboard Scratcher</p>
+            <p>Ivory Coat Dry Dog Food</p>
+            <p>Kazoo Softie Dog Jumper</p>
+            <div class ="price">$54.99</div>
+            <div class ="price1">$18.99</div>
+            <div class ="price2">$513.99</div>
+            <div class ="price3">$55.49</div>
+            <!--the second section-->
+            <h1>Discounted items</h1>
+            <img src="Item_images/Kongpuppytoy.jpg" alt="" class = "BSitem">
+            <img src="Item_images/Ivorycoatcatfood(1).jpg" alt="" class = "BSitem">
+            <img src="Item_images/Dentaltreat.png" alt="" class = "BSitem">
+            <img src="Item_images/Blackcrate.jpg" alt="" class = "BSitem">
+            <p>Kong Puppy Dog Toy</p>
+            <p>Ivory Coat Indoor Cat</p>
+            <p>Greenies Dog Dental Treat</p>
+            <p>Pet One Collapsible Crate</p>
+            <div class ="price4">$21.99</div>
+            <div class ="price5">$65.79</div>
+            <div class ="price6">$25.15</div>
+            <div class ="price7">$89.89</div>
+            <!--the third section-->
+            <h1>Customer favourites</h1>
+            <img src="Item_images/Hills_science_oralcare.jpg" alt="" class = "BSitem">
+            <img src="Item_images/Chicken_breasts.jpg" alt="" class = "BSitem">
+            <img src="Item_images/Fancyfeast_broth.jpg" alt="" class = "BSitem">
+            <img src="Item_images/Epi-optic.jpg" alt="" class = "BSitem">
+            <div class = "CFtext">DRY FOOD</div>
+            <div class = "CFtext">TREATS</div>
+            <div class = "CFtext">WET FOOD</div>
+            <div class = "CFtext">ESSENTIALS</div>
+        </div>
+        <!--other items-->
+        <img src="Item_images/Sale.svg" alt="" class = "Sale1">
+        <img src="Item_images/Sale2.svg" alt="" class = "Sale2">
+        <img src="Item_images/Sale3.svg" alt="" class = "Sale3">
+        <img src="Item_images/Sale4.svg" alt="" class = "Sale4">
+        <img src="Item_images/Newitem.svg" alt="" class = "Newitem">
+        <img src="Item_images/Newitem.svg" alt="" class = "Newitem1">
+        <div class = "BSbackground"></div>
+        <div class = "DIbackground"></div>
+        <div class = "CFbackground"></div>
+        <!--definition for paragraph 2-->
+        <div id = "paragraph2">
+            <h1>
+                About Hornsby Pet Shop
+            </h1>
+            <p>
+                As well as rehoming and sheltering many different kinds of animals, Hornsby Pet Shelter also provides different 
+                equipment that is necessary for raising and caring for pets. The pet store has been run by locals since it opened in 2007.
+                Our profits go towards running the shelter as well as other Sydney based animal charities. We make it easy for you to shop
+                for all your pet's needs from dogs to cats, wet food and dry food, toys and treats. 
+            </p>
+            <p>
+                Our whole team has a passion for pets and we are always here to help! We can answer your questions about which products are the
+                most suited to your pet and give you tips about making sure your pet/s have the best lifestyle possible. We have many reputable brands
+                available including Hill's Science Diet, Ivory Coat, Black Hawk and many others! 
+            </p>
+        </div>
+        <!--footer-->
+        <div class="footer" >
+            <ul class="list">
+                <li>Privacy policy </li>
+                <li>Terms & Conditions </li>
+                <li>About Us</li>
+                <li>Cookies policy</li>
+              </ul>
+        <p> 132 Weston Street, Brunswick East VIC 3057</p>
+        <p>Office Phone: +61 (3) 9329-9587</p>
+        <p>Fax: +61 (3) 9329-9558</p>
+        <div id ="copyright">© 2021 Lia Wigglesworth. All rights reserved</div>
+        </div>
+        <!--definition for the top wave-->
+        <div class = "banner2">
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill= lightgrey fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,101.3C672,128,768,160,864,154.7C960,149,1056,107,1152,101.3C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg> 
+        </p>  
+    </div>
+</body> 
+</html>

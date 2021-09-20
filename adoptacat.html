@@ -852,6 +852,21 @@
     height: 45px;
     font-size: small;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }   
+    /*link*/
+    a.link2:link {
+    color: rgb(148, 134, 104);
+    text-decoration: none;
+    }
+    /*hover over link*/
+    a.link2:hover {
+    text-decoration: underline;
+    color: rgb(112, 119, 105);
+    }
+    /*link has been visited*/
+    a.link2:visited {
+    text-decoration: none;
+    color: rgb(70, 82, 61);
     }
 </style>
 <script>
@@ -1336,7 +1351,7 @@ var elmnt = document.getElementById("paragraph3");
         <div id = "paragraph3">
         <h1>Adoption Process</h1>
         <p>Hornsby Pet Shelter is dedicated to finding loving homes for all of our animals. To protect our staff as well as the wider community of NSW
-            we've had to make some changes to our adoption process. If you are interested in adopting a specific animal from our shelter, please fill out the linked application form below
+            we've had to make some changes to our adoption process. If you are interested in adopting a specific animal from our shelter, please fill out the  <a class="link2" href ="http://127.0.0.1:5500/adoption-request-form.html">linked application form</a> 
             and our team will be in touch to begin the adoption process. If you are approved for adoption, you will be allocated an appointment to meet your
             potential new pet and to process the adoption. There is no fee for this service. Despite these changes, we assure you that our standards remain the same - 
             finding the perfect forever home for our animals has been, and will always be, our top priority. We appreciate your understanding and patience during this time.
