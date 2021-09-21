@@ -7,7 +7,7 @@
     <title>Hornsby Pet Shelter: Cats</title>
     <link rel="icon" href="favicon.ico"/>
 <style>
-        :root {
+    :root {
     --primaryCol: #b1b49c;
     --variationprimaryCol: #c5c9b0;
     --accentCol: #d3daa4;
@@ -16,7 +16,7 @@
     --lightgrey: #dad0c3;
     --middlegrey: #8e9194;
     --darkgrey: #443e36;
-    --variationdarkgrey: #3d372f;
+    --variationdarkgrey: #635b53;
     --lightorange: rgb(216, 190, 155);
     }
     body {
@@ -60,14 +60,12 @@
     font-weight: bold;
     }
     .leftside {
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color: var(--variationdarkgrey);
     grid-area: lside;
     border-right: 2px solid var(--middlegrey);
     }
     .rightside {
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color: var(--variationdarkgrey);
     grid-area: rside;
     border-left: 2px solid var(--middlegrey);
     border-bottom: none;
@@ -513,7 +511,7 @@
     justify-content: space-evenly;
     margin-left: 130px;
     margin-top: 15px;
-    background-color: var(--variationdarkgrey);
+    background-color: var(--darkgrey);
     }
     .bar p {
     background-color: var(--lightgrey);
@@ -528,7 +526,7 @@
     .circle1 {
     position: absolute;
     left: 225px;
-    top: 682px;
+    top: 688px;
     width: 50px;
     margin: 0 0 0 5px;
     padding: 0;
@@ -537,7 +535,7 @@
     .circle2 {
     position: absolute;
     left: 538px;
-    top: 682px;
+    top: 688px;
     width: 50px;
     margin: 0 0 0 5px;
     padding: 0;
@@ -546,7 +544,7 @@
     .circle3 {
     position: absolute;
     left: 850px;
-    top: 682px;
+    top: 688px;
     width: 50px;
     margin: 0 0 0 5px;
     padding: 0;
@@ -556,6 +554,7 @@
     #paragraph1 {
     grid-area: paragraph1;
     background-color: rgb(204, 212, 196);
+    height: 1260px;
     }
     #paragraph1 h2{
     text-align: center;
@@ -564,6 +563,17 @@
     font-size: 25px;
     text-decoration: underline;
     background-color: var(--variationsecondaryCol);
+    border-top: 2px solid rgb(163, 163, 163);
+    border-bottom: 2px solid rgb(150, 149, 149);
+    }
+    #location {
+    font-size: 14px;
+    height: 20px;
+    width: 400px;
+    position: absolute;
+    top: 800px;
+    left: 70px;
+    font-family:Arial, Helvetica, sans-serif;
     }
     #paragraph1 h1 {
     padding: 15px 50px 17px 40px;
@@ -571,6 +581,9 @@
     text-decoration: underline;
     position: relative;
     z-index: 1;
+    }
+    #header3 {
+    margin-top: 340px;
     }
     #paragraph1 p {
     float: left;
@@ -585,14 +598,32 @@
     position: relative;
     z-index: 1;
     }
-    /*background for paragraph 1*/
+    /*paragraph 1 parts*/
+    #paragraph1main {
+    display: block;
+    }
+    #paragraph1items {  
+    display: block;
+    }
+    /*backgrounds for paragraph 1*/
+    .Catbackground {
+    background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
+    25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
+    rgba(255,255,255,0.22172619047619047) 100%);
+    height: 1213px;
+    width: 995px;
+    top: 845px;
+    left: 327px;
+    position: absolute;
+    z-index: 0;
+    }
     .BSbackground {
     background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
     25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
     rgba(255,255,255,0.22172619047619047) 100%);
-    height: 395px;
+    height: 410px;
     width: 1294px;
-    top: 840px;
+    top: 845px;
     left: 27px;
     position: absolute;
     z-index: 0;
@@ -601,9 +632,9 @@
     background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
     25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
     rgba(255,255,255,0.22172619047619047) 100%);
-    height: 395px;
+    height: 392px;
     width: 1294px;
-    top: 1240px;
+    top: 1260px;
     left: 27px;
     position: absolute;
     z-index: 0;
@@ -612,13 +643,14 @@
     background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
     25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
     rgba(255,255,255,0.22172619047619047) 100%);
-    height: 395px;
+    height: 400px;
     width: 1294px;
-    top: 1640px;
+    top: 1658px;
     left: 27px;
     position: absolute;
     z-index: 0;
     }
+    /*text*/
     .CFtext {
     float: left;
     background-color: rgb(181, 189, 177);
@@ -707,7 +739,7 @@
     z-index: 2;
     }
     /*styling for all of the images*/
-    .BSitem {
+    .mainitem {
     height: 230px;
     width: 230px;
     object-fit: cover;
@@ -762,17 +794,632 @@
     left: 555px;
     z-index: 2;
     }
+    /*styling for the sidebar*/
+    #sidebar {
+    float: left;
+    width: 300px;
+    height: 1215px;
+    background-color: var(--variationsecondaryCol);
+    border-right: 2px solid grey;
+    background-color: rgb(184, 176, 165);
+    display: none;
+    }
+    #sidebar h1 {
+    padding: 0;
+    margin: 20px 0 15px 0;
+    text-align: center; 
+    }
+    #sidebar h2 {
+    font-size: 15px;
+    background-color: rgb(184, 176, 165);
+    padding: 0 25px 00px 25px;
+    margin: 0;
+    color: var(--variationdarkgrey);
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    }
+    #sidebar p {
+    background-color: rgb(70, 59, 49);
+    color: rgb(203, 211, 197);
+    height: 35px;
+    border: 1px solid var(--middlegrey);
+    padding: 15px 20px 5px 0;
+    margin: 0 0 20px 40px;
+    font-weight: 120;
+    }
+    .sidebarimage {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 45px;
+    width: 48px;
+    margin: -11px 0 0 10px;
+    border: 1px solid var(--middlegrey);
+    float: left;
+    }
+    .sidebarimage1 {
+    border-radius: 50%;
+    height: 45px;
+    width: 48px;
+    margin: -11px 0 0 10px;
+    border: 1px solid var(--middlegrey);
+    float: left;
+    }
+    /*Paragraph 1 main cat section*/
+    #paragraph1Cat {
+    display: none;
+    }
+    #paragraph1Catpart2 {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    .Catitem1 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 30px 0 80px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Catitem {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 30px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    #paragraph1Cat p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat food section*/
+     #paragraph1Catfood {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat toys section*/
+    #paragraph1Cattoys {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Cattoys p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Catitem2 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 90px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat essentials section*/
+    #paragraph1Catessentials {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catessentials p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat dry food section*/
+    #paragraph1Catdryfood {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catdryfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat wet food section*/
+    #paragraph1Catwetfood {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catwetfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat treats section*/
+    #paragraph1Cattreats {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Cattreats p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat crates section*/
+    #paragraph1Catcrates {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catcrates p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat collar section*/
+    #paragraph1Catcollars {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catcollars p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat grooming section*/
+    #paragraph1Catgrooming {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catgrooming p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat scratchers section*/
+    #paragraph1Catscratcher {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catscratcher p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat litter section*/
+    #paragraph1Catlitter {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catlitter p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 main dog section*/
+    #paragraph1Dog {
+    display: none;
+    }
+    #paragraph1Dogpart2 {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    .Dogitem1 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 30px 0 80px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Dogitem {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 30px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    #paragraph1Dog p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog food section*/
+     #paragraph1Dogfood {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog toys section*/
+    #paragraph1Dogtoys {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogtoys p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Dogitem2 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 90px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog essentials section*/
+    #paragraph1Dogessentials {
+    display: none;
+    }
+    #paragraph1Dogessentialspart2 {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogessentials p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog dry food section*/
+    #paragraph1Dogdryfood {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogdryfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog wet food section*/
+    #paragraph1Dogwetfood {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogwetfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog treats section*/
+    #paragraph1Dogtreats {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogtreats p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog beds section*/
+    #paragraph1Dogbeds {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogbeds p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog collar section*/
+    #paragraph1Dogcollars {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogcollars p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog crates section*/
+    #paragraph1Dogcrates {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogcrates p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog clothing section*/
+    #paragraph1Dogclothing {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogclothing p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog grooming section*/
+    #paragraph1Doggrooming {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Doggrooming p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
     /*PARAGRAPH 2*/
     #paragraph2 {
     grid-area: paragraph2;
     background-color: var(--primaryCol);
-    padding: 10px 90px;
+    padding: 10px 90px 20px 90px;
     text-align: center;
     font-size: 15px;
+    border-top: 2px solid grey;
     }
     #paragraph2 h1{
     font-size: 20px;
     text-decoration: underline;
+    padding-top: 0px;
+    padding-bottom: 2px;
     }
     /*styling for the footer*/
     .footer {
@@ -848,6 +1495,15 @@
     document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
     document.getElementById("mainoption1").style.border = "none";
     }
+    function clickCat() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("paragraph1Cat").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("mainheader").innerHTML = "Cat Items";
+    document.getElementById("location").innerHTML = "Cats";
+    document.getElementById("description").innerHTML = "Our range of cat products includes both dry and wet food from reputable and trusted brands, several different treats, multiple enjoyable and safe toys for your cat to play with, items for grooming and health, scratchers, litter and litter boxes, crates and carriers, and collars!"; 
+    }
     /*main options*/
     function Catoption1() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -872,7 +1528,25 @@
     document.getElementById("suboption3").style.display = "none";
     }
     function clickCatoption1() {
-    document.getElementById("mainoption1").style.backgroundColor = "pink";
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Food";
+    document.getElementById("location").innerHTML = "Cats > Food";
+    document.getElementById("paragraph1Catfood").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "We offer many different types of cat food, designed to be nutritious and healthy for your pet! These foods have also been designed so that they are appealing to the cats and are easy for them to eat. If you have any questions regarding what type of food to buy, how much to feed your pet, or if they should be eating dry or wet food, don't hesitate to contact the staff and ask!";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
     }
     function Catoption2() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -889,6 +1563,27 @@
     document.getElementById("catoption1").style.display = "none";
     document.getElementById("catoption2").style.display = "none";
     document.getElementById("catoption3").style.display = "none";
+    }
+    function clickCatoption2() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Toys";
+    document.getElementById("location").innerHTML = "Cats > Toys";
+    document.getElementById("paragraph1Cattoys").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Cat toys provide entertainment, mental and physical stimulation and enjoyment for you and your cat. These simple toys can help to keep your cat content and prevent unwanted behaviours.";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
     }
     function Catoption3() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -916,7 +1611,28 @@
     document.getElementById("suboption7").style.display = "none";
     document.getElementById("suboption8").style.display = "none";
     }
-    /*sub-options*/
+    function clickCatoption3() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Essentials";
+    document.getElementById("location").innerHTML = "Cats > Essentials";
+    document.getElementById("paragraph1Catessentials").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "These essentials are necessary to caring for your cat and include all the items that you will need. Our range of items have been designed to enhance the health, safety, comfort and appearance of your pet. Essentials include crates, collars, grooming items, scratchers, litter and litter boxes.";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
+    }
+    /*sub-options for cat section*/
     function Suboption1() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
@@ -940,6 +1656,27 @@
     document.getElementById("suboption1").style.display = "none";
     document.getElementById("suboption2").style.display = "none";
     document.getElementById("suboption3").style.display = "none";
+    }
+    function clickSuboption1() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Dry Food";
+    document.getElementById("location").innerHTML = "Cats > Food > Dry";
+    document.getElementById("paragraph1Catdryfood").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = ""; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
     }
     function Suboption2() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -965,6 +1702,27 @@
     document.getElementById("suboption2").style.display = "none";
     document.getElementById("suboption3").style.display = "none";
     }
+    function clickSuboption2() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Wet Food";
+    document.getElementById("location").innerHTML = "Cats > Wet > Dry";
+    document.getElementById("paragraph1Catwetfood").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Many cat nutrition experts recommend that you do not only feed your cat dry food. Dry food averages around 7-12% water content which means that it is easy for your cat to become dehydrated if they do not drink enough water. Dry food also has a high sodium content, and overall this can cause urinary tract issues and health complications. This is one of the benefits of wet cat food as it is normally around 70% moisture content, which is similar to prey that cats would naturally hunt. It also contains more protein and less carbohydrates. This helps with losing excess weight. Wet cat food is also useful for kittens as it makes for an easy transition from milk or formula to solids. ";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
+    }  
     function Suboption3() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
@@ -988,6 +1746,27 @@
     document.getElementById("suboption1").style.display = "none";
     document.getElementById("suboption2").style.display = "none";
     document.getElementById("suboption3").style.display = "none";
+    }
+    function clickSuboption3() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Treats";
+    document.getElementById("location").innerHTML = "Cats > Food > Treats";
+    document.getElementById("paragraph1Cattreats").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Many cat treats do a good job of supplementing your cat's diet, providing additional nutrition and benefits that they can't get from their regular food. Treats provide the opportunity for important one-on-one time with your cat and can go a long way toward strengthening your bond. While cats don't require treats and it can be bad for their health in excess, occassional treats are beneficial.";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
     }
     function Suboption4() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -1017,6 +1796,27 @@
     document.getElementById("suboption7").style.display = "none";
     document.getElementById("suboption8").style.display = "none";
     }
+    function clickSuboption4() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Crates & Carriers";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Crates";
+    document.getElementById("paragraph1Catcrates").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "While people tend to talk about crates for dogs more than they do for cats, crates are important for transporting cats, even just to the vet or another home. Unlike dogs you can not simply place a cat in the front or back seat as they could jump around or escape when possible. They could also distract the driver which could result in a crash.";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
+    }
     function Suboption5() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
@@ -1044,6 +1844,27 @@
     document.getElementById("suboption6").style.display = "none";
     document.getElementById("suboption7").style.display = "none";
     document.getElementById("suboption8").style.display = "none";
+    }
+    function clickSuboption5() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Collars";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Collars";
+    document.getElementById("paragraph1Catcollars").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Cat collars hold identification and registration tags. This is critical in case your cat becomes lost and needs to be identified. Without collars it is difficult for the cat to be returned and they could be seen as a stray and taken to a shelter. Some of the collars that we offer also contain bells or make other noises which scare off potential prey from the cat when they get too close.";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
     }
     function Suboption6() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -1073,6 +1894,27 @@
     document.getElementById("suboption7").style.display = "none";
     document.getElementById("suboption8").style.display = "none";
     }
+    function clickSuboption6() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Grooming Items";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Grooming";
+    document.getElementById("paragraph1Catgrooming").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Regular grooming for long or medium haired cats is important for your cat's health and wellbeing, as well as their appearance. An untended coat can become long, matted, and uncomfortable for your pet. Grooming helps rid the coat of shed hair and dead skin while spreading natural oils. It is also important to clip your cats nails regularly and to clean their ears and eyes to improve their senses and lower risk of infection.";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
+    }
     function Suboption7() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
@@ -1100,6 +1942,27 @@
     document.getElementById("suboption6").style.display = "none";
     document.getElementById("suboption7").style.display = "none";
     document.getElementById("suboption8").style.display = "none";
+    }
+    function clickSuboption7() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Scratchers";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Scratchers";
+    document.getElementById("paragraph1Catscratcher").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Cats scratch and climb to leave their scent and visual markings, to sharpen their claws and to stretch their legs. Instead of declawing your cat, provide a scratching post where normal scratching can safely be practiced. This will protect your property while also allowing natural behaviours and not frustrating your cat.";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    document.getElementById("paragraph1Catlitter").style.display = "none";
     }
     function Suboption8() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -1129,7 +1992,27 @@
     document.getElementById("suboption7").style.display = "none";
     document.getElementById("suboption8").style.display = "none";
     }
-
+    function clickSuboption8() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Cat Litter";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Litter";
+    document.getElementById("paragraph1Catlitter").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "A well-kept litter box not only helps a cat stay mentally and physically healthy, but it also allows our feline companions to remain interested in using it for doing their “business”. Otherwise, they could opt for a cleaner area of the house which may or may not contain a litter box.";
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Cat").style.display = "none";
+    document.getElementById("paragraph1Catfood").style.display = "none";
+    document.getElementById("paragraph1Cattoys").style.display = "none";
+    document.getElementById("paragraph1Catessentials").style.display = "none";
+    document.getElementById("paragraph1Catwetfood").style.display = "none";
+    document.getElementById("paragraph1Catdryfood").style.display = "none";
+    document.getElementById("paragraph1Cattreats").style.display = "none";
+    document.getElementById("paragraph1Catcrates").style.display = "none";
+    document.getElementById("paragraph1Catcollars").style.display = "none";
+    document.getElementById("paragraph1Catscratcher").style.display = "none";
+    document.getElementById("paragraph1Catgrooming").style.display = "none";
+    }
     /*dog section*/
     function Dogsmenu() {
     document.getElementById("dogoption1").style.display = "block";
@@ -1144,6 +2027,15 @@
     document.getElementById("dogoption3").style.display = "none";
     document.getElementById("mainoption1").style.backgroundColor = "rgba(211, 211, 211, 0.1)";
     document.getElementById("mainoption1").style.border = "none";
+    }
+    function clickDog() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("paragraph1Dog").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("mainheader").innerHTML = "Dog Items";
+    document.getElementById("location").innerHTML = "Dogs";
+    document.getElementById("description").innerHTML = "Our range of dog products includes both dry and wet food from reputable and trusted brands, several different treats, multiple enjoyable and safe toys for your dog to play with, items for grooming and health, scratchers, litter and litter boxes, crates and carriers, and collars!"; 
     }
     /*main options for dog section*/
     function Dogoption1() {
@@ -1169,7 +2061,25 @@
     document.getElementById("suboption11").style.display = "none";
     }
     function clickDogoption1() {
-    document.getElementById("mainoption1").style.backgroundColor = "pink";
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Food";
+    document.getElementById("location").innerHTML = "Dogs > Food";
+    document.getElementById("paragraph1Dogfood").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = ""; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
     }
     function Dogoption2() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -1186,6 +2096,27 @@
     document.getElementById("dogoption1").style.display = "none";
     document.getElementById("dogoption2").style.display = "none";
     document.getElementById("dogoption3").style.display = "none";
+    }
+    function clickDogoption2() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Toys";
+    document.getElementById("location").innerHTML = "Dogs > Toys";
+    document.getElementById("paragraph1Dogtoys").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
     }
     function Dogoption3() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -1207,14 +2138,35 @@
     document.getElementById("dogoption1").style.display = "none";
     document.getElementById("dogoption2").style.display = "none";
     document.getElementById("dogoption3").style.display = "none";
-    document.getElementById("suboption4").style.display = "none";
-    document.getElementById("suboption5").style.display = "none";
-    document.getElementById("suboption6").style.display = "none";
-    document.getElementById("suboption7").style.display = "none";
-    document.getElementById("suboption8").style.display = "none";
+    document.getElementById("suboption12").style.display = "none";
+    document.getElementById("suboption13").style.display = "none";
+    document.getElementById("suboption14").style.display = "none";
+    document.getElementById("suboption15").style.display = "none";
+    document.getElementById("suboption16").style.display = "none";
     }
-       /*sub-options*/
-       function Suboption9() {
+    function clickDogoption3() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Essentials";
+    document.getElementById("location").innerHTML = "Dogs > Essentials";
+    document.getElementById("paragraph1Dogessentials").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
+    }
+    /*sub-options*/
+    function Suboption9() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
     document.getElementById("dogoption1").style.display = "block";
@@ -1237,6 +2189,27 @@
     document.getElementById("suboption9").style.display = "none";
     document.getElementById("suboption10").style.display = "none";
     document.getElementById("suboption11").style.display = "none";
+    }
+    function clickSuboption9() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Dry Food";
+    document.getElementById("location").innerHTML = "Cats > Food > Dry";
+    document.getElementById("paragraph1Dogdryfood").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
     }
     function Suboption10() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -1262,6 +2235,27 @@
     document.getElementById("suboption10").style.display = "none";
     document.getElementById("suboption11").style.display = "none";
     }
+    function clickSuboption10() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Wet Food";
+    document.getElementById("location").innerHTML = "Cats > Food > Wet";
+    document.getElementById("paragraph1Dogwetfood").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
+    }
     function Suboption11() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
@@ -1285,6 +2279,27 @@
     document.getElementById("suboption9").style.display = "none";
     document.getElementById("suboption10").style.display = "none";
     document.getElementById("suboption11").style.display = "none";
+    }
+    function clickSuboption11() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Treats";
+    document.getElementById("location").innerHTML = "Cats > Food > Treats";
+    document.getElementById("paragraph1Dogtreats").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
     }
     function Suboption12() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -1314,6 +2329,27 @@
     document.getElementById("suboption15").style.display = "none";
     document.getElementById("suboption16").style.display = "none";
     }
+    function clickSuboption12() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Bedding";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Beds";
+    document.getElementById("paragraph1Dogbeds").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
+    }
     function Suboption13() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
@@ -1341,6 +2377,27 @@
     document.getElementById("suboption14").style.display = "none";
     document.getElementById("suboption15").style.display = "none";
     document.getElementById("suboption16").style.display = "none";
+    }
+    function clickSuboption13() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Leads & Collars";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Leads/Collars";
+    document.getElementById("paragraph1Dogcollars").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
     }
     function Suboption14() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
@@ -1370,6 +2427,27 @@
     document.getElementById("suboption15").style.display = "none";
     document.getElementById("suboption16").style.display = "none";
     }
+    function clickSuboption14() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Crates";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Crates";
+    document.getElementById("paragraph1Dogcrates").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
+    }
     function Suboption15() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
@@ -1398,6 +2476,27 @@
     document.getElementById("suboption15").style.display = "none";
     document.getElementById("suboption16").style.display = "none";
     }
+    function clickSuboption15() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Clothing & Accessories";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Clothing/Accessories";
+    document.getElementById("paragraph1Dogclothing").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Doggrooming").style.display = "none";
+    }
     function Suboption16() {
     document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
     document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 
@@ -1425,6 +2524,27 @@
     document.getElementById("suboption14").style.display = "none";
     document.getElementById("suboption15").style.display = "none";
     document.getElementById("suboption16").style.display = "none";
+    }
+    function clickSuboption16() {
+    document.getElementById("paragraph1main").style.display = "none";
+    document.getElementById("paragraph1items").style.display = "none";
+    document.getElementById("mainheader").innerHTML = "Dog Grooming Items";
+    document.getElementById("location").innerHTML = "Cats > Essentials > Grooming";
+    document.getElementById("paragraph1Doggrooming").style.display = "block";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("description").innerHTML = "Idk"; 
+    /*all pages that have to be hidden*/
+    document.getElementById("paragraph1Dog").style.display = "none";
+    document.getElementById("paragraph1Dogfood").style.display = "none";
+    document.getElementById("paragraph1Dogtoys").style.display = "none";
+    document.getElementById("paragraph1Dogessentials").style.display = "none";
+    document.getElementById("paragraph1Dogdryfood").style.display = "none";
+    document.getElementById("paragraph1Dogwetfood").style.display = "none";
+    document.getElementById("paragraph1Dogtreats").style.display = "none";
+    document.getElementById("paragraph1Dogbeds").style.display = "none";
+    document.getElementById("paragraph1Dogcollars").style.display = "none";
+    document.getElementById("paragraph1Dogcrates").style.display = "none";
+    document.getElementById("paragraph1Dogclothing").style.display = "none";
     }
 </script>
 </head>
@@ -1468,42 +2588,45 @@
         <div id="menu">
             <!--Cat section-->
             <h2 id = "mainoption1">Cats</h2>
-            <img src="Downward_arrow.svg" alt="" class = "arrow" onmouseover="Catsmenu()" onmouseout="offCatsmenu()">
+            <img src="Downward_arrow.svg" alt="" class = "arrow" onmouseover="Catsmenu()" onmouseout="offCatsmenu()" onclick="clickCat()">
             <h3 id = "catoption1" onmouseover="Catoption1()" onmouseout="offCatoption1()" onclick="clickCatoption1()">- Food</h3>
-                <h9 id = "suboption1" onmouseover="Suboption1()" onmouseout="offSuboption1()">Dry</h9>
-                <h10 id = "suboption2" onmouseover="Suboption2()" onmouseout="offSuboption2()">Wet</h10>
-                <h11 id = "suboption3" onmouseover="Suboption3()" onmouseout="offSuboption3()">Treats</h11>
-            <h4 id = "catoption2" onmouseover="Catoption2()" onmouseout="offCatoption2()">- Toys</h4>
-            <h5 id = "catoption3" onmouseover="Catoption3()" onmouseout="offCatoption3()">- Essentials</h5>
-                <h12 id = "suboption4" onmouseover="Suboption4()" onmouseout="offSuboption4()">Crates</h12>
-                <h13 id = "suboption5" onmouseover="Suboption5()" onmouseout="offSuboption5()">Collars</h13>
-                <h14 id = "suboption6" onmouseover="Suboption6()" onmouseout="offSuboption6()">Grooming</h14>
-                <h15 id = "suboption7" onmouseover="Suboption7()" onmouseout="offSuboption7()">Scratchers</h15>
-                <h16 id = "suboption8" onmouseover="Suboption8()" onmouseout="offSuboption8()">Litter</h16>
+                <h9 id = "suboption1" onmouseover="Suboption1()" onmouseout="offSuboption1()" onclick="clickSuboption1()">Dry</h9>
+                <h10 id = "suboption2" onmouseover="Suboption2()" onmouseout="offSuboption2()" onclick="clickSuboption2()">Wet</h10>
+                <h11 id = "suboption3" onmouseover="Suboption3()" onmouseout="offSuboption3()" onclick="clickSuboption3()">Treats</h11>
+            <h4 id = "catoption2" onmouseover="Catoption2()" onmouseout="offCatoption2()" onclick="clickCatoption2()">- Toys</h4>
+            <h5 id = "catoption3" onmouseover="Catoption3()" onmouseout="offCatoption3()" onclick="clickCatoption3()">- Essentials</h5>
+                <h12 id = "suboption4" onmouseover="Suboption4()" onmouseout="offSuboption4()" onclick="clickSuboption4()">Crates</h12>
+                <h13 id = "suboption5" onmouseover="Suboption5()" onmouseout="offSuboption5()" onclick="clickSuboption5()">Collars</h13>
+                <h14 id = "suboption6" onmouseover="Suboption6()" onmouseout="offSuboption6()" onclick="clickSuboption6()">Grooming</h14>
+                <h15 id = "suboption7" onmouseover="Suboption7()" onmouseout="offSuboption7()" onclick="clickSuboption7()">Scratchers</h15>
+                <h16 id = "suboption8" onmouseover="Suboption8()" onmouseout="offSuboption8()" onclick="clickSuboption8()">Litter</h16>
                 <!--Dog section-->
             <p id = "mainoption1">Dogs</p>
-            <img src="Downward_arrow.svg" alt="" class = "arrow2" onmouseover="Dogsmenu()" onmouseout="offDogsmenu()">
+            <img src="Downward_arrow.svg" alt="" class = "arrow2" onmouseover="Dogsmenu()" onmouseout="offDogsmenu()" onclick="clickDog()">
             <h6 id = "dogoption1" onmouseover="Dogoption1()" onmouseout="offDogoption1()" onclick="clickDogoption1()">- Food</h6>
-                <h17 id = "suboption9" onmouseover="Suboption9()" onmouseout="offSuboption9()">Dry</h17>
-                <h18 id = "suboption10" onmouseover="Suboption10()" onmouseout="offSuboption10()">Wet</h18>
-                <h19 id = "suboption11" onmouseover="Suboption11()" onmouseout="offSuboption11()">Treats</h19>
-            <h7 id = "dogoption2" onmouseover="Dogoption2()" onmouseout="offDogoption2()">- Toys</h7>
-            <h8 id = "dogoption3" onmouseover="Dogoption3()" onmouseout="offDogoption3()">- Essentials</h8>
-                <h20 id = "suboption12" onmouseover="Suboption12()" onmouseout="offSuboption12()">Beds</h20>
-                <h21 id = "suboption13" onmouseover="Suboption13()" onmouseout="offSuboption13()">Leads + collars</h21>
-                <h22 id = "suboption14" onmouseover="Suboption14()" onmouseout="offSuboption14()">Crates</h22>
-                <h23 id = "suboption15" onmouseover="Suboption15()" onmouseout="offSuboption15()">Clothing</h23>
-                <h24 id = "suboption16" onmouseover="Suboption16()" onmouseout="offSuboption16()">Grooming</h24>
+                <h17 id = "suboption9" onmouseover="Suboption9()" onmouseout="offSuboption9()" onclick="clickSuboption9()">Dry</h17>
+                <h18 id = "suboption10" onmouseover="Suboption10()" onmouseout="offSuboption10()" onclick="clickSuboption10()">Wet</h18>
+                <h19 id = "suboption11" onmouseover="Suboption11()" onmouseout="offSuboption11()" onclick="clickSuboption11()">Treats</h19>
+            <h7 id = "dogoption2" onmouseover="Dogoption2()" onmouseout="offDogoption2()" onclick="clickDogoption2()">- Toys</h7>
+            <h8 id = "dogoption3" onmouseover="Dogoption3()" onmouseout="offDogoption3()" onclick="clickDogoption3()">- Essentials</h8>
+                <h20 id = "suboption12" onmouseover="Suboption12()" onmouseout="offSuboption12()" onclick="clickSuboption12()">Beds</h20>
+                <h21 id = "suboption13" onmouseover="Suboption13()" onmouseout="offSuboption13()" onclick="clickSuboption13()">Leads + collars</h21>
+                <h22 id = "suboption14" onmouseover="Suboption14()" onmouseout="offSuboption14()" onclick="clickSuboption14()">Crates</h22>
+                <h23 id = "suboption15" onmouseover="Suboption15()" onmouseout="offSuboption15()" onclick="clickSuboption15()">Clothing</h23>
+                <h24 id = "suboption16" onmouseover="Suboption16()" onmouseout="offSuboption16()" onclick="clickSuboption16()">Grooming</h24>
         </div>
         <!--definition for paragraph 1-->
         <div id = "paragraph1">
-        <h2>Popular Items</h2>
-            <!--the first section-->
+        <div id = "location"></div>
+        <h2 id = "mainheader">Popular Items</h2>
+            <!--the main section-->
+            <div id = "paragraph1main">
+            <!--the first row-->
             <h1>Best sellers</h1>
-            <img src="Item_images/Aloveenshampoo.jpg" alt="" class = "BSitem">
-            <img src="Item_images/Catscratcher(1).jpg" alt="" class = "BSitem">
-            <img src="Item_images/Ivorycoatdrydogfood(1).jpg" alt="" class = "BSitem">
-            <img src="Item_images/Kazoojacket.jpg" alt="" class = "BSitem">
+            <img src="Item_images/Dogs/Aloveenshampoo.jpg" alt="" class = "mainitem">
+            <img src="Item_images/Cats/Catscratcher(1).jpg" alt="" class = "mainitem">
+            <img src="Item_images/Dogs/Ivorycoatdrydogfood(1).jpg" alt="" class = "mainitem">
+            <img src="Item_images/Dogs/Kazoojacket.jpg" alt="" class = "mainitem">
             <p>Aloveen Pet Shampoo</p>
             <p>ZeeZ Cardboard Scratcher</p>
             <p>Ivory Coat Dry Dog Food</p>
@@ -1512,41 +2635,397 @@
             <div class ="price1">$18.99</div>
             <div class ="price2">$513.99</div>
             <div class ="price3">$55.49</div>
-            <!--the second section-->
-            <h1>Discounted items</h1>
-            <img src="Item_images/Kongpuppytoy.jpg" alt="" class = "BSitem">
-            <img src="Item_images/Ivorycoatcatfood(1).jpg" alt="" class = "BSitem">
-            <img src="Item_images/Dentaltreat.png" alt="" class = "BSitem">
-            <img src="Item_images/Blackcrate.jpg" alt="" class = "BSitem">
+            <!--the second row-->
+            <h1 id = "header3">Discounted items</h1>
+            <img src="Item_images/Dogs/Kongpuppytoy.jpg" alt="" class = "mainitem">
+            <img src="Item_images/Cats/Ivorycoatcatfood(1).jpg" alt="" class = "mainitem">
+            <img src="Item_images/Dogs/Dentaltreat.png" alt="" class = "mainitem">
+            <img src="Item_images/Dogs/Blackcrate.jpg" alt="" class = "mainitem">
             <p>Kong Puppy Dog Toy</p>
-            <p>Ivory Coat Indoor Cat</p>
+            <p>Ivory Coat Cat Food</p>
             <p>Greenies Dog Dental Treat</p>
             <p>Pet One Collapsible Crate</p>
             <div class ="price4">$21.99</div>
             <div class ="price5">$65.79</div>
             <div class ="price6">$25.15</div>
             <div class ="price7">$89.89</div>
-            <!--the third section-->
-            <h1>Customer favourites</h1>
-            <img src="Item_images/Hills_science_oralcare.jpg" alt="" class = "BSitem">
-            <img src="Item_images/Chicken_breasts.jpg" alt="" class = "BSitem">
-            <img src="Item_images/Fancyfeast_broth.jpg" alt="" class = "BSitem">
-            <img src="Item_images/Epi-optic.jpg" alt="" class = "BSitem">
+            <!--the third row-->
+            <h1 id = "header3">Customer favourites</h1>
+            <img src="Item_images/Dogs/Hills_science_oralcare.jpg" alt="" class = "mainitem">
+            <img src="Item_images/Cats/Chicken_breasts.jpg" alt="" class = "mainitem">
+            <img src="Item_images/Cats/Fancyfeast_broth.jpg" alt="" class = "mainitem">
+            <img src="Item_images/Cats/Epi-optic.jpg" alt="" class = "mainitem">
             <div class = "CFtext">DRY FOOD</div>
             <div class = "CFtext">TREATS</div>
             <div class = "CFtext">WET FOOD</div>
             <div class = "CFtext">ESSENTIALS</div>
+            </div>
+            <!--sidebar in paragraph 1-->
+            <div id = "sidebar">
+            <h1>Description</h1>
+            <h2 id = "description">Our range of cat products includes both dry and wet food from reputable and trusted brands, several different
+                treats, multiple enjoyable and safe toys for your cat to play with, items for grooming and health, scratchers, litter
+                and litter boxes, crates and carriers, and collars!
+            </h2>
+            <h1>Brands</h1>
+            <p>
+                <img src="Item_images/Hills_logo.jpg" alt="" class = "sidebarimage">
+                Hills Science Diet
+            </p>
+            <p>
+                <img src="Item_images/Ivory_coat_logo.png.crdownload" alt="" class = "sidebarimage">
+                Ivory Coat
+            </p>
+            <p>
+                <img src="Item_images/Fancy_feast_logo.jpg" alt="" class = "sidebarimage">
+                Fancy Feast
+            </p>
+            <p>
+                <img src="Item_images/KONG_logo.jpg" alt="" class = "sidebarimage">
+                KONG company
+            </p>
+            <p>
+                <img src="Item_images/Black_hawk_logo.gif" alt="" class = "sidebarimage1">
+                Black Hawk
+            </p>
+            <p>
+                <img src="Item_images/Pet_One_logo.png" alt="" class = "sidebarimage">
+                Pet One
+            </p>
+            <p>
+                <img src="Item_images/Kazoo_logo.png" alt="" class = "sidebarimage">
+                Kazoo Pet Co
+            </p>
+            </div>
+            <!--Main cat part-->
+            <div id = "paragraph1Cat">
+            <div class = "Catbackground"></div>
+            <div id = "paragraph1Catpart1">
+                <img src="Item_images/Cats/Hills_science_catfood.jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Ivorycoatcatfood(1).jpg" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Fancyfeast_broth.jpg" alt="" class = "Catitem">
+                <p>Hills Science Cat Food</p>
+                <p>Ivory Coat Cat Food</p>
+                <p>Fancy Feast Broths</p>
+                <img src="Item_images/Cats/Hills_science_wetpouches(2).png" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Chicken_breasts.jpg" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Lamb_bites.jpg" alt="" class = "Catitem">
+                <p>Hills Science Wet Cat Pouches</p>
+                <p>Fit'n'Flash Chicken Breasts</p>
+                <p>Fit'n'Flash Lamb Bites</p>
+                <img src="Item_images/Cats/Laser_kongtoy.jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Kong_treat_ball.jpg" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Epi-optic.jpg" alt="" class = "Catitem">
+                <p>Laser Kong Toy</p>
+                <p>Kong Treat Ball Cat Toy</p>
+                <p>Epi-optic Ear Cleaner</p>
+            </div>
+            <div id = "paragraph1Catpart2">
+                <img src="Item_images/Cats/Nail_clipper.jpg" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Catscratcher(1).jpg" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Scratching_condo.jpg" alt="" class = "Catitem">
+                <p>Cat Nail Clipper</p>
+                <p>ZeeZ Cardboard Scratcher</p>
+                <p>Catio Supreme Scratching Condo</p>
+                <img src="Item_images/Cats/Cat_litter.png" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Litter_tray.jpg" alt="" class = "Catitem">
+                <img src="Item_images/Dogs/Blackcrate.jpg" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Pet_carrier.jpg" alt="" class = "Catitem">
+                <p>Breeder's Choice Cat Litter</p>
+                <p>Cat Enclosed Litter Tray</p>
+                <p>Pet One Collapsible Crate</p>
+                <p>Pet One Plastic Carrier</p>
+            </div>
+            </div>
+            <!--General cat food part-->
+            <div id = "paragraph1Catfood">
+                <div class = "Catbackground"></div>
+                <img src="Item_images/Cats/Hills_science_catfood.jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Ivorycoatcatfood(1).jpg" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Fancyfeast_broth.jpg" alt="" class = "Catitem">
+                <p>Hills Science Cat Food</p>
+                <p>Ivory Coat Cat Food</p>
+                <p>Fancy Feast Broths</p>
+                <img src="Item_images/Cats/Hills_science_wetpouches(2).png" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Chicken_breasts.jpg" alt="" class = "Catitem">
+                <img src="Item_images/Cats/Lamb_bites.jpg" alt="" class = "Catitem">
+                <p>Hills Science Wet Cat Pouches</p>
+                <p>Fit'n'Flash Chicken Breasts</p>
+                <p>Fit'n'Flash Lamb Bites</p>
+            </div>
+            <!--General essentials part-->
+            <div id = "paragraph1Catessentials">
+            <div class = "Catbackground"></div>
+            <img src="Item_images/Cats/Epi-optic.jpg" alt="" class = "Catitem1">
+            <img src="Item_images/Cats/Nail_clipper.jpg" alt="" class = "Catitem">
+            <img src="Item_images/Cats/Catscratcher(1).jpg" alt="" class = "Catitem">
+            <p>Epi-optic Ear Cleaner</p>
+            <p>Cat Nail Clipper</p>
+            <p>ZeeZ Cardboard Scratcher</p>
+            <img src="Item_images/Cats/Scratching_condo.jpg" alt="" class = "Catitem1">
+            <img src="Item_images/Cats/Cat_litter.png" alt="" class = "Catitem">
+            <img src="Item_images/Cats/Litter_tray.jpg" alt="" class = "Catitem">
+            <p>Catio Supreme Scratching Condo</p>
+            <p>Breeder's Choice Cat Litter</p>
+            <p>Cat Enclosed Litter Tray</p>
+            <img src="Item_images/Dogs/Blackcrate.jpg" alt="" class = "Catitem1">
+            <img src="Item_images/Cats/Pet_carrier.jpg" alt="" class = "Catitem2">
+            <p>Pet One Collapsible Crate</p>
+            <p>Pet One Plastic Carrier</p>
+            </div>
+             <!--Cat toy part-->
+            <div id = "paragraph1Cattoys">
+            <div class = "Catbackground"></div>
+            <img src="Item_images/Cats/Laser_kongtoy.jpg" alt="" class = "Catitem1">
+            <img src="Item_images/Cats/Kong_treat_ball.jpg" alt="" class = "Catitem2">
+            <p>Laser Kong Toy</p>
+            <p>Kong Treat Ball Cat Toy</p>
+            </div>
+            <!--Cat dry food part-->
+            <div id = "paragraph1Catdryfood">
+            <div class = "Catbackground"></div>
+            <img src="Item_images/Cats/Hills_science_catfood.jpg" alt="" class = "Catitem1">
+            <img src="Item_images/Cats/Ivorycoatcatfood(1).jpg" alt="" class = "Catitem2">
+            <p>Hills Science Cat Food</p>
+            <p>Ivory Coat Cat Food</p>
+            </div>
+            <!--Cat wet food part-->
+            <div id = "paragraph1Catwetfood">
+                <img src="Item_images/Cats/Fancyfeast_broth.jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Hills_science_wetpouches(2).png" alt="" class = "Catitem2">
+                <p>Fancy Feast Broths</p>
+                <p>Hills Science Wet Cat Pouches</p>
+            </div>
+             <!--Cat treats part-->
+            <div id = "paragraph1Cattreats">
+                <img src="Item_images/Cats/Chicken_breasts.jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Lamb_bites.jpg" alt="" class = "Catitem2">
+                <p>Fit'n'Flash Chicken Breasts</p>
+                <p>Fit'n'Flash Lamb Bites</p>
+            </div>
+            <!--Cat crates part-->
+            <div id = "paragraph1Catcrates">
+                <img src="Item_images/Dogs/Blackcrate.jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Pet_carrier.jpg" alt="" class = "Catitem2">
+                <p>Pet One Collapsible Crate</p>
+                <p>Pet One Plastic Carrier</p>
+            </div>
+            <!--Cat collars part-->
+            <div id = "paragraph1Catcollars">
+            <div class = "Catbackground"></div>
+            <img src="Item_images/Cats/Safeloc_collar(1).jpg" alt="" class = "Catitem1">
+            <img src="Item_images/Cats/Catcollar.jpg" alt="" class = "Catitem">
+            <img src="Item_images/Cats/Catharness.jpg" alt="" class = "Catitem">
+            <p>Safe-loc Cat Collar</p>
+            <p>Trouble and Trix Collar</p>
+            <p>Adjustable Cat Harness and Lead Set</p>
+            </div>
+            <!--Cat grooming part-->
+            <div id = "paragraph1Catgrooming">
+                <img src="Item_images/Cats/Nail_clipper.jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Epi-optic.jpg" alt="" class = "Catitem">
+                <img src="Item_images/Dogs/Aloveenshampoo.jpg" alt="" class = "Catitem">
+                <p>Cat Nail Clipper</p>
+                <p>Epi-optic ear cleaner</p>
+                <p>Aloveen Pet Shampoo</p>
+                <img src="Item_images/Cats/PetOne_brush.jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Petkin_eyewipes.jpg" alt="" class = "Catitem2">
+                <p>Pet One Cat Grooming Brush</p>
+                <p>Petkin Eye Wipes</p>
+            </div>
+             <!--Cat scratcher part-->
+             <div id = "paragraph1Catscratcher">
+                <img src="Item_images/Cats/Catscratcher(1).jpg" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Scratching_condo.jpg" alt="" class = "Catitem2">
+                <p>ZeeZ Cardboard Scratcher</p>
+                <p>Catio Supreme Scratching Condo</p>
+            </div>
+            <!--Cat litter part-->
+            <div id = "paragraph1Catlitter">
+                <img src="Item_images/Cats/Cat_litter.png" alt="" class = "Catitem1">
+                <img src="Item_images/Cats/Litter_tray.jpg" alt="" class = "Catitem2">
+                <p>Breeder's Choice Cat Litter</p>
+                <p>Cat Enclosed Litter Tray</p>
+            </div>
+
+            <!--Main dog part-->
+            <div id = "paragraph1Dog">
+            <div class = "Catbackground"></div>
+            <div id = "paragraph1Dogpart1">
+                <img src="Item_images/Dogs/Hills_science_oralcare.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Ivorycoatdrydogfood(1).jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Dogs/Blackhawk_wetfood.png" alt="" class = "Dogitem">
+                <p>Hills Science Oral Care Dry Food</p>
+                <p>Ivory Coat Dry Dog Food</p>
+                <p>Black Hawk Grain Free Beef Wet Dog Food</p>
+                <img src="Item_images/Dogs/Lamb_kangaroo_stew.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Cats/Chicken_breasts.jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Cats/Lamb_bites.jpg" alt="" class = "Dogitem">
+                <p>Ivory Coat Lamb & Kangaroo Stew</p>
+                <p>Fit'n'Flash Chicken Breasts</p>
+                <p>Fit'n'Flash Lamb Bites</p>
+                <img src="Item_images/Dogs/Dentaltreat.png" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Green_lipped_snacks.png" alt="" class = "Dogitem">
+                <img src="Item_images/Dogs/Kongpuppytoy.jpg" alt="" class = "Dogitem">
+                <p>Greenies Dog Dental Treat</p>
+                <p>K9 Natural Green Lipped Mussel Snacks</p>
+                <p>Kong Puppy Toy</p>
+            </div>
+            <div id = "paragraph1Dogpart2">
+                <img src="Item_images/Dogs/AirDog_squeakerballs.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Easy_walk_dogharness.jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Dogs/Flat_nylon_dogrecall.jpg" alt="" class = "Dogitem">
+                <p>Kong AirDog Squeaker Balls</p>
+                <p>Easy Walk Dog Harness</p>
+                <p>Flat Nylon Dog Recall</p>
+                <img src="Item_images/Cats/Epi-optic.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Aloveenshampoo.jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Cats/Petkin_eyewipes.jpg" alt="" class = "Dogitem">
+                <p>Epi-optic ear cleaner</p>
+                <p>Aloveen Pet Shampoo</p>
+                <p>Petkin Eye Wipes</p>
+                <img src="Item_images/Dogs/PetOne_dogbed.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Kazoo_petcushion.jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Dogs/Blackcrate.jpg" alt="" class = "Dogitem">
+                <p>Pet One Sheepskin Dog Bed</p>
+                <p>Kazoo Pet Pillow Cushion</p>
+                <p>Pet One Collapsible Crate</p>
+                <img src="Item_images/Cats/Pet_carrier.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Kazoojacket.jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Dogs/Kazoo_vovo_jacket.jpg" alt="" class = "Dogitem">   
+                <p>Pet One Plastic Carrier</p>
+                <p>Kazoo Softie Dog Jumper</p>
+                <p>Kazoo Vovo Puffer Dog Jacket</p>
+            </div>
+            </div>
+            <!--General dog food part-->
+            <div id = "paragraph1Dogfood">
+                <img src="Item_images/Dogs/Hills_science_oralcare.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Ivorycoatdrydogfood(1).jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Dogs/Blackhawk_wetfood.png" alt="" class = "Dogitem">
+                <p>Hills Science Oral Care Dry Food</p>
+                <p>Ivory Coat Dry Dog Food</p>
+                <p>Black Hawk Grain Free Beef Wet Dog Food</p>
+                <img src="Item_images/Dogs/Lamb_kangaroo_stew.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Cats/Chicken_breasts.jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Cats/Lamb_bites.jpg" alt="" class = "Dogitem">
+                <p>Ivory Coat Lamb & Kangaroo Stew</p>
+                <p>Fit'n'Flash Chicken Breasts</p>
+                <p>Fit'n'Flash Lamb Bites</p>
+                <img src="Item_images/Dogs/Dentaltreat.png" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Green_lipped_snacks.png" alt="" class = "Dogitem2">
+                <p>Greenies Dog Dental Treat</p>
+                <p>K9 Natural Green Lipped Mussel Snacks</p>
+            </div>
+            <!--General essentials part-->
+            <div id = "paragraph1Dogessentials">
+                <div id = "paragraph1Dogessentialspart1">
+                    <div class = "Catbackground"></div>
+                    <img src="Item_images/Dogs/Easy_walk_dogharness.jpg" alt="" class = "Dogitem1">
+                    <img src="Item_images/Dogs/Flat_nylon_dogrecall.jpg" alt="" class = "Dogitem">
+                    <img src="Item_images/Cats/Epi-optic.jpg" alt="" class = "Dogitem">
+                    <p>Easy Walk Dog Harness</p>
+                    <p>Flat Nylon Dog Recall</p>
+                    <p>Epi-optic ear cleaner</p>
+                    <img src="Item_images/Dogs/Aloveenshampoo.jpg" alt="" class = "Dogitem1">
+                    <img src="Item_images/Cats/Petkin_eyewipes.jpg" alt="" class = "Dogitem">
+                    <img src="Item_images/Dogs/PetOne_dogbed.jpg" alt="" class = "Dogitem">
+                    <p>Aloveen Pet Shampoo</p>
+                    <p>Petkin Eye Wipes</p>
+                    <p>Pet One Sheepskin Dog Bed</p>
+                    <img src="Item_images/Dogs/Kazoo_petcushion.jpg" alt="" class = "Dogitem1">
+                    <img src="Item_images/Dogs/Blackcrate.jpg" alt="" class = "Dogitem">
+                    <img src="Item_images/Cats/Pet_carrier.jpg" alt="" class = "Dogitem">
+                    <p>Kazoo Pet Pillow Cushion</p>
+                    <p>Pet One Collapsible Crate</p>
+                    <p>Pet One Plastic Carrier</p>
+                </div>
+                <div id = "paragraph1Dogessentialspart2">
+                    <img src="Item_images/Dogs/Kazoojacket.jpg" alt="" class = "Dogitem1"> 
+                    <img src="Item_images/Dogs/Kazoo_vovo_jacket.jpg" alt="" class = "Dogitem2">   
+                    <p>Kazoo Softie Dog Jumper</p>          
+                    <p>Kazoo Vovo Puffer Dog Jacket</p>
+                </div>
+            </div>
+            <!--Dog toy part-->
+            <div id = "paragraph1Dogtoys">
+                <div class = "Catbackground"></div>
+                <img src="Item_images/Dogs/Kongpuppytoy.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/AirDog_squeakerballs.jpg" alt="" class = "Dogitem2">
+                <p>Kong Puppy Toy</p>
+                <p>Kong AirDog Squeaker Balls</p>
+            </div>
+            <!--Dog dry food part-->
+            <div id = "paragraph1Dogdryfood">
+                <img src="Item_images/Dogs/Hills_science_oralcare.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Ivorycoatdrydogfood(1).jpg" alt="" class = "Dogitem2">
+                <p>Hills Science Oral Care Dry Food</p>
+                <p>Ivory Coat Dry Dog Food</p>
+            </div>
+            <!--Dog wet food part-->
+            <div id = "paragraph1Dogwetfood">
+                <img src="Item_images/Dogs/Blackhawk_wetfood.png" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Lamb_kangaroo_stew.jpg" alt="" class = "Dogitem2">
+                <p>Black Hawk Grain Free Beef Wet Dog Food</p>
+                <p>Ivory Coat Lamb & Kangaroo Stew</p>
+            </div>
+            <!--Dog treats part-->
+            <div id = "paragraph1Dogtreats">
+                <img src="Item_images/Cats/Chicken_breasts.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Cats/Lamb_bites.jpg" alt="" class = "Dogitem2">
+                <p>Fit'n'Flash Chicken Breasts</p>
+                <p>Fit'n'Flash Lamb Bites</p>
+            </div>
+            <!--Dog beds part-->
+            <div id = "paragraph1Dogbeds">
+                <img src="Item_images/Dogs/PetOne_dogbed.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Kazoo_petcushion.jpg" alt="" class = "Dogitem2">
+                <p>Pet One Sheepskin Dog Bed</p>
+                <p>Kazoo Pet Pillow Cushion</p>
+            </div>
+            <!--Dog collars part-->
+            <div id = "paragraph1Dogcollars">
+                <img src="Item_images/Dogs/Easy_walk_dogharness.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Flat_nylon_dogrecall.jpg" alt="" class = "Dogitem2">
+                <p>Easy Walk Dog Harness</p>
+                <p>Flat Nylon Dog Recall</p>
+            </div>
+            <!--Dog crates part-->
+            <div id = "paragraph1Dogcrates">
+                <img src="Item_images/Dogs/Blackcrate.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Cats/Pet_carrier.jpg" alt="" class = "Dogitem2">
+                <p>Pet One Collapsible Crate</p>
+                <p>Pet One Plastic Carrier</p>
+            </div>
+            <!--Dog clothing part-->
+            <div id = "paragraph1Dogclothing">
+                <img src="Item_images/Dogs/Kazoojacket.jpg" alt="" class = "Dogitem1"> 
+                <img src="Item_images/Dogs/Kazoo_vovo_jacket.jpg" alt="" class = "Dogitem2">   
+                <p>Kazoo Softie Dog Jumper</p>          
+                <p>Kazoo Vovo Puffer Dog Jacket</p>
+            </div>
+            <!--Dog grooming part-->
+            <div id = "paragraph1Doggrooming">
+                <img src="Item_images/Cats/Epi-optic.jpg" alt="" class = "Dogitem1">
+                <img src="Item_images/Dogs/Aloveenshampoo.jpg" alt="" class = "Dogitem">
+                <img src="Item_images/Cats/Petkin_eyewipes.jpg" alt="" class = "Dogitem">
+                <p>Epi-optic ear cleaner</p>
+                <p>Aloveen Pet Shampoo</p>
+                <p>Petkin Eye Wipes</p>
+            </div>
+            <!--other items-->
+            <div id = "paragraph1items">
+                <img src="Item_images/Sale.svg" alt="" class = "Sale1">
+                <img src="Item_images/Sale2.svg" alt="" class = "Sale2">
+                <img src="Item_images/Sale3.svg" alt="" class = "Sale3">
+                <img src="Item_images/Sale4.svg" alt="" class = "Sale4">
+                <img src="Item_images/Newitem.svg" alt="" class = "Newitem">
+                <img src="Item_images/Newitem.svg" alt="" class = "Newitem1">
+                <div class = "BSbackground"></div>
+                <div class = "DIbackground"></div>
+                <div class = "CFbackground"></div>
+            </div>
         </div>
-        <!--other items-->
-        <img src="Item_images/Sale.svg" alt="" class = "Sale1">
-        <img src="Item_images/Sale2.svg" alt="" class = "Sale2">
-        <img src="Item_images/Sale3.svg" alt="" class = "Sale3">
-        <img src="Item_images/Sale4.svg" alt="" class = "Sale4">
-        <img src="Item_images/Newitem.svg" alt="" class = "Newitem">
-        <img src="Item_images/Newitem.svg" alt="" class = "Newitem1">
-        <div class = "BSbackground"></div>
-        <div class = "DIbackground"></div>
-        <div class = "CFbackground"></div>
         <!--definition for paragraph 2-->
         <div id = "paragraph2">
             <h1>
