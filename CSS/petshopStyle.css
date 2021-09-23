@@ -1,0 +1,1494 @@
+:root {
+    --primaryCol: #b1b49c;
+    --variationprimaryCol: #c5c9b0;
+    --accentCol: #d3daa4;
+    --secondaryCol: #d2d6bb;
+    --variationsecondaryCol: #c0c4ad;
+    --lightgrey: #dad0c3;
+    --middlegrey: #8e9194;
+    --darkgrey: #443e36;
+    --variationdarkgrey: #635b53;
+    --lightorange: rgb(216, 190, 155);
+    }
+    body {
+    margin: 0;
+    background-color: rgb(204, 212, 196);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+      .wrapper {
+    display: grid;
+    grid-template-columns: 2% 96% 2%;
+    grid-template-rows: 3.75% 0% 18% 5% 2% 4.5% 57% 10% 7%;
+    grid-template-areas: "top top top"
+                        "pages pages pages" 
+                        "banner banner banner"
+                        "header header header"
+                        "menu menu menu"
+                        "lside bar rside"
+                        "lside paragraph1 rside"
+                        "lside paragraph2 rside"
+                        "footer footer footer"
+       }
+    .top{
+    grid-area: top;
+    background-color: var(--darkgrey);
+    }
+    .logo {
+    height: 95px;
+    padding-left: 30px;
+    }
+    .logo:hover {
+    transform: scale(1.3);
+    transition: .5s;
+    }
+    .top pre {
+    color: var(--lightgrey);
+    font-size: 14px;
+    text-align: center;
+    padding-right: 15px;
+    padding-top: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    }
+    .leftside {
+    background-color: var(--variationdarkgrey);
+    grid-area: lside;
+    border-right: 2px solid var(--middlegrey);
+    }
+    .rightside {
+    background-color: var(--variationdarkgrey);
+    grid-area: rside;
+    border-left: 2px solid var(--middlegrey);
+    border-bottom: none;
+    border-right: none;
+    }
+    /*styling for the image*/
+    .banner {
+    grid-area: banner;
+    background-image: url('../Images/test.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0px 30px; 
+    border-bottom: 2px solid var(--darkgrey);
+    border-left: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    z-index: -2;
+    }
+    /*styling for the two waves*/
+    .banner p {
+    display: block;
+    margin: 260px 0 0 -360px;
+    padding: 0;
+    width: 100%;
+    height: 0px;
+    z-index: -1;
+    }
+    .banner2 p {
+    display: block;
+    margin: 210px 0 0 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    }
+    /*styling for the header*/
+    #header {
+    background-color: #3d372f;
+    color: rgb(211, 224, 200);
+    grid-area: header;
+    place-content: center;
+    border-width: 10px;
+    padding-top: 8px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-top: 10px solid #4e473d;
+    border-bottom: 10px solid #37312a;
+    }
+    #header h1 {
+    font-size: 55px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    margin: 0;
+    }
+    /*styling for the menu*/
+    #menu {
+    background-color: var(--primaryCol);
+    grid-area: menu;
+    place-content: center;
+    border-bottom: 2px solid var(--middlegrey);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    }  
+    #menu p {
+    display: inline-block;
+    width: 82px;
+    padding: 5px 10px 4px 38px;
+    margin: 5px 0 0 60px;
+    font-size: 19px;
+    font-weight: normal;
+    background-color: rgba(211, 211, 211, 0.1);
+    }
+    #menu h2 {
+    display: inline-block;
+    width: 82px;
+    padding: 5px 10px 5px 38px;
+    margin: 5px 0 0 500px;
+    font-size: 19px;
+    font-weight: normal;
+    background-color: rgba(211, 211, 211, 0.1);
+    }
+    /*the different options*/
+    #menu h3 {
+    position: absolute;
+    left: 500px;
+    top: 633px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h4 {
+    position: absolute;
+    left: 500px;
+    top: 665px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h5 {
+    position: absolute;
+    left: 500px;
+    top: 697px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h6 {
+    position: absolute;
+    left: 694px;
+    top: 610px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h7 {
+    position: absolute;
+    left: 694px;
+    top: 685px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h8 {
+    position: absolute;
+    left: 694px;
+    top: 723px;
+    width: 85px;
+    padding: 9px 35px 9px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: lightgrey;
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    /*sub-options*/
+    #menu h9 {
+    position: absolute;
+    left: 631px;
+    top: 649px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h10 {
+    position: absolute;
+    left: 631px;
+    top: 680px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h11 {
+    position: absolute;
+    left: 631px;
+    top: 710px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h12 {
+    position: absolute;
+    left: 631px;
+    top: 724px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h13 {
+    position: absolute;
+    left: 631px;
+    top: 754px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h14 {
+    position: absolute;
+    left: 631px;
+    top: 785px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }    
+    #menu h15 {
+    position: absolute;
+    left: 631px;
+    top: 815px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h16 {
+    position: absolute;
+    left: 631px;
+    top: 845px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h17 {
+    position: absolute;
+    left: 825px;
+    top: 647px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h18 {
+    position: absolute;
+    left: 825px;
+    top: 678px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h19 {
+    position: absolute;
+    left: 825px;
+    top: 708px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h20 {
+    position: absolute;
+    left: 825px;
+    top: 723px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 2;
+    display: none;
+    }
+    #menu h21 {
+    position: absolute;
+    left: 825px;
+    top: 753px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    z-index: 4;
+    display: none;
+    }
+    #menu h22 {
+    position: absolute;
+    left: 825px;
+    top: 784px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }    
+    #menu h23 {
+    position: absolute;
+    left: 825px;
+    top: 814px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    #menu h24 {
+    position: absolute;
+    left: 825px;
+    top: 844px;
+    width: 120px;
+    padding: 5px 35px 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: rgb(211, 214, 206);
+    border: 1px solid var(--middlegrey);
+    border-top: none;
+    z-index: 2;
+    display: none;
+    }
+    /*arrows for expanding the menu*/
+    .arrow {
+    position: absolute;
+    left: 500px;
+    top: 617px;
+    height: 20px;
+    z-index: 3;
+    padding: 6px 20px 6px 90px;
+    }
+    .arrow2 {
+    position: absolute;
+    left: 695px;
+    top: 617px;
+    height: 20px;
+    padding: 6px 20px 6px 90px;
+    z-index: 3;
+    }
+    /*pages*/
+    .pages {
+    grid-area: pages;
+    height: 40px;
+    background-color: var(--variationsecondaryCol);
+    border-bottom: 2px solid var(--variationdarkgrey);
+    border-left: 2px solid var(--middlegrey);
+    border-right: 2px solid var(--middlegrey);
+    display : flex;
+    justify-content: space-evenly;
+    }
+    .pages h1 {
+    color: var(--variationdarkgrey);
+    font-size: 15px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    height: 230px;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+    /*link*/
+    a:link {
+    color: var(--darkgrey);
+    text-decoration: none;
+    }
+    /*hover over link*/
+    a:hover {
+    text-decoration: underline;
+    color: rgb(79, 79, 65);
+    }
+    /*link has been visited*/
+    a:visited {
+    text-decoration: none;
+    color: var(--variationdarkgrey);
+    }
+    .bar {
+    grid-area: bar;
+    width: 1000px;
+    height: 80px;
+    padding: 0;
+    border: 2px solid var(--variationsecondaryCol);
+    border-radius: 30px;
+    display : flex;
+    justify-content: space-evenly;
+    margin-left: 130px;
+    margin-top: 15px;
+    background-color: var(--darkgrey);
+    }
+    .bar p {
+    background-color: var(--lightgrey);
+    width: 180px;
+    text-align: center;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px 15px 10px 70px;
+    margin-top: 10px;
+    font-weight: 500;
+    }
+    .circle1 {
+    position: absolute;
+    left: 225px;
+    top: 688px;
+    width: 50px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    float: left;
+    }
+    .circle2 {
+    position: absolute;
+    left: 538px;
+    top: 688px;
+    width: 50px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    float: left;
+    }
+    .circle3 {
+    position: absolute;
+    left: 850px;
+    top: 688px;
+    width: 50px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    float: left;
+    }
+    /*PARAGRAPH 1*/
+    #paragraph1 {
+    grid-area: paragraph1;
+    background-color: rgb(204, 212, 196);
+    height: 1260px;
+    }
+    #paragraph1 h2{
+    text-align: center;
+    padding: 10px 0 20px 0;
+    margin: 20px 0 0 0;
+    font-size: 25px;
+    text-decoration: underline;
+    background-color: var(--variationsecondaryCol);
+    border-top: 2px solid rgb(163, 163, 163);
+    border-bottom: 2px solid rgb(150, 149, 149);
+    }
+    #location {
+    font-size: 14px;
+    height: 20px;
+    width: 400px;
+    position: absolute;
+    top: 800px;
+    left: 70px;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+    #paragraph1 h1 {
+    padding: 15px 50px 17px 40px;
+    font-size: 19px;
+    text-decoration: underline;
+    position: relative;
+    z-index: 1;
+    }
+    #header3 {
+    margin-top: 340px;
+    }
+    #paragraph1 p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0 30px 35px 40px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*paragraph 1 parts*/
+    #paragraph1main {
+    display: block;
+    }
+    #paragraph1items {  
+    display: block;
+    }
+    /*backgrounds for paragraph 1*/
+    .Catbackground {
+    background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
+    25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
+    rgba(255,255,255,0.22172619047619047) 100%);
+    height: 1213px;
+    width: 995px;
+    top: 845px;
+    left: 327px;
+    position: absolute;
+    z-index: 0;
+    }
+    .BSbackground {
+    background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
+    25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
+    rgba(255,255,255,0.22172619047619047) 100%);
+    height: 410px;
+    width: 1294px;
+    top: 845px;
+    left: 27px;
+    position: absolute;
+    z-index: 0;
+    }
+    .DIbackground {
+    background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
+    25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
+    rgba(255,255,255,0.22172619047619047) 100%);
+    height: 392px;
+    width: 1294px;
+    top: 1260px;
+    left: 27px;
+    position: absolute;
+    z-index: 0;
+    }
+    .CFbackground {
+    background: linear-gradient(90deg, rgba(255,255,255,0.21612394957983194) 0%, rgba(255,255,255,0.40379901960784315)
+    25%, rgba(255, 255, 255, 0.671) 49%, rgba(255,255,255,0.32816876750700286) 80%, 
+    rgba(255,255,255,0.22172619047619047) 100%);
+    height: 400px;
+    width: 1294px;
+    top: 1658px;
+    left: 27px;
+    position: absolute;
+    z-index: 0;
+    }
+    /*text*/
+    .CFtext {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 30px;
+    margin: 0 30px 20px 40px;
+    text-align: center;
+    padding: 25px 15px 15px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+    }
+    /*different prices for the first of the 3 different categories*/
+    .price{
+    position: absolute;
+    top: 1195px;
+    left: 135px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price1{
+    position: absolute;
+    top: 1195px;
+    left: 437px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price2{
+    position: absolute;
+    top: 1195px;
+    left: 740px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price3{
+    position: absolute;
+    top: 1195px;
+    left: 1050px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price4{
+    position: absolute;
+    top: 1594px;
+    left: 135px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price5{
+    position: absolute;
+    top: 1594px;
+    left: 437px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price6{
+    position: absolute;
+    top: 1594px;
+    left: 740px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price7{
+    position: absolute;
+    top: 1594px;
+    left: 1050px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    /*styling for all of the images*/
+    .mainitem {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 0 30px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*styling for circles indicating sales and new items*/
+    .Sale1 {
+    height: 85px;
+    position: absolute;
+    top: 1280px;
+    left: 250px;
+    z-index: 2;
+    }
+    .Sale2 {
+    height: 85px;
+    position: absolute;
+    top: 1280px;
+    left: 555px;
+    z-index: 2;
+    }
+    .Sale3 {
+    height: 85px;
+    position: absolute;
+    top: 1280px;
+    left: 860px;
+    z-index: 2;
+    }
+    .Sale4 {
+    height: 85px;
+    position: absolute;
+    top: 1280px;
+    left: 1160px;
+    z-index: 2;
+    }
+    .Newitem {
+    height: 85px;
+    position: absolute;
+    top: 885px;
+    left: 250px;
+    z-index: 2;
+    }
+    .Newitem1 {
+    height: 85px;
+    position: absolute;
+    top: 885px;
+    left: 555px;
+    z-index: 2;
+    }
+    /*styling for the sidebar*/
+    #sidebar {
+    float: left;
+    width: 300px;
+    height: 1215px;
+    background-color: var(--variationsecondaryCol);
+    border-right: 2px solid grey;
+    background-color: rgb(184, 176, 165);
+    display: none;
+    }
+    #sidebar h1 {
+    padding: 0;
+    margin: 20px 0 15px 0;
+    text-align: center; 
+    }
+    #sidebar h2 {
+    font-size: 15px;
+    background-color: rgb(184, 176, 165);
+    padding: 0 25px 00px 25px;
+    margin: 0;
+    color: var(--variationdarkgrey);
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    }
+    #sidebar p {
+    background-color: rgb(70, 59, 49);
+    color: rgb(203, 211, 197);
+    height: 35px;
+    border: 1px solid var(--middlegrey);
+    padding: 15px 20px 5px 0;
+    margin: 0 0 20px 40px;
+    font-weight: 120;
+    }
+    .sidebarimage {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 45px;
+    width: 48px;
+    margin: -11px 0 0 10px;
+    border: 1px solid var(--middlegrey);
+    float: left;
+    }
+    .sidebarimage1 {
+    border-radius: 50%;
+    height: 45px;
+    width: 48px;
+    margin: -11px 0 0 10px;
+    border: 1px solid var(--middlegrey);
+    float: left;
+    }
+    /*Paragraph 1 main cat section*/
+    #paragraph1Cat {
+    display: none;
+    }
+    #paragraph1Catpart2 {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    .Catitem1 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 30px 0 80px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Catitem {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 30px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    #paragraph1Cat p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat food section*/
+     #paragraph1Catfood {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat toys section*/
+    #paragraph1Cattoys {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Cattoys p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Catitem2 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 90px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat essentials section*/
+    #paragraph1Catessentials {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catessentials p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat dry food section*/
+    #paragraph1Catdryfood {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catdryfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat wet food section*/
+    #paragraph1Catwetfood {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catwetfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat treats section*/
+    #paragraph1Cattreats {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Cattreats p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat crates section*/
+    #paragraph1Catcrates {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catcrates p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat collar section*/
+    #paragraph1Catcollars {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catcollars p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat grooming section*/
+    #paragraph1Catgrooming {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catgrooming p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Catitem3 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 380px 0 80px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat scratchers section*/
+    #paragraph1Catscratcher {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catscratcher p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 cat litter section*/
+    #paragraph1Catlitter {
+    display: none;
+    }
+    #paragraph1Catprices {
+    display: none;
+    }
+    #paragraph1Catlitter p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 main dog section*/
+    #paragraph1Dog {
+    display: none;
+    }
+    #paragraph1Dogpart2 {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    .Dogitem1 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 30px 0 80px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Dogitem {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 30px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    #paragraph1Dog p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog food section*/
+     #paragraph1Dogfood {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog toys section*/
+    #paragraph1Dogtoys {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogtoys p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Dogitem2 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 90px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog essentials section*/
+    #paragraph1Dogessentials {
+    display: none;
+    }
+    #paragraph1Dogessentialspart2 {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogessentials p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog dry food section*/
+    #paragraph1Dogdryfood {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogdryfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog wet food section*/
+    #paragraph1Dogwetfood {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogwetfood p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog treats section*/
+    #paragraph1Dogtreats {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogtreats p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    .Dogitem3 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 40px 380px 0 80px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog beds section*/
+    #paragraph1Dogbeds {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogbeds p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog collar section*/
+    #paragraph1Dogcollars {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogcollars p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog crates section*/
+    #paragraph1Dogcrates {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogcrates p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog clothing section*/
+    #paragraph1Dogclothing {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Dogclothing p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*Paragraph 1 dog grooming section*/
+    #paragraph1Doggrooming {
+    display: none;
+    }
+    #paragraph1Dogprices {
+    display: none;
+    }
+    #paragraph1Doggrooming p {
+    float: left;
+    background-color: rgb(181, 189, 177);
+    width: 200px;
+    height: 47px;
+    margin: 0px -10px 35px 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid var(--middlegrey);
+    border-top: none;
+    position: relative;
+    z-index: 1;
+    }
+    /*PARAGRAPH 2*/
+    #paragraph2 {
+    grid-area: paragraph2;
+    background-color: var(--primaryCol);
+    padding: 10px 90px 20px 90px;
+    text-align: center;
+    font-size: 15px;
+    border-top: 2px solid grey;
+    }
+    #paragraph2 h1{
+    font-size: 20px;
+    text-decoration: underline;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    }
+    /*styling for the footer*/
+    .footer {
+    padding-left: 30px;
+    grid-area: footer;
+    background-color: var(--darkgrey);
+    color: var(--accentCol);
+    margin-bottom: 0%;
+    padding-top: 10px;
+    line-height: 10px;
+    border-top: 3px solid var(--middlegrey);
+    }
+    .footer p {
+    padding: 0px;
+    color: var(--lightgrey);
+    text-align: center;
+    line-height: 35%;
+    }
+    .footer ul {
+    font-weight: bold;
+    display : flex;
+    flex-direction: row;
+    list-style: none;
+    margin:0;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    }
+    #copyright {
+    padding-top: 1px;
+    padding-right: 15px;
+    text-align: right;
+    color: var(--primaryCol);
+    font-size: small;
+    font-weight: bold;
+    }
+    .vl {
+    border-left: 2px solid var(--middlegrey);
+    height: 1980px;
+    position: absolute;
+    left: 50%;
+    }
+    /*link*/
+    a.link2:link {
+    color: rgb(148, 134, 104);
+    text-decoration: none;
+    }
+    /*hover over link*/
+    a.link2:hover {
+    text-decoration: underline;
+    color: rgb(112, 119, 105);
+    }
+    /*link has been visited*/
+    a.link2:visited {
+    text-decoration: none;
+    color: rgb(70, 82, 61);
+    }

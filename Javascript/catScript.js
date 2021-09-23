@@ -67,19 +67,19 @@ document.getElementById("closeinfo6").style.opacity = "0%";
 }
 /*functions for the side bar*/
 function expandsidebar() {
-    if (document.getElementById("sidebarinfo").style.visibility = "hidden") {
+    if (document.getElementById("sidebarinfo").style.visibility == "hidden") {
         document.getElementById("sidebarinfo").style.visibility = "visible";
         document.getElementById("sidebar").style.transform = "translate(-122px)";
         document.getElementById("closesidebar").style.opacity = "100%";
-        document.getElementById("sidebar").innerHTML = ">";
+        document.getElementById("sidebar").innerHTML = ">"
     }
-}
-function closesidebar() {
-    document.getElementById("sidebarinfo").style.visibility = "hidden";
-    document.getElementById("sidebar").style.transform = "translate(0px)";
-    document.getElementById("closesidebar").style.opacity = "0%";
-    document.getElementById("sidebar").innerHTML = "<";
-}
+    else {
+        document.getElementById("sidebarinfo").style.visibility = "hidden";
+        document.getElementById("sidebar").style.transform = "translate(0px)";
+        document.getElementById("closesidebar").style.opacity = "0%";
+        document.getElementById("sidebar").innerHTML = "<";
+    }
+    }
 /*side bar links*/
 function gotoparagraph1() {
 var elmnt = document.getElementById("paragraph1");

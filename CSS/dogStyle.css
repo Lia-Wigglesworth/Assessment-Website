@@ -211,7 +211,7 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     width: 303px;
-    background-color: var(--middlegrey);
+    background-color: #a39c90;
     color: black;
     padding: 10px 15px 0px 15px;
     font-size: medium;
@@ -224,7 +224,7 @@
     display: inline-block;
     justify-content: space-evenly;
     margin: 0 0 0 73px;
-    border: 4px solid var(--middlegrey);
+    border: 4px solid #a39c90;
     }
     .dogimages2 {
     height: 220px;
@@ -233,7 +233,7 @@
     display: inline-block;
     justify-content: space-evenly;
     margin: 0 0 0 73px;
-    border: 4px solid var(--middlegrey);
+    border: 4px solid #a39c90;
     }
     .underline {
     height: 40px;
@@ -512,12 +512,30 @@
     background-color: rgba(233, 233, 233, 0.104);
     }
     #paragraph2popupimg {
-    width: 420px;
+    width: 420px;   
     height: 170px;
     margin-top: 20px;
     margin-left: 65px; 
     object-fit: cover;
     object-position: 0px 0px;
+    border: 2px solid var(--middlegrey);    
+    }
+    #paragraph2popupimg1 {
+    width: 420px;   
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 65px; 
+    object-fit: cover;
+    object-position: 0px -75px;
+    border: 2px solid var(--middlegrey);    
+    }
+    #paragraph2popupimg2 {
+    width: 420px;   
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 65px; 
+    object-fit: cover;
+    object-position: 0px -50px;
     border: 2px solid var(--middlegrey);    
     }
     /*the second pop-up (for the cost) of paragraph 2 part 1*/
@@ -646,9 +664,8 @@
     /*the first pop-up of paragraph 2 part 2*/
     #paragraph2part2popup1 {
     border-top: 2px solid var(--middlegrey);    
-    border-bottom: 2px solid var(--middlegrey);    
     background: rgb(92, 92, 92);
-    height: 586px;
+    height: 586.5px;
     width: 568.525px;
     float: right;
     overflow: auto;
@@ -730,10 +747,9 @@
     }
     /*the second pop-up of paragraph 2 part 2*/
     #paragraph2part2popup2 {
-    border-top: 2px solid var(--middlegrey);    
-    border-bottom: 2px solid var(--middlegrey);    
+    border-top: 2px solid var(--middlegrey);      
     background: rgb(92, 92, 92);
-    height: 586px;
+    height: 586.5px;
     width: 568.525px;
     float: right;
     padding-top: 5px;
@@ -797,6 +813,16 @@
     opacity: 75%;
     }
     /*the third pop-up of paragraph 2 part 2*/
+    #paragraph2part2popup3 {
+    border-top: 2px solid var(--middlegrey);    
+    background: rgb(92, 92, 92);
+    height: 586.5px;
+    width: 568.525px;
+    float: right;
+    overflow: auto;
+    padding-top: 5px;
+    display: none;
+    }
     .paragraph2part2popup3background {
     background-color: rgba(233, 233, 233, 0.104);
     height: 1225px;
@@ -838,16 +864,6 @@
     border-right: 2px solid var(--middlegrey);
     border-radius: 0px 20px 20px 0px;
     overflow: auto;
-    }
-    #paragraph2part2popup3 {
-    border-top: 2px solid var(--middlegrey);    
-    background: rgb(92, 92, 92);
-    height: 591.5px;
-    width: 568.525px;
-    float: right;
-    overflow: auto;
-    padding-top: 5px;
-    display: none;
     }
     #paragraph2part2popup3 h1{
     padding-top: 40px;
@@ -1269,7 +1285,7 @@
     height: 170px;
     width: 180px;
     object-fit: cover;
-    object-position: 0px -10px;
+    object-position: 0px 0px;
     margin-left: 35px;
     border: 4px solid #a6a995;
     border-radius: 50%;
@@ -1280,7 +1296,7 @@
     height: 170px;
     width: 180px;
     object-fit: cover;
-    object-position: 0px -10px;
+    object-position: 0px 0px;
     margin-left: 35px;
     border: 4px solid #a6a995;
     border-radius: 50%;
@@ -1291,7 +1307,7 @@
     height: 170px;
     width: 180px;
     object-fit: cover;
-    object-position: 0px -10px;
+    object-position: 0px 0px;
     margin-left: 35px;
     border: 4px solid #a6a995;
     border-radius: 50%;
@@ -1308,6 +1324,39 @@
     border: 4px solid #a6a995;
     border-radius: 50%;
     display: block;
+    }
+    /*second image*/
+    #section3image2 {
+    height: 170px;
+    width: 180px;
+    object-fit: cover;
+    object-position: 0px -10px;
+    margin-left: 35px;
+    border: 4px solid #a6a995;
+    border-radius: 50%;
+    display: none;
+    }
+    /*third image*/
+    #section3image3 {
+    height: 170px;
+    width: 180px;
+    object-fit: cover;
+    object-position: 0px -10px;
+    margin-left: 35px;
+    border: 4px solid #a6a995;
+    border-radius: 50%;
+    display: none;
+    }
+     /*third image*/
+     #section3image4 {
+    height: 170px;
+    width: 180px;
+    object-fit: cover;
+    object-position: 0px 0px;
+    margin-left: 35px;
+    border: 4px solid #a6a995;
+    border-radius: 50%;
+    display: none;
     }
     /*section 4*/
     /*first image*/
@@ -1428,7 +1477,7 @@
     height: 170px;
     width: 180px;
     object-fit: cover;
-    object-position: 0px -10px;
+    object-position: 0px 0px;
     margin-left: 35px;
     border: 4px solid #a6a995;
     border-radius: 50%;
@@ -1440,7 +1489,7 @@
     height: 170px;
     width: 180px;
     object-fit: cover;
-    object-position: 0px -10px;
+    object-position: 0px 0px;
     margin-left: 35px;
     border: 4px solid #a6a995;
     border-radius: 50%;
@@ -1451,7 +1500,7 @@
     height: 170px;
     width: 180px;
     object-fit: cover;
-    object-position: 0px -10px;
+    object-position: 0px 0px;
     margin-left: 35px;
     border: 4px solid #a6a995;
     border-radius: 50%;
@@ -2119,17 +2168,16 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     /*link*/
-    a.link2:link {
-    color: rgb(148, 134, 104);
-    text-decoration: none;
+    a.link2 {
+    text-decoration: underline;
     }
     /*hover over link*/
     a.link2:hover {
     text-decoration: underline;
-    color: rgb(112, 119, 105);
+    color: rgb(98, 146, 64);
     }
     /*link has been visited*/
     a.link2:visited {
-    text-decoration: none;
-    color: rgb(70, 82, 61);
+    text-decoration: underline;
+    color: rgb(98, 122, 82);
     }

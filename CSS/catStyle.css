@@ -86,7 +86,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: 100% 10%; 
+    background-position: 100% 90%; 
     border-bottom: 2px solid var(--darkgrey);
     border-left: 2px solid var(--middlegrey);
     border-right: 2px solid var(--middlegrey);
@@ -779,7 +779,7 @@
     padding-top: 130px;
     padding-bottom: 130px;
     right: 0%;
-    top: 92.5%;
+    top: 91.75%;
     text-align: center;
     color: var(--lightgrey);
     background-color: var(--darkgrey);
@@ -794,9 +794,9 @@
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     right: 0%;
-    top: 92.5%;
+    top: 91.75%;
     background-color: var(--lightorange);
-    border: 2px solid rgb(208, 172, 126);
+    border: 2px solid rgb(206, 181, 149);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     visibility: hidden;
     }
@@ -845,17 +845,16 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }   
     /*link*/
-    a.link2:link {
-    color: rgb(148, 134, 104);
-    text-decoration: none;
+    a.link2 {
+    text-decoration: underline;
     }
     /*hover over link*/
     a.link2:hover {
     text-decoration: underline;
-    color: rgb(112, 119, 105);
+    color: rgb(98, 146, 64);
     }
     /*link has been visited*/
     a.link2:visited {
-    text-decoration: none;
-    color: rgb(70, 82, 61);
+    text-decoration: underline;
+    color: rgb(98, 122, 82);
     }

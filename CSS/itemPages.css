@@ -150,18 +150,19 @@
     .text {
     background-color: rgba(233, 233, 233, 0.3);
     float: left;
-    width: 809px;
+    width: 811px;
     margin: 40px 0px 0px 40px;
     padding: 0px 0 0 0;
-    border: 2px solid rgb(170, 177, 169);
-    border-right: none;
+    border-top: 2px solid rgb(170, 177, 169);
+    border-bottom: 2px solid rgb(170, 177, 169);
+    border-left: 2px solid rgb(170, 177, 169);
     }
     .paragraph1 h1 {
     font-size: 21px;
     text-align: center;
     background-color: #c2b6a6;
     margin: 0;
-    padding: 20px 20px;
+    padding: 20px 25px;
     border-bottom: 2px solid rgb(156, 154, 150);
     }
     .paragraph1 h4 {
@@ -211,7 +212,8 @@
     float: left;
     color: rgb(143, 24, 24);
     background-color: var(--lightgrey);
-    padding: 6px 368px;
+    padding: 6px 0;
+    width: 812px;
     border-bottom: 1px solid rgb(192, 183, 169);
     }
     .oldprice {
@@ -385,15 +387,67 @@
     font-size: 15px;
     display: none;
     }
-    /*main image of page*/
+    /*main images of page*/
     #mainimage {
-    border: 2px solid var(--variationdarkgrey);
+    border: 2px solid rgb(200, 200, 200);
+    background-color: white;
     object-fit: cover;
     height: 480px;
-    width: 400px;
+    width: 398px;
+    float: right;
+    margin: 40px 40px 0 0px;
+    filter: brightness(85%);
+    }
+    #mainimage1 {
+    border: 2px solid rgb(200, 200, 200);
+    background-color: white;
+    height: 480px;
+    width: 258px;
     float: right;
     margin: 40px 40px 0 0;
-    opacity: 0.8;
+    padding: 0 70px;
+    filter: brightness(85%);
+    }
+    #mainimage2 {
+    border: 2px solid rgb(200, 200, 200);;
+    background-color: white;
+    height: 400px;
+    width: 378px;
+    float: right;
+    margin: 40px 40px 0 0;
+    padding: 40px 10px;
+    filter: brightness(85%);
+    }
+    #mainimage3 {
+    border: 2px solid rgb(200, 200, 200);
+    background-color: white;
+    object-fit: cover;
+    height: 480px;
+    width: 398px;
+    object-position: 0px 0px;
+    float: right;
+    margin: 40px 40px 0 0px;
+    filter: brightness(85%);
+    }
+    #mainimage4 {
+    border: 2px solid rgb(170, 170, 170);
+    object-fit: cover;
+    height: 480px;
+    width: 398px;
+    float: right;
+    margin: 40px 40px 0 0px;
+    position: relative;
+    z-index: 2;
+    }
+    #mainimage5 {
+    border: 2px solid rgb(200, 200, 200);
+    background-color: white;
+    height: 320px;
+    width: 378px;
+    float: right;
+    margin: 40px 40px 0 0;
+    padding: 80px 10px;
+    filter: brightness(85%);
     }
     /*sub images*/
     #subimagesbackground {
@@ -408,27 +462,69 @@
     }
     .subimage {
     border: 2px solid rgb(170, 177, 169);
+    background-color: white;
     height: 120px;
     width: 105px;
     float: right;
     margin: 13px 68px 0 10px;
-    opacity: 0.8;
+    filter: brightness(85%);
     }
     .subimage1 {
     border: 2px solid rgb(170, 177, 169);
+    background-color: white;
     height: 120px;
     width: 105px;
     float: right;
     margin: 13px 0px 0 10px;
-    opacity: 0.8;
+    filter: brightness(85%);
     }
     .subimage2 {
     border: 2px solid rgb(170, 177, 169);
+    background-color: white;
     height: 120px;
     width: 105px;
     float: right;
     margin: 13px 0px 0 0;
-    opacity: 0.8;
+    filter: brightness(85%);
+    }
+    .subimage3 {
+    border: 2px solid rgb(170, 177, 169);
+    background-color: white;
+    height: 120px;
+    width: 105px;
+    float: right;
+    margin: 13px 0px 0 0;
+    filter: brightness(78%);
+    }
+    .subimage4 {
+    border: 2px solid rgb(170, 177, 169);
+    background-color: white;
+    height: 60px;
+    width: 105px;
+    float: right;
+    padding: 30px 0;
+    margin: 13px 68px 0 10px;
+    filter: brightness(85%);
+    }
+    .subimage5 {
+    border: 2px solid rgb(170, 177, 169);
+    background-color: white;
+    height: 25px;
+    width: 105px;
+    float: right;
+    margin: 13px 68px 0 10px;
+    padding: 50px 0;
+    filter: brightness(85%);
+    }
+    .subimage6 {
+    border: 2px solid rgb(170, 177, 169);
+    background-color: white;
+    height: 96px;
+    width: 105px;
+    float: right;
+    padding: 12px 0;
+    margin: 13px 68px 0 10px;
+    filter: brightness(85%);
     }
     .paragraph1 h12 {
     background-color: var(--lightgrey);
@@ -438,7 +534,7 @@
     font-weight: bold;
     text-decoration: underline;
     float: left;
-    padding: 15px 370px;
+    padding: 15px 372px;
     }
     .paragraph1 h3 {
     margin-left: 235px;
@@ -513,6 +609,48 @@
     border-bottom: 2px solid rgb(192, 183, 169);
     border-left: 1px solid rgb(192, 183, 169);
     }
+    .paragraph1 h17 {
+    margin: 0 0 25px 175px;
+    background-color: rgb(240, 240, 240);
+    width: 120px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    display: inline-block;
+    color: var(--darkgrey);
+    font-size: 15px;
+    border-bottom: 2px solid rgb(192, 183, 169);
+    border-left: 1px solid rgb(192, 183, 169);
+    }
+    .paragraph1 h18 {
+    margin: 0 0 25px 5px;
+    background-color: rgb(240, 240, 240);
+    width: 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    display: inline-block;
+    color: var(--darkgrey);
+    font-size: 15px;
+    border-bottom: 2px solid rgb(192, 183, 169);
+    border-left: 1px solid rgb(192, 183, 169);
+    }
+    .paragraph1 h19 {
+    margin: 0 0 25px 75px;
+    background-color: rgb(240, 240, 240);
+    width: 80px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    display: inline-block;
+    color: var(--darkgrey);
+    font-size: 15px;
+    border-bottom: 2px solid rgb(192, 183, 169);
+    border-left: 1px solid rgb(192, 183, 169);
+    }
     #spinbuttonleft {
     background-color: var(--lightgrey);
     border: 2px solid rgb(192, 183, 169);
@@ -540,13 +678,25 @@
     width: 33px;
     float: right;
     }
-    #spinbuttonright    {
+    #spinbuttonright {
+    background-color: var(--lightgrey);
+    height: 50px;
+    width: 40px;
+    float: right;
+    margin-right: 165px;
+    margin-top: -67px;
+    margin-bottom: 80px;
+    border: 2px solid rgb(192, 183, 169);
+    border-left: none;
+    }
+    #spinbuttonright2 {
     background-color: var(--lightgrey);
     height: 50px;
     width: 40px;
     float: right;
     margin-right: 165px;
     margin-top: -72px;
+    margin-bottom: 80px;
     border: 2px solid rgb(192, 183, 169);
     border-left: none;
     }
@@ -620,6 +770,20 @@
     border-bottom: none;
     position: relative;
     z-index: 1;
+    filter: brightness(85%);
+    }
+    .varitem {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 15px 20px 0 34px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    filter: brightness(100%);
     }
     .item1 {
     height: 230px;
@@ -632,6 +796,20 @@
     border-bottom: none;
     position: relative;
     z-index: 1;
+    filter: brightness(85%);
+    }
+    .varitem1 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 15px 20px 0 17px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    filter: brightness(100%);
     }
     .item2 {
     height: 230px;
@@ -644,6 +822,7 @@
     border-bottom: none;
     position: relative;
     z-index: 1;
+    filter: brightness(85%);
     }
     .item3 {
     height: 230px;
@@ -656,6 +835,7 @@
     border-bottom: none;
     position: relative;
     z-index: 1;
+    filter: brightness(85%);
     }
     .item4 {
     height: 230px;
@@ -668,6 +848,20 @@
     border-bottom: none;
     position: relative;
     z-index: 1;
+    filter: brightness(85%);
+    }
+    .item4 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 15px 700px 0 17px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    filter: brightness(100%);
     }
     #items h1 {
     float: left;

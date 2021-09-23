@@ -157,18 +157,18 @@ function mainbutton1() {
     }
     /*side bar*/
     function expandsidebar() {
-    if (document.getElementById("sidebarinfo").style.visibility = "hidden") {
+    if (document.getElementById("sidebarinfo").style.visibility == "hidden") {
         document.getElementById("sidebarinfo").style.visibility = "visible";
         document.getElementById("sidebar").style.transform = "translate(-122px)";
         document.getElementById("closesidebar").style.opacity = "100%";
         document.getElementById("sidebar").innerHTML = ">";
-    }
-    }
-    function closesidebar() {
+        }
+    else {
         document.getElementById("sidebarinfo").style.visibility = "hidden";
         document.getElementById("sidebar").style.transform = "translate(0px)";
         document.getElementById("closesidebar").style.opacity = "0%";
         document.getElementById("sidebar").innerHTML = "<";
+        }
     }
     /*side bar links*/
     function gotoparagraph1() {
@@ -227,33 +227,35 @@ function imagecarousel1() {
     document.getElementById("section3image1").style.display = "none";
     document.getElementById("section3image2").style.display = "block";
     document.getElementById("section3image3").style.display = "none";
+    document.getElementById("section3image4").style.display = "none";
     } 
     else if (document.getElementById("section3image2").style.display !== "none") {
     document.getElementById("section3image1").style.display = "none";
     document.getElementById("section3image2").style.display = "none";
     document.getElementById("section3image3").style.display = "block";
+    document.getElementById("section3image4").style.display = "none";
+    }
+    else if (document.getElementById("section3image3").style.display !== "none") {
+    document.getElementById("section3image1").style.display = "none";
+    document.getElementById("section3image2").style.display = "none";
+    document.getElementById("section3image3").style.display = "none";
+    document.getElementById("section3image4").style.display = "block";
     } 
     else {
     document.getElementById("section3image1").style.display = "block";
     document.getElementById("section3image2").style.display = "none";
     document.getElementById("section3image3").style.display = "none";
+    document.getElementById("section3image4").style.display = "none";
     }
 }
     function imagecarousel4() {
     if (document.getElementById("section4image1").style.display !== "none") {
     document.getElementById("section4image1").style.display = "none";
     document.getElementById("section4image2").style.display = "block";
-    document.getElementById("section4image3").style.display = "none";
-    } 
-    else if (document.getElementById("section4image2").style.display !== "none") {
-    document.getElementById("section4image1").style.display = "none";
-    document.getElementById("section4image2").style.display = "none";
-    document.getElementById("section4image3").style.display = "block";
-    } 
+    }
     else {
     document.getElementById("section4image1").style.display = "block";
     document.getElementById("section4image2").style.display = "none";
-    document.getElementById("section4image3").style.display = "none";
     }
 }
     function imagecarousel5() {
@@ -313,8 +315,8 @@ function imagecarousel1() {
     document.getElementById("section8image2").style.display = "block";
     } 
     else {
-    document.getElementById("section1image1").style.display = "block";
-    document.getElementById("section1image2").style.display = "none";
+    document.getElementById("section8image1").style.display = "block";
+    document.getElementById("section8image2").style.display = "none";
     }
 }
     /*button*/
