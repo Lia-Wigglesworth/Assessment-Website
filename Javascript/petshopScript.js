@@ -283,7 +283,7 @@
         document.getElementById("location").innerHTML = "Cats > Food > Dry";
         document.getElementById("paragraph1Catdryfood").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = ""; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -816,7 +816,7 @@
         document.getElementById("location").innerHTML = "Dogs > Food";
         document.getElementById("paragraph1Dogfood").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = ""; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -867,7 +867,7 @@
         document.getElementById("location").innerHTML = "Dogs > Toys";
         document.getElementById("paragraph1Dogtoys").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -928,7 +928,7 @@
         document.getElementById("location").innerHTML = "Dogs > Essentials";
         document.getElementById("paragraph1Dogessentials").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -988,7 +988,7 @@
         document.getElementById("location").innerHTML = "Cats > Food > Dry";
         document.getElementById("paragraph1Dogdryfood").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         var elmnt = document.getElementById("mainheader");
@@ -1049,7 +1049,7 @@
         document.getElementById("location").innerHTML = "Cats > Food > Wet";
         document.getElementById("paragraph1Dogwetfood").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -1108,7 +1108,7 @@
         document.getElementById("location").innerHTML = "Cats > Food > Treats";
         document.getElementById("paragraph1Dogtreats").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -1171,7 +1171,7 @@
         document.getElementById("location").innerHTML = "Cats > Essentials > Beds";
         document.getElementById("paragraph1Dogbeds").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -1234,7 +1234,7 @@
         document.getElementById("location").innerHTML = "Cats > Essentials > Leads/Collars";
         document.getElementById("paragraph1Dogcollars").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -1297,7 +1297,7 @@
         document.getElementById("location").innerHTML = "Cats > Essentials > Crates";
         document.getElementById("paragraph1Dogcrates").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -1360,7 +1360,7 @@
         document.getElementById("location").innerHTML = "Cats > Essentials > Clothing/Accessories";
         document.getElementById("paragraph1Dogclothing").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/
@@ -1423,7 +1423,7 @@
         document.getElementById("location").innerHTML = "Cats > Essentials > Grooming";
         document.getElementById("paragraph1Doggrooming").style.display = "block";
         document.getElementById("sidebar").style.display = "block";
-        document.getElementById("description").innerHTML = "Idk"; 
+        document.getElementById("description").innerHTML = "N/A"; 
         var elmnt = document.getElementById("mainheader");
         elmnt.scrollIntoView();
         /*all pages that have to be hidden*/

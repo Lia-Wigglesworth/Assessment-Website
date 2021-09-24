@@ -705,11 +705,22 @@
     .price5{
     position: absolute;
     top: 1594px;
-    left: 437px;
+    left: 460px;
     color: rgb(168, 34, 34);
     padding: 0px 25px;
     border-radius: 5px;
     z-index: 2;
+    }
+    .price5A{
+    position: absolute;
+    top: 1594px;
+    left: 410px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
     }
     .price6{
     position: absolute;
@@ -723,7 +734,304 @@
     .price7{
     position: absolute;
     top: 1594px;
-    left: 1050px;
+    left: 1075px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .price7A{
+    position: absolute;
+    top: 1594px;
+    left: 1025px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .subprice1{
+    position: absolute;
+    top: 1165px;
+    left: 475px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice1A{
+    position: absolute;
+    top: 1165px;
+    left: 452px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .subprice1B{
+    position: absolute;
+    top: 1165px;
+    left: 500px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice2{
+    position: absolute;
+    top: 1165px;
+    left: 782px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice2A{
+    position: absolute;
+    top: 1165px;
+    left: 756px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .subprice2B{
+    position: absolute;
+    top: 1165px;
+    left: 804px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice3{
+    position: absolute;
+    top: 1165px;
+    left: 1088px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice3A{
+    position: absolute;
+    top: 1165px;
+    left: 1060px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .subprice3B{
+    position: absolute;
+    top: 1165px;
+    left: 1110px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice4{
+    position: absolute;
+    top: 1537px;
+    left: 475px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .varsubprice4{
+    position: absolute;
+    top: 1557px;
+    left: 475px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice4A{
+    position: absolute;
+    top: 1537px;
+    left: 450px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .subprice4B{
+    position: absolute;
+    top: 1537px;
+    left: 500px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .varsubprice4A{
+    position: absolute;
+    top: 1557px;
+    left: 450px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .varsubprice4B{
+    position: absolute;
+    top: 1557px;
+    left: 500px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice5{
+    position: absolute;
+    top: 1537px;
+    left: 782px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .varsubprice5{
+    position: absolute;
+    top: 1557px;
+    left: 782px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .varsubprice5A{
+    position: absolute;
+    top: 1557px;
+    left: 755px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .varsubprice5B{
+    position: absolute;
+    top: 1557px;
+    left: 808px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice6{
+    position: absolute;
+    top: 1537px;
+    left: 1088px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .varsubprice6{
+    position: absolute;
+    top: 1557px;
+    left: 1088px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice7{
+    position: absolute;
+    top: 1909px;
+    left: 475px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice7A{
+    position: absolute;
+    top: 1909px;
+    left: 450px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .subprice7B{
+    position: absolute;
+    top: 1909px;
+    left: 500px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .varsubprice7{
+    position: absolute;
+    top: 1947px;
+    left: 476px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice8{
+    position: absolute;
+    top: 1909px;
+    left: 782px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice8A{
+    position: absolute;
+    top: 1909px;
+    left: 762px;
+    color: rgb(61, 57, 51);
+    text-decoration: line-through;
+    padding: 2px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    font-size: 15px;
+    }
+    .subprice8B{
+    position: absolute;
+    top: 1909px;
+    left: 803px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .varsubprice8{
+    position: absolute;
+    top: 1947px;
+    left: 782px;
+    color: rgb(168, 34, 34);
+    padding: 0px 25px;
+    border-radius: 5px;
+    z-index: 2;
+    }
+    .subprice9{
+    position: absolute;
+    top: 1909px;
+    left: 1088px;
     color: rgb(168, 34, 34);
     padding: 0px 25px;
     border-radius: 5px;

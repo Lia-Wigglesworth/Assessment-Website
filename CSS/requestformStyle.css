@@ -14,7 +14,7 @@
     }
     body {
     margin: 0;
-    background-color: var(--lightgrey);
+    background-color:#c9bdae;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .wrapper {
@@ -54,29 +54,26 @@
     font-weight: bold;
     }
     .leftside {
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color: #534d47;
     grid-area: lside;
     border-top: 2px solid var(--darkgrey);
     border-right: 2px solid var(--middlegrey);
     }
     .rightside {
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color:#534d47;
     grid-area: rside;
     border-top: 2px solid var(--darkgrey);
     border-left: 2px solid var(--middlegrey);
     }
     .upperleftside {
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color: #534d47;
     grid-area: upperlside;
     padding: 0;
     margin: 0;
     border-bottom: 2px solid var(--darkgrey);
     }
     .upperrightside {
-    background-color: lightgrey;
+    background-color: #534d47;
     color: lightgrey;
     grid-area: upperrside;
     border-bottom: 2px solid var(--darkgrey);
@@ -120,7 +117,7 @@
     }
     .caption {
     grid-area: caption;
-    background-color: var(--lightgrey);
+    background-color: #c9bdae;
     text-align: center;
     margin-bottom: 0;
     margin-top: 0;
@@ -141,8 +138,9 @@
     }
     .questions {
     grid-area: questions;
-    background-color: var(--lightorange);
-    border: 2px solid var(--lightergrey);
+    background-color: #645d56;
+    border: 2px solid rgb(180, 171, 156);
+    color: rgb(228, 225, 220);
     text-align: left;
     margin: 0 90px 50px 90px;
     }
@@ -152,8 +150,8 @@
     margin: 0 0 0 0;
     text-align: center;
     background-color: var(--orange);
-    border-bottom: 2px solid var(--lightergrey);
-
+    border: 2px solid rgb(140, 131, 114);
+    color: var(--variationdarkgrey);
     }
     .ynquestion {
     float: left;
@@ -175,7 +173,6 @@
     text-align: right;
     padding: 15px 30px 20px 19px;
     margin: 0;
-
     }
     .ynquestion2 pre {
     padding: 0;
@@ -316,6 +313,9 @@
     text-align: left;
     padding: 10px 0px 0px 0px;
     margin: 50px 0 0 100px;
+    color: rgb(221, 216, 203);
+    position: relative;
+    z-index: 1;
     }
     .questions h9 pre {
     float: left;
@@ -326,6 +326,9 @@
     text-align: left;
     padding: 0px 0px 0px 0px;
     margin: 0 0 0 100px;
+    color: rgb(221, 216, 203);
+    position: relative;
+    z-index: 1;
     }
     .questions h11 pre {
     float: left;
@@ -336,6 +339,9 @@
     text-align: left;
     padding: 0px 0px 0px 0px;
     margin: 0 0 0 100px;
+    color: rgb(221, 216, 203);
+    position: relative;
+    z-index: 1;
     }
     .questions h10 {
     float: left;
@@ -345,7 +351,11 @@
     text-align: center;
     padding: 0px 0px 0px 0px;
     margin: 60px 0 0 412px;
+    color: rgb(221, 216, 203);
+    position: relative;
+    z-index: 1;
     }
+    /*answer to the open ended questions*/
     textarea {
     resize: none;
     border: 2px solid var(--primaryCol);
@@ -403,6 +413,7 @@
     background-color: var(--variationprimaryCol);
     font-size: small;
     }
+    /*the answer to the drop down questions*/
     #options {
     float: left;
     width: 138px;
@@ -411,6 +422,7 @@
     background-color: var(--variationprimaryCol);
     text-align: center;
     border: 2px solid var(--primaryCol);
+    color: black;
     }
     #options2 {
     float: left;
@@ -420,6 +432,7 @@
     background-color: var(--variationprimaryCol);
     text-align: center;
     border: 2px solid var(--primaryCol);
+    color: black;
     }
     #options3 {
     float: left;
@@ -429,138 +442,161 @@
     background-color: var(--variationprimaryCol);
     text-align: center;
     border: 2px solid var(--primaryCol);
+    color: black;
     }
+    /*the different possible options*/
     #option1 {
     position: absolute;
-    top: 352%;
-    left: 59.6%;
+    top: 281.05%;
+    left: 59.75%;
     width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    padding: 6px 9.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option2 {
     position: absolute;
-    top: 357%;
-    left: 59.6%;
+    top: 286.7%;
+    left: 59.75%;
     width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    padding: 6px 9.2px 6px 9.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option3 {
     position: absolute;
-    top: 362%;
-    left: 59.6%;
+    top: 292.3%;
+    left: 59.75%;
     width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    padding: 6px 9.2px 6px 9.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option4 {
     position: absolute;
-    top: 367%;
-    left: 59.6%;
+    top: 297.95%;
+    left: 59.75%;
     width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    padding: 6px 9.2px 6px 9.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option5 {
     position: absolute;
-    top: 367%;
-    left: 59.6%;
+    top: 289.95%;
+    left: 59.75%;
     width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    padding: 6px 9.2px 6px 9.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option6 {
     position: absolute;
-    top: 372%;
-    left: 59.6%;
+    top: 295.59%;
+    left: 59.75%;
     width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    padding: 6px 9.2px 6px 9.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option7 {
     position: absolute;
-    top: 377%;
-    left: 59.6%;
+    top: 301.1%;
+    left: 59.75%;
     width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    padding: 6px 9.2px 6px 9.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option8 {
     position: absolute;
-    top: 362%;
-    left: 59.6%;
-    width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    top: 300.6%;
+    left: 59.8%;
+    width: 165px;
+    padding: 6px 4.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option9 {
     position: absolute;
-    top: 367%;
-    left: 59.6%;
-    width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    top: 306.3%;
+    left: 59.8%;
+    width: 165px;
+    padding: 6px 4.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option10 {
     position: absolute;
-    top: 372%;
-    left: 59.6%;
-    width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    top: 311.9%;
+    left: 59.8%;
+    width: 165px;
+    padding: 6px 4.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden;
+    color: black;
+    z-index: 1;
     }
     #option11 {
     position: absolute;
-    top: 377%;
-    left: 59.6%;
-    width: 155px;
-    padding: 6px 17.5px 6px 17.5px;
+    top: 317.5%;
+    left: 59.8%;
+    width: 165px;
+    padding: 6px 4.2px;
     margin: 10px 0% 10px 30px;
     background-color: rgb(237, 237, 237);
     text-align: center;
     border: 2px solid var(--primaryCol);
     visibility: hidden; 
+    color: black;
     }
     #option1:hover {
     background-color: var(--middlegrey);
@@ -595,9 +631,10 @@
     #option11:hover {
     background-color: var(--middlegrey);
     }
+    /*button to expand the different options*/
     #expandoption1 {
     position: absolute;
-    top: 313.2%;
+    top: 276.5%;
     left: 73.45%;
     height: 38px;
     width: 20px;
@@ -609,7 +646,7 @@
     }
     #expandoption2 {
     position: absolute;
-    top: 322%;
+    top: 285.6%;
     left: 73.45%;
     height: 38px;
     width: 20px;
@@ -621,7 +658,7 @@
     }
     #expandoption3 {
     position: absolute;
-    top: 332.8%;
+    top: 296.05%;
     left: 73.5%;
     height: 38px;
     width: 20px;
@@ -637,8 +674,6 @@
     background-color: #6d6d6d;
     border-top: 2px solid #6d6d6d;
     border-top: 2spx solid #c6cc9f;
-    border-left: 2px solid #c6cc9f;
-    border-right: 2px solid #c6cc9f;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -825,8 +860,8 @@
     #circle7 {
     border-radius: 50%;
     position: absolute;
-    top: 286.7%;
-    left: 67%;
+    top: 268.8%;
+    left: 66.5%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
     height: 20px;
@@ -835,8 +870,8 @@
     #circle8 {
     border-radius: 50%;
     position: absolute;
-    top: 286.7%;
-    left: 73.5%;
+    top: 268.8%;
+    left: 73%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
     height: 20px;
@@ -845,7 +880,7 @@
     #circle9 {
     border-radius: 50%;
     position: absolute;
-    top: 422%;
+    top: 391.6%;
     left: 67%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
@@ -855,7 +890,7 @@
     #circle10 {
     border-radius: 50%;
     position: absolute;
-    top: 422%;
+    top: 391.6%;
     left: 74%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
@@ -865,7 +900,7 @@
     #circle11 {
     border-radius: 50%;
     position: absolute;
-    top: 430.7%;
+    top: 399.8%;
     left: 67%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
@@ -875,7 +910,7 @@
     #circle12 {
     border-radius: 50%;
     position: absolute;
-    top: 430.7%;
+    top: 399.8%;
     left: 74%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
@@ -885,7 +920,7 @@
     #circle13 {
     border-radius: 50%;
     position: absolute;
-    top: 443.4%;
+    top: 411.3%;
     left: 67%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
@@ -895,7 +930,7 @@
     #circle14 {
     border-radius: 50%;
     position: absolute;
-    top: 443.4%;
+    top: 411.3%;
     left: 74%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
@@ -905,7 +940,7 @@
     #circle15 {
     border-radius: 50%;
     position: absolute;
-    top: 452.4%;
+    top: 419.3%;
     left: 67%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
@@ -915,7 +950,7 @@
     #circle16 {
     border-radius: 50%;
     position: absolute;
-    top: 452.4%;
+    top: 419.3%;
     left: 74%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
@@ -925,51 +960,103 @@
     #circle17 {
     border-radius: 50%;
     position: absolute;
-    top: 475%;
-    left: 70%;
+    top: 440.5%;
+    left: 67%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
     height: 20px;
     width: 20px;
+    z-index: 1;
     }
     #circle18 {
     border-radius: 50%;
     position: absolute;
-    top: 490%;
-    left: 70%;
+    top: 453.5%;
+    left: 67%;
     border: 2px solid rgb(84, 84, 84);
     background-color: rgb(230, 230, 230);
     height: 20px;
     width: 20px;
+    z-index: 1;
+    }
+    #circle19 {
+    border-radius: 50%;
+    position: absolute;
+    top: 464%;
+    left: 67%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    z-index: 1;
+    }
+    #circle20 {
+    border-radius: 50%;
+    position: absolute;
+    top: 481%;
+    left: 67%;
+    border: 2px solid rgb(84, 84, 84);
+    background-color: rgb(230, 230, 230);
+    height: 20px;
+    width: 20px;
+    z-index: 1;
     }
     .line hr{
-    border: 3px solid var(--lightergrey);
-    height: 3px;
+    border: 2.5px solid var(--lightergrey);
+    height: 2px;
     width: 740px;
     position: absolute;
     left: 23%;
-    top: 380%;
+    top: 385%;
     }
     .line2 hr{
-    border: 3px solid var(--lightergrey);
-    height: 3px;
+    border: 2.5px solid var(--lightergrey);
+    height: 2px;
     width: 740px;
     position: absolute;
     left: 23%;
-    top: 424%;
+    top: 426%;
+    }
+    .backgroundrectangle {
+    background-color: rgba(68, 64, 58, 0.308);
+    border-radius: 20px;
+    height: 505px;
+    width: 1000px;
+    position: absolute;
+    left: 12.5%;
+    top: 432%;
+    z-index: 0;
     }
     #checkbox {
     position: absolute;
-    left: 72.5%;
-    top: 490.3%;
+    left: 70%;
+    top: 440.3%;
+    color: var(--lightgrey);
+    z-index: 1;
     }
     #checkbox2 {
     position: absolute;
-    left: 72.5%;
-    top: 475.05%;
+    left: 70%;
+    top: 453.5%;
+    color: var(--lightgrey);
+    z-index: 1;
+    }
+    #checkbox3 {
+    position: absolute;
+    left: 70%;
+    top: 464%;
+    color: var(--lightgrey);
+    z-index: 1;
+    }
+    #checkbox4 {
+    position: absolute;
+    left: 70%;
+    top: 481%;
+    color: var(--lightgrey);
+    z-index: 1;
     }
     #button {
-    background-color: var(--accentCol);
+    background-color: var(--lightgrey);
     position: absolute;
     left: 42%;
     top: 500%;
@@ -978,7 +1065,7 @@
     font-size: 16px;
     }
     #button2 {
-    background-color: var(--accentCol);
+    background-color: var(--lightgrey);
     position: absolute;
     left: 42%;
     top: 500%;
@@ -990,5 +1077,5 @@
     visibility: hidden;
     }
     #afterButtonclick {
-    visibility:hidden;
+    visibility: hidden;
     }
