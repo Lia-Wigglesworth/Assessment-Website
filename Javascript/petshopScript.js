@@ -106,6 +106,41 @@
         document.getElementById("paragraph1Dogclothing").style.display = "none";
         document.getElementById("paragraph1Doggrooming").style.display = "none";
         }
+        function expandoptions1Click() {
+        document.getElementById("paragraph1Catpart2").style.display = "block";
+        document.getElementById("paragraph1Catpart1").style.display = "none";
+        var elmnt = document.getElementById("mainheader");
+        elmnt.scrollIntoView();
+        }
+        function closeoptions1Click() {
+        document.getElementById("paragraph1Catpart2").style.display = "none";
+        document.getElementById("paragraph1Catpart1").style.display = "block";
+        var elmnt = document.getElementById("mainheader");
+        elmnt.scrollIntoView();
+        }
+        function expandoptions2Click() {
+        if (document.getElementById("paragraph1Dogpart1").style.display != "none") {
+        document.getElementById("paragraph1Dogpart2").style.display = "block";
+        document.getElementById("paragraph1Dogpart1").style.display = "none";
+        document.getElementById("paragraph1Dogpart3").style.display = "none";
+        var elmnt = document.getElementById("mainheader");
+        elmnt.scrollIntoView();
+        }
+        else {
+        document.getElementById("paragraph1Dogpart2").style.display = "none";
+        document.getElementById("paragraph1Dogpart1").style.display = "block";
+        document.getElementById("paragraph1Dogpart3").style.display = "none";
+        var elmnt = document.getElementById("mainheader");
+        elmnt.scrollIntoView();
+        }
+        }
+        function expandoptions3Click() {
+        document.getElementById("paragraph1Dogpart2").style.display = "none";
+        document.getElementById("paragraph1Dogpart1").style.display = "none";
+        document.getElementById("paragraph1Dogpart3").style.display = "block";
+        var elmnt = document.getElementById("mainheader");
+        elmnt.scrollIntoView();
+        }
         function Catoption2() {
         document.getElementById("mainoption1").style.backgroundColor = "rgba(167, 167, 167, 0.8)";
         document.getElementById("mainoption1").style.border = "1px solid var(--middlegrey)"; 

@@ -45,18 +45,24 @@
                 <div class = "wordrating">Average rating for this product was 3.5/5</div>
                 <div class = "ratingnumber">Number of ratings: 98</div>
                 <div id = "reviews1">
+                    <p>On 15 Feb 2020
+                        By Miss K
+                        SA, AU</p>
                     This super-comfy, retro puffer jacket is pretty damn sky-lish if I do say so myself. In fact, with its cool colour 
-                    combo, I look like a little slice of heaven. Plus, I love the soft and snuggly fabric. Makes me feel 
-                    like I’m wearing a cloud. 
+                    combo, I look like a little slice of heaven. Plus, I love the soft and snuggly fabric. 
                 </div>
                 <div id = "reviews2">
+                    <p>On 13 Feb 2020
+                        By Nati</p>
                     It was difficult finding a jumper that fit my small dogs correctly. Finally I found this, the a detailed sizing chart 
                     helped me to easily find what I was looking for. Thank you!
                 </div>
                 <div id = "reviews3">
+                    <p>On 13 Dec 2019
+                        By Alex
+                        WA, AU</p>
                     This jumper is great for the weather where I live, as it can get pretty chilly in winter. This is perfect as it isn't too
-                    warm however it keeps the dogs snug and stops them from freezing. I purchased it for both of my dogs in different sizes, and while
-                    it can be a bit tight on the larger one, I havent had any major issues with this product. 
+                    warm however it keeps the dogs snug and stops them from freezing. I purchased it for both of my dogs in different sizes, and it fit well on both.
                 </div>
                 <img src="../Images/Downward_arrow.svg" alt="" id = "arrow" onclick = "arrowClick()">
                 <h6>Leave feedback
@@ -64,9 +70,15 @@
                 </h6>
                 <div id = "yourFeedback">
                     <h7>Please write your review here</h7>
-                    <textarea class = feedback rows="6" cols="65"></textarea>
+                    <textarea id = feedback rows="6" cols="65"></textarea>
                     <h8>Your rating</h8>
-                    <img src="../Images/Rating_images/3_rating.svg" alt="" class = "yourRating">
+                    <img src="../Images/Rating_images/0_rating.svg" alt="" id = "yourRating" onclick = "clickRating()">
+                    <img src="../Images/Rating_images/1_rating.svg" alt="" id = "yourRating1" onclick = "clickRating1()">
+                    <img src="../Images/Rating_images/2_rating.svg" alt="" id = "yourRating2" onclick = "clickRating2()">
+                    <img src="../Images/Rating_images/3_rating.svg" alt="" id = "yourRating3" onclick = "clickRating3()">
+                    <img src="../Images/Rating_images/4_rating.svg" alt="" id = "yourRating4" onclick = "clickRating4()">
+                    <img src="../Images/Rating_images/5_rating.svg" alt="" id = "yourRating5" onclick = "clickRating5()">
+                    <div id = "submitRating" onclick = "clicksubmitRating()">Submit Rating</div>
                 </div>
                 <div class = "specs">
                     <h12>Ordering</h12>
@@ -107,11 +119,11 @@
                 <h2>Additional information
                     <img src="../Images/Downward_arrow.svg" alt="" id = "expansion1" onclick = "expansion3()">
                 </h2>
-                <table id = "infotable">
+                <table id = "infotable" class = "vartable">
                     <tr>
-                        <td>Jumper Size</td>
-                        <td>Length</td>
-                        <td>Breed</td>
+                        <th>Jumper Size</th>
+                        <th>Length</th>
+                        <th>Breed</th>
                     </tr>
                     <tr>
                         <td>XXS</td>

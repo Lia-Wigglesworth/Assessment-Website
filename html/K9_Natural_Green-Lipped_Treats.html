@@ -44,29 +44,41 @@
                 <div class = "wordrating">Average rating for this product was 3.5/5</div>
                 <div class = "ratingnumber">Number of ratings: 127</div>
                 <div id = "reviews1">
+                    <p>On 8 Apr 2021, By Peter</p>
                     My dog loves these dried green muscles. I stuff them in kongs or cardboard boxes/ toilet paper rolls 
-                    for him to “hunt” for enrichment. He can smell me opening the packet form the other room and gets 
-                    very excited. 
+                    for him to “hunt” for enrichment. He hears me opening the packet and gets excited. 
                 </div>
                 <div id = "reviews2">
+                    <p>On 24 Feb 2021, By Jillian NSW, AU</p>
                     Dogs love them as a special treat. Great even for small dogs because they are so soft. 
                     But quite expensive for only a few. Can get crushed in transit, too.
                 </div>
                 <div id = "reviews3">
+                    <p>
+                        On 17 Aug 2021
+                        By LC
+                        VIC, AU
+                    </p>
                     The dogs loved these -- but -- most of the pieces were crushed, 
                     so the bag only contained a few whole mussles. I also found that this particular product is very dry and
                     - almost turns to dust in the hand.  Otherwise a great product and has a great health benefit for your pets. 
                     It's naturally sourced as well!
                 </div>
-                <img src="../Images/Downward_arrow.svg" alt="" id = "arrow" onclick = "arrowClick()">
+                <img src="../Images/Downward_arrow.svg" alt="" id = "arrow" onclick = "arrowClick2()">
                 <h6>Leave feedback
                     <img src="../Images/Downward_arrow.svg" alt="" id = "expansion1" onclick = "expansion1()">
                 </h6>
                 <div id = "yourFeedback">
                     <h7>Please write your review here</h7>
-                    <textarea class = feedback rows="6" cols="65"></textarea>
+                    <textarea id = feedback rows="6" cols="65"></textarea>
                     <h8>Your rating</h8>
-                    <img src="../Images/Rating_images/3_rating.svg" alt="" class = "yourRating">
+                    <img src="../Images/Rating_images/0_rating.svg" alt="" id = "yourRating" onclick = "clickRating()">
+                    <img src="../Images/Rating_images/1_rating.svg" alt="" id = "yourRating1" onclick = "clickRating1()">
+                    <img src="../Images/Rating_images/2_rating.svg" alt="" id = "yourRating2" onclick = "clickRating2()">
+                    <img src="../Images/Rating_images/3_rating.svg" alt="" id = "yourRating3" onclick = "clickRating3()">
+                    <img src="../Images/Rating_images/4_rating.svg" alt="" id = "yourRating4" onclick = "clickRating4()">
+                    <img src="../Images/Rating_images/5_rating.svg" alt="" id = "yourRating5" onclick = "clickRating5()">
+                    <div id = "submitRating" onclick = "clicksubmitRating()">Submit Rating</div>
                 </div>
                 <div class = "specs">
                     <h12>Ordering</h12>
@@ -94,7 +106,8 @@
                 </h2>
                 <p id = "description">
                     We combine only the best ingredients to create a high-meat diet packed with energy and nutrients. 
-                    GRAIN FREE. We only use sustainable, free-range, and grass-fed ingredients. With taste a top priority, 
+                    Our treats are GRAIN FREE and do not contain excessive amounts of carbohydrates which are unhealthy for your pet.
+                     We only use sustainable, free-range, and grass-fed ingredients. With taste a top priority, 
                     our truly unique blends of dog food and cat food are ones that your pet will crave. K9 Natural treats
                     are a healthy way to reward dogs with the taste they love. Perfect for training or rewarding mans 
                     best friend.

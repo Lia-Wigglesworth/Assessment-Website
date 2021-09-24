@@ -1,6 +1,34 @@
 
-/*function for expanding the reviews*/
+/*function for expanding the reviews across the different pages*/
 function arrowClick() {
+    if (document.getElementById("reviews3").style.display != "block") {
+    document.getElementById("reviews1").style.display = "none";
+    document.getElementById("reviews2").style.display = "none";
+    document.getElementById("reviews3").style.display = "block";
+    document.getElementById("arrow").style.transform = "translate(0,20px)";
+    }
+    else {
+    document.getElementById("reviews1").style.display = "block";
+    document.getElementById("reviews2").style.display = "block";
+    document.getElementById("reviews3").style.display = "none";
+    document.getElementById("arrow").style.transform = "translate(0,0px)";
+    }
+}
+function arrowClick2() {
+    if (document.getElementById("reviews3").style.display != "block") {
+    document.getElementById("reviews1").style.display = "none";
+    document.getElementById("reviews2").style.display = "none";
+    document.getElementById("reviews3").style.display = "block";
+    document.getElementById("arrow").style.transform = "translate(0,35px)";
+    }
+    else {
+    document.getElementById("reviews1").style.display = "block";
+    document.getElementById("reviews2").style.display = "block";
+    document.getElementById("reviews3").style.display = "none";
+    document.getElementById("arrow").style.transform = "translate(0,0px)";
+    }
+}
+function arrowClick3() {
     if (document.getElementById("reviews3").style.display != "block") {
     document.getElementById("reviews1").style.display = "none";
     document.getElementById("reviews2").style.display = "none";
@@ -13,6 +41,66 @@ function arrowClick() {
     document.getElementById("reviews3").style.display = "none";
     document.getElementById("arrow").style.transform = "translate(0,0px)";
     }
+}
+/*function for changing your rating of product*/
+function clickRating() {
+document.getElementById("yourRating").style.display = "none";
+document.getElementById("yourRating1").style.display = "block";
+document.getElementById("yourRating2").style.display = "none";
+document.getElementById("yourRating3").style.display = "none";
+document.getElementById("yourRating4").style.display = "none";
+document.getElementById("yourRating5").style.display = "none";
+}
+function clickRating1() {
+document.getElementById("yourRating").style.display = "none";
+document.getElementById("yourRating1").style.display = "none";
+document.getElementById("yourRating2").style.display = "block";
+document.getElementById("yourRating3").style.display = "none";
+document.getElementById("yourRating4").style.display = "none";
+document.getElementById("yourRating5").style.display = "none";
+}
+function clickRating2() {
+document.getElementById("yourRating").style.display = "none";
+document.getElementById("yourRating1").style.display = "none";
+document.getElementById("yourRating2").style.display = "none";
+document.getElementById("yourRating3").style.display = "block";
+document.getElementById("yourRating4").style.display = "none";
+document.getElementById("yourRating5").style.display = "none";
+}
+function clickRating3() {
+document.getElementById("yourRating").style.display = "none";
+document.getElementById("yourRating1").style.display = "none";
+document.getElementById("yourRating2").style.display = "none";
+document.getElementById("yourRating3").style.display = "none";
+document.getElementById("yourRating4").style.display = "block";
+document.getElementById("yourRating5").style.display = "none";
+}
+function clickRating4() {
+document.getElementById("yourRating").style.display = "none";
+document.getElementById("yourRating1").style.display = "none";
+document.getElementById("yourRating2").style.display = "none";
+document.getElementById("yourRating3").style.display = "none";
+document.getElementById("yourRating4").style.display = "none";
+document.getElementById("yourRating5").style.display = "block";
+}
+function clickRating5() {
+document.getElementById("yourRating").style.display = "block";
+document.getElementById("yourRating1").style.display = "none";
+document.getElementById("yourRating2").style.display = "none";
+document.getElementById("yourRating3").style.display = "none";
+document.getElementById("yourRating4").style.display = "none";
+document.getElementById("yourRating5").style.display = "none";
+}
+/*function to submit the rating*/
+function clicksubmitRating() {
+document.getElementById("yourRating").style.display = "block";
+document.getElementById("yourRating1").style.display = "none";
+document.getElementById("yourRating2").style.display = "none";
+document.getElementById("yourRating3").style.display = "none";
+document.getElementById("yourRating4").style.display = "none";
+document.getElementById("yourRating5").style.display = "none";
+window.alert("Your form has been submitted");
+window.location.reload();
 }
 /*function for expanding different paragraphs*/
 /*expansion 1 for feedback*/
@@ -158,8 +246,8 @@ function expansion2() {
     else if ((document.getElementById("yourFeedback").style.display != "block") && (document.getElementById("description").style.display == "block") && (document.getElementById("infotable").style.display != "block")) {
     document.getElementById("description").style.display = "none";
     document.getElementById("wrapper").style.gridTemplateRows = "83px 42px 113px 690px 500px 150px";
-    document.getElementById("informationbackground").style.height = "890px"
-    document.getElementById("information").style.height = "800px";
+    document.getElementById("informationbackground").style.height = "600px"
+    document.getElementById("information").style.height = "550px";
     }
     /*no expansions are open*/
     else if ((document.getElementById("yourFeedback").style.display != "block") && (document.getElementById("description").style.display != "block") && (document.getElementById("infotable").style.display != "block")) {
@@ -344,19 +432,26 @@ else {document.getElementById("quantity").innerHTML = "1"}
 }
 /*function for the add to cart button*/
 function buttonClick() {
-document.getElementById("quantity").innerHTML = "1";
-document.getElementById("size1").style.backgroundColor = "rgb(240, 240, 240)";
-document.getElementById("size1").style.color = "var(--darkgrey)";
-document.getElementById("size2").style.backgroundColor = "rgb(240, 240, 240)";
-document.getElementById("size2").style.color = "var(--darkgrey)";
-document.getElementById("size3").style.backgroundColor = "rgb(240, 240, 240)";
-document.getElementById("size3").style.color = "var(--darkgrey)";
-document.getElementById("size4").style.backgroundColor = "rgb(240, 240, 240)";
-document.getElementById("size4").style.color = "var(--darkgrey)";
-document.getElementById("size5").style.backgroundColor = "rgb(240, 240, 240)";
-document.getElementById("size5").style.color = "var(--darkgrey)";
-document.getElementById("size6").style.backgroundColor = "rgb(240, 240, 240)";
-document.getElementById("size6").style.color = "var(--darkgrey)";
+/*if any of the sizes have been seleted, unselect sizes and send message*/
+    if ((document.getElementById("size1").style.color == "rgb(238, 237, 236)") || (document.getElementById("size2").style.color == "rgb(238, 237, 236)") || (document.getElementById("size3").style.color == "rgb(238, 237, 236)") || (document.getElementById("size4").style.color == "rgb(238, 237, 236)") || (document.getElementById("size5").style.color == "rgb(238, 237, 236)")) {
+    window.alert("Item has been added to cart");
+    document.getElementById("quantity").innerHTML = "1";
+    document.getElementById("size1").style.backgroundColor = "rgb(240, 240, 240)";
+    document.getElementById("size1").style.color = "var(--darkgrey)";
+    document.getElementById("size2").style.backgroundColor = "rgb(240, 240, 240)";
+    document.getElementById("size2").style.color = "var(--darkgrey)";
+    document.getElementById("size3").style.backgroundColor = "rgb(240, 240, 240)";
+    document.getElementById("size3").style.color = "var(--darkgrey)";
+    document.getElementById("size4").style.backgroundColor = "rgb(240, 240, 240)";
+    document.getElementById("size4").style.color = "var(--darkgrey)";
+    document.getElementById("size5").style.backgroundColor = "rgb(240, 240, 240)";
+    document.getElementById("size5").style.color = "var(--darkgrey)";
+    document.getElementById("size6").style.backgroundColor = "rgb(240, 240, 240)";
+    document.getElementById("size6").style.color = "var(--darkgrey)";
+    }
+    else {
+    window.alert("Please select a sizing option");
+    }
 }
 function leftscrollItems() {
 if (document.getElementById("itemspart1").style.display != "none") {

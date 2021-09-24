@@ -45,27 +45,42 @@
                 <div class = "wordrating">Average rating for this product was 3.7/5</div>
                 <div class = "ratingnumber">Number of ratings: 127</div>
                 <div id = "reviews1">
+                    <p>On 30 Jul 2020
+                        By Rita
+                        VIC, AU</p>
                     My greyhound Cooper is super warm and cozy in this soft jumper (plus it's extremely cute!). Thank you Kazoo for this
                     amazing product!
                 </div>
                 <div id = "reviews2">
+                    <p>On 31 Mar 2020
+                        By Keanah</p>
                     This jumper is really easy to put on and is super warm and comfortable for my greyhound. It looks really nice as well 
                     and the color in real life matches the image. 
                 </div>
                 <div id = "reviews3">
+                    <p>
+                    On 20 Mar 2020
+                    By Fred
+                    </p>
                     I used this jumper for my whippet and she loved it. Because whippets and greyhounds don't have an undercoat and have very
                     short fur they can easily get cold, particularly during winter. This jumper kept her warm and it didn't seem to obstruct her movement 
                     at all. This is especially good as she had disliked other jumpers in the past that were heavier. 
                 </div>
-                <img src="../Images/Downward_arrow.svg" alt="" id = "arrow" onclick = "arrowClick()">
+                <img src="../Images/Downward_arrow.svg" alt="" id = "arrow" onclick = "arrowClick3()">
                 <h6>Leave feedback
                     <img src="../Images/Downward_arrow.svg" alt="" id = "expansion1" onclick = "expansion1()">
                 </h6>
                 <div id = "yourFeedback">
                     <h7>Please write your review here</h7>
-                    <textarea class = feedback rows="6" cols="65"></textarea>
+                    <textarea id = feedback rows="6" cols="65"></textarea>
                     <h8>Your rating</h8>
-                    <img src="../Images/Rating_images/3_rating.svg" alt="" class = "yourRating">
+                    <img src="../Images/Rating_images/0_rating.svg" alt="" id = "yourRating" onclick = "clickRating()">
+                    <img src="../Images/Rating_images/1_rating.svg" alt="" id = "yourRating1" onclick = "clickRating1()">
+                    <img src="../Images/Rating_images/2_rating.svg" alt="" id = "yourRating2" onclick = "clickRating2()">
+                    <img src="../Images/Rating_images/3_rating.svg" alt="" id = "yourRating3" onclick = "clickRating3()">
+                    <img src="../Images/Rating_images/4_rating.svg" alt="" id = "yourRating4" onclick = "clickRating4()">
+                    <img src="../Images/Rating_images/5_rating.svg" alt="" id = "yourRating5" onclick = "clickRating5()">
+                    <div id = "submitRating" onclick = "clicksubmitRating()">Submit Rating</div>
                 </div>
                 <div class = "specs">
                     <h12>Ordering</h12>
@@ -99,18 +114,20 @@
                 <p id = "description">
                     The Kazoo Greyhound Softie Dog Jumper is made with a soft, lightweight stretch knit fabric and is super snuggly. It has a cozy, 
                     body hugging design, is very lightweight, features leg straps for a secure fit and is machine washable. The elongated neck collar is great
-                    for keeping your dog's neck warm and can be folded over to suit your preference. The trendy color scheme addss sme style to your dog's attire.
+                    for keeping your dog's neck warm and can be folded over to suit your preference. The trendy color scheme adds some style to your dog's attire.
+                    Not only can it be be used for greyhounds, it fits onto similar breeds such as whippets. These breeds often have short fur so it is more important
+                    for them that they are kept warm. 
                 </p>
                 <h2>Additional information
                     <img src="../Images/Downward_arrow.svg" alt="" id = "expansion1" onclick = "expansion3()">
                 </h2>
-                <table id = "infotable">
+                <table id = "infotable" class = "vartable">
                     <tr>
-                        <td>Jumper Size</td>
-                        <td>Chest Circumference </td>
-                        <td>Length from Collar to Rear</td>
-                        <td>Neck Fabric Length (when extended)</td>
-                        <td>Front Leg Sleeves Length</td>
+                        <th>Jumper Size</th>
+                        <th>Chest Circumference </th>
+                        <th>Length from Collar to Rear</th>
+                        <th>Neck Fabric Length (when extended)</th>
+                        <th>Front Leg Sleeves Length</th>
                     </tr>
                     <tr>
                         <td>X-Small</td>

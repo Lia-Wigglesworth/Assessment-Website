@@ -261,34 +261,58 @@
     margin: 75px 0 0 -195px;
     }
     #reviews1 {
+    background-color: rgba(170, 170, 170, 0.295);
+    border: 2px solid rgba(182, 182, 182, 0.295);
+    border-bottom: none;
     float: right;
     width: 350px;
-    font-size: 13px;
-    margin-right: 60px;
-    padding-bottom: 10px;
+    font-size: 12px;
+    margin-right: 50px;
+    padding: 5px 5px 0 5px;
     text-align: center;
     }
+    #reviews1 p {
+    padding: 0 0 2px 0;
+    margin: 0;
+    font-weight: 500;
+    }
     #reviews2 {
+    background-color: rgba(170, 170, 170, 0.295);
+    border: 2px solid rgba(182, 182, 182, 0.295);
+    border-top: none;
     float: right;
     width: 350px;
-    font-size: 13px;
-    margin-right: 60px;
+    font-size: 12px;
+    margin-right: 50px;
+    padding: 5px 5px 35px 5px;
     text-align: center;
+    }
+    #reviews2 p {
+    padding: 0 0 2px 0;
+    margin: 0;
+    font-weight: 500;
     }
     #reviews3 {
     float: right;
+    background-color: rgba(170, 170, 170, 0.295);
+    border: 2px solid rgba(182, 182, 182, 0.295);
     width: 350px;
-    font-size: 13px;
-    margin-right: 60px;
-    padding-bottom: 10px;
+    font-size: 12px;
+    margin-right: 50px;
+    padding: 5px 5px 45px 5px;
     text-align: center;
     display: none;
+    }
+    #reviews3 p {
+    padding: 0 0 2px 0;
+    margin: 0;
+    font-weight: 500;
     }
     #arrow {
     float: right;
     width: 18px;
-    margin-top: 60px;
-    margin-right: -180px;
+    margin-top: 80px;
+    margin-right: -190px;
     padding: 1px;
     background-color: var(--variationsecondaryCol);
     border: 1px solid var(--middlegrey);
@@ -302,7 +326,7 @@
     width: 22px;
     padding: 1px;
     }
-    .feedback{
+    #feedback{
     padding: 10px;
     margin: 15px 0 20px 25px;
     font-size: 13px;
@@ -310,16 +334,62 @@
     font-weight: normal;
     background-color: var(--variationsecondaryCol);
     }
-    .yourRating {
+    #yourRating {
     float: right;
     margin: -150px 130px 0 0px;
     padding: 0;
     height: 30px;
     }
+    #yourRating1 {
+    float: right;
+    margin: -150px 130px 0 0px;
+    padding: 0;
+    height: 30px;
+    display: none;
+    }
+    #yourRating2 {
+    float: right;
+    margin: -150px 130px 0 0px;
+    padding: 0;
+    height: 30px;
+    display: none;
+    }
+    #yourRating3 {
+    float: right;
+    margin: -150px 130px 0 0px;
+    padding: 0;
+    height: 30px;
+    display: none;
+    }
+    #yourRating4 {
+    float: right;
+    margin: -150px 130px 0 0px;
+    padding: 0;
+    height: 30px;
+    display: none;
+    }
+    #yourRating5 {
+    float: right;
+    margin: -150px 130px 0 0px;
+    padding: 0;
+    height: 30px;
+    display: none;
+    }
     #infotable {
     display: none;
     }
     /*styling for table*/
+    table.vartable {
+    font-size: 14px;
+    text-align: left;
+    }
+    table.vartable th{
+    border-collapse: collapse;
+    margin: 20px 20px 35px 30px;
+    }
+    th.vartable {
+    font-weight: bold;
+    }
     table {
     border-collapse: collapse;
     width: 85%;
@@ -346,10 +416,6 @@
     }
     td:nth-child(even) {
     font-size: 15px;    
-    }
-    th {
-    text-align: left;
-    font-weight: normal;
     }
     #informationbackground {
     position: absolute;
@@ -382,7 +448,7 @@
     }
     #information p {
     background-color: rgba(202, 202, 202, 0.33);
-    padding: 10px 40px;
+    padding: 15px 40px;
     margin: 0;
     font-size: 15px;
     display: none;
@@ -705,6 +771,20 @@
     padding-bottom: 17px;
     padding-right: 9px;
     transform: rotate(180deg);
+    }
+    #submitRating {
+    position: absolute;
+    top: 790px;
+    left: 575px;
+    text-align: center;
+    background-color: #cab9a8;
+    border-radius: 20px;
+    padding: 8px 10px 10px 10px;
+    width: 155px;
+    border-bottom: 2px solid rgb(170, 162, 150);
+    border-left: 1px solid rgb(163, 155, 139);
+    border-right: 0.5px solid rgb(168, 158, 140);
+    border-top: 1px solid rgb(179, 171, 159);
     }
     #button {
     margin-left: 345px;

@@ -846,12 +846,13 @@
     #paragraph1Catprices {
     display: none;
     }
+
     .Catitem1 {
     height: 230px;
     width: 230px;
     object-fit: cover;
     float: left;
-    margin: 40px 30px 0 80px;
+    margin: 55px 30px 0 80px;
     opacity: 90%;
     border: 2px solid var(--middlegrey);
     border-bottom: none;
@@ -863,7 +864,20 @@
     width: 230px;
     object-fit: cover;
     float: left;
-    margin: 40px 30px 0 40px;
+    margin: 55px 30px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    .varCatitem {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    object-position: 0 -55px;
+    float: left;
+    margin: 55px 30px 0 40px;
     opacity: 90%;
     border: 2px solid var(--middlegrey);
     border-bottom: none;
@@ -875,13 +889,23 @@
     background-color: rgb(181, 189, 177);
     width: 200px;
     height: 47px;
-    margin: 0px -10px 35px 80px;
+    margin: 0px -10px 15px 80px;
     text-align: center;
     padding: 10px 15px 10px 15px;
     border: 2px solid var(--middlegrey);
     border-top: none;
     position: relative;
     z-index: 1;
+    }
+    #expandoptions1 {
+    position: absolute;
+    top: 810px;
+    right: 0;
+    width: 150px;
+    font-size: 14px;
+    margin: 50px 0 0 0;
+    padding: 1px 75px 1px 80px;
+    text-decoration: underline;
     }
     /*Paragraph 1 cat food section*/
      #paragraph1Catfood {
@@ -928,7 +952,20 @@
     width: 230px;
     object-fit: cover;
     float: left;
-    margin: 40px 90px 0 40px;
+    margin: 55px 90px 0 40px;
+    opacity: 90%;
+    border: 2px solid var(--middlegrey);
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    }
+    .varCatitem2 {
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    float: left;
+    margin: 55px 90px 0 40px;
+    object-position: 0 -55px;
     opacity: 90%;
     border: 2px solid var(--middlegrey);
     border-bottom: none;
@@ -1080,7 +1117,7 @@
     width: 230px;
     object-fit: cover;
     float: left;
-    margin: 40px 380px 0 80px;
+    margin: 55px 670px 0 80px;
     opacity: 90%;
     border: 2px solid var(--middlegrey);
     border-bottom: none;
@@ -1132,6 +1169,9 @@
     display: none;
     }
     #paragraph1Dogpart2 {
+    display: none;
+    }
+    #paragraph1Dogpart3 {
     display: none;
     }
     #paragraph1Dogprices {
